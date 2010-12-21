@@ -1,4 +1,3 @@
-<? xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -16,7 +15,7 @@
         <div class="outer-container">
             <div class="inner-container">
                 <div class="graybox">
-                    <div class="left">AMMINISTRAZIONE :: <?php echo BASE_TITLE ?></div>
+                    <div class="left">Backend :: <?php //echo BASE_TITLE ?></div>
                     <?php if ($this->params["action"] != 'admin_login'): ?>
                         <div class="right"><?php echo $this->Html->link('Logout', '/admin/users/logout') ?></div>
                     <?php endif ?>
@@ -54,7 +53,7 @@
 
                     <span class="right">
 
-                        <a href="http://www.terralink.it" target="_blank">Made in Terralink</a>
+                        <a href="http://www.tecrail.com" target="_blank">Made in tecrail</a>
 
                     </span>
 
