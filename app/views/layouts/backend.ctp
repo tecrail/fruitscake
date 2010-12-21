@@ -25,7 +25,7 @@
                     <div class="clear">&nbsp;</div>
                     <p>&nbsp;</p>
 
-                <?php echo $this->element('admin_menu'); ?>
+                <?php echo $this->element('backend_menu'); ?>
 
                         <div class="main">
 
