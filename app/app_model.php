@@ -4,6 +4,15 @@ class AppModel extends Model {
 
     public $actsAs = array('Containable');
 
+    public function  __construct($id = false, $table = null, $ds = null) {
+        if (Configure::read('debug')) {
+            $this->useDbConfig = 'production';
+        } else {
+            $this->useDbConfig = 'development';
+        }
+        parent::__construct($id, $table, $ds);
+    }
+
     public function paginateCount($conditions = array(), $recursive = 0, $extra = array()) {
         $parameters = compact('conditions');
         if ($recursive != $this->recursive) {
