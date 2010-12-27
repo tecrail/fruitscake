@@ -15,7 +15,7 @@
  * @package users
  * @subpackage users.controllers
  */
-class UsersController extends UsersAppController {
+class UsersController extends AppController {
 
 /**
  * Controller name

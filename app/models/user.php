@@ -15,7 +15,7 @@
  * @package users
  * @subpackage users.models
  */
-class User extends UsersAppModel {
+class User extends AppModel {
 
 /**
  * Name

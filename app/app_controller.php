@@ -1,12 +1,24 @@
 <?php
-class AppController extends Controller {
 
-//    public $components =  array('Session', 'Cookie', 'DebugKit.Toolbar', 'Auth', 'P28n');
-//    public $helpers    =  array('Html', 'Form', 'Number', 'Session', 'Time', 'MyApp', 'CakeAttachment.Upload');
+class AppController extends Controller {
+    /**
+     * Helpers
+     *
+     * @var array
+     */
+    public $helpers = array('Html', 'Form', 'Session', 'Time',  'Number','Text', 'Utils.Gravatar');
+    /**
+     * Components
+     *
+     * @var array
+     */
+    public $components = array('Auth', 'Session', 'Email', 'Cookie', 'Search.Prg', 'DebugKit.Toolbar');
+
 //    public $uses       =  array('Configuration');
 //    protected $siteConfiguration = array();
 //    protected $currentLanguage = false;
     protected $pageTitle = "tecrail.com";
+
 //
 //    public function languages() {
 //        return array(
@@ -17,12 +29,11 @@ class AppController extends Controller {
 
     public function beforeFilter() {
 //        $this->_setupCookies();
-//        $this->_setupAuthComponent();
+        $this->_setupAuthComponent();
 //        $this->_setupLocale();
 //        $this->_getLanguages();
-
 //        if(isset($this->params['prefix']) && $this->params['prefix'] == 'admin') {
-            $this->layout = 'backend';
+        $this->layout = 'backend';
 //            $this->pageTitle = BASE_TITLE.' - Area di amministrazione';
 //forza la visualizzazione dell'amministrazione in italiano
 //            if($this->currentLanguage != DEFAULT_LANGUAGE) {
@@ -33,24 +44,22 @@ class AppController extends Controller {
 //            $this->layout = 'default';
 //            $this->_getConfiguration();
 //            $this->_getNewsList();
-
 //            if(!isset($this->params['page'])) {
 //                $this->set('page', false);
 //                $this->set('path', false);
 //                $this->set('pathParts', false);
 //            }
-
 //            if(empty($this->siteConfiguration['Configuration']['site_title'])) {
 //                $this->pageTitle = BASE_TITLE;
 //            } else {
 //                $this->pageTitle = $this->siteConfiguration['Configuration']['site_title'];
 //            }
 //        }
-
     }
 
     public function beforeRender() {
-        if (empty ($this->pageTitle)) $this->pageTitle = BASE_TITLE;
+        if (empty($this->pageTitle))
+            $this->pageTitle = BASE_TITLE;
         $this->set('title_for_layout', $this->pageTitle);
     }
 
@@ -68,7 +77,6 @@ class AppController extends Controller {
             $this->{$modelName}->setLocale($this->currentLanguage);
         }
     }
-
 
 //    protected function _getConfiguration() {
 //        $configuration = $this->Configuration->findActive();
@@ -91,14 +99,14 @@ class AppController extends Controller {
 //    protected function _getNewsList() {
 //        $this->set('newsLists', $this->News->find('all', array('conditions' => News::publishConditions(), 'order' => array('News.date' => 'DESC'))));
 //    }
-
-//    protected function _setupAuthComponent() {
-//        $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login', 'admin' =>  true);
-//        $this->Auth->loginRedirect = array('controller' => 'users', 'action' => 'index', 'admin' => true);
-//        $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login', 'admin' => true);
-//        $this->Auth->loginError = 'Attenzione. Username o password errati';
-//        $this->Auth->authError = 'Accesso negato. Effettua il login per accedere alla pagina';
-//    }
+    
+    protected function _setupAuthComponent() {
+        $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login', 'admin' =>  false);
+        $this->Auth->loginRedirect = array('controller' => 'users', 'action' => 'index', 'admin' => true);
+        $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login', 'admin' => true);
+        $this->Auth->loginError = 'Attenzione. Username o password errati';
+        $this->Auth->authError = 'Accesso negato. Effettua il login per accedere alla pagina';
+    }
 
     protected function _setupCookies() {
         $this->Cookie->name = 'tecrailAppCookies';
@@ -106,4 +114,3 @@ class AppController extends Controller {
     }
 
 }
-?>
