@@ -12,12 +12,14 @@ class User extends AppModel {
         'Utils.Sluggable' => array(
             'label' => 'username',
             'method' => 'multibyteSlug'));
+    
     /**
      * Additional Find methods
      *
      * @var array
      */
     public $_findMethods = array('search' => true);
+    
     /**
      * @todo comment me
      *
@@ -81,9 +83,10 @@ class User extends AppModel {
             'temppassword' => array(
                 'rule' => 'confirmPassword',
                 'message' => __d('users', 'The passwords are not equal, please try again.', true)),
-            'tos' => array(
-                'rule' => array('custom', '[1]'),
-                'message' => __d('users', 'You must agree to the terms of use.', true)));
+//            'tos' => array(
+//                'rule' => array('custom', '[1]'),
+//                'message' => __d('users', 'You must agree to the terms of use.', true))
+        );
 
         $this->validatePasswordChange = array(
             'new_password' => $this->validate['passwd'],
@@ -118,7 +121,7 @@ class User extends AppModel {
     public function confirmPassword($password = null) {
         if ((isset($this->data[$this->alias]['passwd']) && isset($password['temppassword']))
                 && !empty($password['temppassword'])
-                && ($this->data[$this->alias]['passwd'] === $password['temppassword'])) {
+                && ($this->data[$this->alias]['passwd'] === Security::hash($password['temppassword'], null, true))) {
             return true;
         }
         return false;
@@ -205,17 +208,26 @@ class User extends AppModel {
                         $this->alias . '.active' => 1,
                         $this->alias . '.email' => $postData[$this->alias]['email'])));
 
-        if (!empty($user) && $user[$this->alias]['email_authenticated'] == 1) {
+//        if (!empty($user) && $user[$this->alias]['email_authenticated'] == 1) {
+//            $sixtyMins = time() + 43000;
+//            $token = $this->generateToken();
+//            $user[$this->alias]['password_token'] = $token;
+//            $user[$this->alias]['email_token_expires'] = date('Y-m-d H:i:s', $sixtyMins);
+//            $user = $this->save($user, false);
+//            return $user;
+//        } elseif (!empty($user) && $user[$this->alias]['email_authenticated'] == 0) {
+//            $this->invalidate('email', __d('users', 'This Email Address exists but was never validated.', true));
+//        } else {
+//            $this->invalidate('email', __d('users', 'This Email Address does not exist in the system.', true));
+//        }
+
+        if (!empty($user)) {
             $sixtyMins = time() + 43000;
             $token = $this->generateToken();
             $user[$this->alias]['password_token'] = $token;
             $user[$this->alias]['email_token_expires'] = date('Y-m-d H:i:s', $sixtyMins);
             $user = $this->save($user, false);
             return $user;
-        } elseif (!empty($user) && $user[$this->alias]['email_authenticated'] == 0) {
-            $this->invalidate('email', __d('users', 'This Email Address exists but was never validated.', true));
-        } else {
-            $this->invalidate('email', __d('users', 'This Email Address does not exist in the system.', true));
         }
         return false;
     }
@@ -367,7 +379,7 @@ class User extends AppModel {
             $postData[$this->alias]['email_token_expires'] = date('Y-m-d H:i:s', time() + 86400);
         } else {
             $postData[$this->alias]['email_authenticated'] = 1;
-        }
+        }Security::hash($this->data[$this->alias]['new_password'], null, true);
         $postData[$this->alias]['active'] = 1;
 
         $this->_removeExpiredRegistrations();
@@ -549,51 +561,6 @@ class User extends AppModel {
             return $this->find($extra['type'], array_merge($parameters, $extra));
         } else {
             return $this->find('count', array_merge($parameters, $extra));
-        }
-    }
-
-    /**
-     * Adds a new user
-     * 
-     * @param array post data, should be Controller->data
-     * @return array
-     */
-    public function add($postData = null) {
-        if (!empty($postData)) {
-            $this->create();
-            if ($this->save($postData)) {
-                return true;
-            }
-        }
-    }
-
-    /**
-     * Edits an existing user
-     *
-     * @param string $userId User ID
-     * @param array $postData controller post data usually $this->data
-     * @return mixed True on successfully save else post data as array
-     */
-    public function edit($userId = null, $postData = null) {
-        $user = $this->find('first', array(
-                    'contain' => array(),
-                    'conditions' => array(
-                        $this->alias . '.id' => $userId)));
-
-        $this->set($user);
-        if (empty($user)) {
-            throw new OutOfBoundsException(__d('users', 'Invalid User', true));
-        }
-
-        if (!empty($postData)) {
-            $this->set($postData);
-            $result = $this->save(null, true);
-            if ($result) {
-                $this->data = $result;
-                return true;
-            } else {
-                return $postData;
-            }
         }
     }
 

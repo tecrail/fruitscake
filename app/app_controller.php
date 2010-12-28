@@ -20,8 +20,7 @@ class AppController extends Controller {
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login', 'admin' => true);
         $this->Auth->loginRedirect = array('controller' => 'users', 'action' => 'dashboard', 'admin' => true);
         $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login', 'admin' => true);
-//        $this->Auth->loginError = 'Attenzione. Username o password errati';
-//        $this->Auth->authError = 'Accesso negato. Effettua il login per accedere alla pagina';
+        $this->Auth->fields = array('username' => 'email', 'password' => 'passwd');
     }
 
     protected function _setupCookies() {

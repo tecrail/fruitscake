@@ -8,23 +8,19 @@ class UsersController extends AppController {
     public $presetVars = array(
         array('field' => 'search', 'type' => 'value'),
         array('field' => 'username', 'type' => 'value'),
-        array('field' => 'email', 'type' => 'value'));
+        array('field' => 'email', 'type' => 'value')
+    );
 
     public function beforeFilter() {
         parent::beforeFilter();
-//		$this->Auth->allow('register', 'reset', 'verify', 'logout', 'index', 'view', 'reset_password');
-        $this->Auth->allow('*');
-
-        if ($this->action == 'register') {
-            $this->Auth->enabled = false;
-        }
+//		$this->Auth->allow('*');
+        $this->Auth->allow('logout', 'admin_reset_password');
 
         if ($this->action == 'login') {
             $this->Auth->autoRedirect = false;
         }
 
         $this->set('model', $this->modelClass);
-
         if (!Configure::read('App.defaultEmail')) {
             Configure::write('App.defaultEmail', 'noreply@' . env('HTTP_HOST'));
         }
@@ -81,6 +77,8 @@ class UsersController extends AppController {
             $this->Session->setFlash(__d('users', 'The User has been saved', true));
             $this->redirect(array('action' => 'index'));
         }
+        $this->data['User']['passwd'] = null;
+        $this->data['User']['temppassword'] = null;
     }
 
     /**
@@ -106,6 +104,9 @@ class UsersController extends AppController {
         if (empty($this->data)) {
             $this->data = $this->User->read(null, $userId);
         }
+
+        $this->data['User']['passwd'] = null;
+        $this->data['User']['temppassword'] = null;
     }
 
     /**
@@ -423,11 +424,11 @@ class UsersController extends AppController {
                     $this->redirect(array('action' => 'index', 'admin' => true));
                 } else {
                     $this->Session->setFlash(__d('users', 'You should receive an email with further instructions shortly', true));
-                    $this->redirect(array('action' => 'login'));
+                    $this->redirect($this->Auth->loginAction);
                 }
             } else {
                 $this->Session->setFlash(__d('users', 'No user was found with that email.', true));
-                $this->redirect('/');
+                $this->redirect($this->Auth->loginAction);
             }
         }
         $this->render('request_password_change');
@@ -474,7 +475,7 @@ class UsersController extends AppController {
         $user = $this->User->checkPasswordToken($token);
         if (empty($user)) {
             $this->Session->setFlash(__d('users', 'Invalid password reset token, try again.', true));
-            $this->redirect(array('action' => 'reset_password'));
+            $this->redirect(array('action' => 'reset_password', 'admin' => true));
         }
 
         if (!empty($this->data)) {

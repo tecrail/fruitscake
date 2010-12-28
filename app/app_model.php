@@ -25,27 +25,49 @@ class AppModel extends Model {
         }
     }
 
-//  public $translateColumns = false;
-//  public $recursive = -1;
-//  protected $_locale = false;
-//
-//  function  __construct($id = false, $table = null, $ds = null) {
-//    parent::__construct($id, $table, $ds);
-//    $this->_locale = DEFAULT_LANGUAGE;
-//  }
-//
-//  function setLocale($lang = 'it'){
-//    $this->_locale = $lang;
-//  }
-//
-//  function beforeFind($queryData) {
-//    parent::beforeFind($queryData);
-//    if($this->translateColumns) {
-//      $queryData['fields'] = array("*");
-//      foreach ($this->translateColumns as $column) {
-//        $queryData['fields'][] = $this->alias.".".$column."_".$this->_locale." AS ".$column;
-//      }
-//    }
-//    return $queryData;
-//  }
+    /**
+     * Adds a new record
+     *
+     * @param array post data, should be Controller->data
+     * @return array
+     */
+    public function add($postData = null) {
+        if (!empty($postData)) {
+            $this->create();
+            if ($this->save($postData)) {
+                return true;
+            }
+        }
+    }
+
+    /**
+     * Edits an existing record
+     *
+     * @param string $id ID
+     * @param array $postData controller post data usually $this->data
+     * @return mixed True on successfully save else post data as array
+     */
+    public function edit($id = null, $postData = null) {
+        $record = $this->find('first', array(
+                    'contain' => array(),
+                    'conditions' => array(
+                        $this->alias . '.' . $this->primaryKey => $id)));
+
+        $this->set(Inflector::camelize($this->alias), $record);
+        if (empty($record)) {
+            throw new OutOfBoundsException(__('Invalid ' . $this->alias, true));
+        }
+
+        if (!empty($postData)) {
+            $this->set($postData);
+            $result = $this->save(null, true);
+            if ($result) {
+                $this->data = $result;
+                return true;
+            } else {
+                return $postData;
+            }
+        }
+    }
+
 }

@@ -215,6 +215,7 @@ fieldset legend {
     padding: 15px 20px;
     background: url(/img/backend/login.jpg) 3% 85% no-repeat;
     height: 270px;
+    width: 360px;
 }
 
 .content .descr h1 {
