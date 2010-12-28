@@ -6,8 +6,8 @@
         <meta name="description" content=""/>
         <meta name="keywords" content=""/>
         <meta name="author" content=""/>
-        <?php echo $this->Html->css(array('css.menu', 'cake.generic', 'backend')) ; ?>
-        <?php echo $this->Html->script(array('backend')); ?>
+        <?php echo $this->Html->css(array('backend/css.menu', 'backend/cake.generic', 'backend/default')); ?>
+        <?php echo $this->Html->script(array('backend/application')); ?>
         <?php echo $scripts_for_layout ?>
         <title><?php echo $title_for_layout ?></title>
     </head>
@@ -15,7 +15,7 @@
         <div class="outer-container">
             <div class="inner-container">
                 <div class="graybox">
-                    <div class="left">Backend :: <?php //echo BASE_TITLE ?></div>
+                    <div class="left">Backend :: <?php echo $this->Html->link(Configure::read('App.baseTitle'), '/', array('target' => '_blank')) ?></div>
                     <?php if ($this->params["action"] != 'admin_login'): ?>
                         <div class="right"><?php echo $this->Html->link('Logout', '/admin/users/logout') ?></div>
                     <?php endif ?>
@@ -53,11 +53,11 @@
 
                     <span class="right">
 
-                        <a href="http://www.tecrail.com" target="_blank">Made in tecrail</a>
+                        <a href="http://www.tecrail.com" target="_blank">Powered by tecrail</a>
 
                     </span>
 
-                    <div class="clearer"></div>
+                    <div class="clear">&nbsp;</div>
 
                 </div>
 

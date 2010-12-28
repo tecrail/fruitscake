@@ -1,61 +1,19 @@
 <?php
-/**
- * Copyright 2010, Cake Development Corporation (http://cakedc.com)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright 2010, Cake Development Corporation (http://cakedc.com)
- * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
- */
-
-/**
- * Users Users Controller
- *
- * @package users
- * @subpackage users.controllers
- */
 class UsersController extends AppController {
 
-/**
- * Controller name
- *
- * @var string
- */
 	public $name = 'Users';
-
-/**
- * Helpers
- *
- * @var array
- */
 	public $helpers = array('Html', 'Form', 'Session', 'Time', 'Text', 'Utils.Gravatar');
-
-/**
- * Components
- *
- * @var array
- */
 	public $components = array('Auth', 'Session', 'Email', 'Cookie', 'Search.Prg');
-
-/**
- * $presetVars
- *
- * @var array $presetVars
- */
 	public $presetVars = array(
 		array('field' => 'search', 'type' => 'value'),
 		array('field' => 'username', 'type' => 'value'),
 		array('field' => 'email', 'type' => 'value'));
 
-/**
- * beforeFilter callback
- *
- * @return void
- */
+        
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('register', 'reset', 'verify', 'logout', 'index', 'view', 'reset_password');
+//		$this->Auth->allow('register', 'reset', 'verify', 'logout', 'index', 'view', 'reset_password');
+                $this->Auth->allow('*');
 
 		if ($this->action == 'register') {
 			$this->Auth->enabled = false;
@@ -71,87 +29,15 @@ class UsersController extends AppController {
 			Configure::write('App.defaultEmail', 'noreply@' . env('HTTP_HOST'));
 		}
 	}
-
-/**
- * List of all users
- *
- * @return void
- */
-	public function index() {
-		//$this->User->contain('Detail');
-		$searchTerm = '';
-		$this->Prg->commonProcess($this->modelClass, $this->modelClass, 'index', false);
-
-		if (!empty($this->params['named']['search'])) {
-			if (!empty($this->params['named']['search'])) {
-				$searchTerm = $this->params['named']['search'];
-			}
-			$this->data[$this->modelClass]['search'] = $searchTerm;
-		}
-
-		$this->paginate = array(
-			'search',
-			'limit' => 12,
-			'order' => $this->modelClass . '.username ASC',
-			'by' => $searchTerm,
-			'conditions' => array(
-				'OR' => array(
-					'AND' => array(
-							$this->modelClass . '.active' => 1, 
-							$this->modelClass . '.email_authenticated' => 1))));
-
-
-		$this->set('users', $this->paginate($this->modelClass));
-		$this->set('searchTerm', $searchTerm);
-
-		if (!isset($this->params['named']['sort'])) {
-			$this->params['named']['sort'] = 'username';
-		}
-	}
-
+        
 /**
  * The homepage of a users giving him an overview about everything
  *
  * @return void
  */
-	public function dashboard() {
+	public function admin_dashboard() {
 		$user = $this->User->read(null, $this->Auth->user('id'));
 		$this->set('user', $user);
-	}
-
-/**
- * Shows a users profile
- *
- * @param string $slug User Slug
- * @return void
- */
-	public function view($slug = null) {
-		try {
-			$this->set('user', $this->User->view($slug));
-		} catch (Exception $e) {
-			$this->Session->setFlash($e->getMessage());
-			$this->redirect('/');
-		}
-	}
-
-/**
- * Edit
- *
- * @param string $id User ID
- * @return void
- */
-	public function edit() {
-		if (!empty($this->data)) {
-			if ($this->User->Detail->saveSection($this->Auth->user('id'), $this->data, 'User')) {
-				$this->Session->setFlash(__d('users', 'Profile saved.', true));
-			} else {
-				$this->Session->setFlash(__d('users', 'Could not save your profile.', true));
-			}
-		} else {
-			$this->data = $this->User->read(null, $this->Auth->user('id'));
-		}
-
-		$this->_setLanguages();
 	}
 
 /**
@@ -243,44 +129,45 @@ class UsersController extends AppController {
  *
  * @return void
  */
-	public function admin_search() {
-		$this->search();
-	}
+//	public function search() {
+//		$this->search();
+//	}
 
-/**
- * User register action
- *
- * @return void
- */
-	public function register() {
-		if ($this->Auth->user()) {
-			$this->Session->setFlash(__d('users', 'You are already registered and logged in!', true));
-			$this->redirect('/');
-		}
-
-		if (!empty($this->data)) {
-			$user = $this->User->register($this->data);
-			if ($user !== false) {
-				$this->set('user', $user);
-				$this->_sendVerificationEmail($user[$this->modelClass]['email']);
-				$this->Session->setFlash(__d('users', 'Your account has been created. You should receive an e-mail shortly to authenticate your account. Once validated you will be able to login.', true));
-				$this->redirect(array('action'=> 'login'));
-			} else {
-				unset($this->data[$this->modelClass]['passwd']);
-				unset($this->data[$this->modelClass]['temppassword']);
-				$this->Session->setFlash(__d('users', 'Your account could not be created. Please, try again.', true), 'default', array('class' => 'message warning'));
-			}
-		}
-
-		$this->_setLanguages();
-	}
+///**
+// * User register action
+// *
+// * @return void
+// */
+//	public function register() {
+//		if ($this->Auth->user()) {
+//			$this->Session->setFlash(__d('users', 'You are already registered and logged in!', true));
+//			$this->redirect('/');
+//		}
+//
+//		if (!empty($this->data)) {
+//			$user = $this->User->register($this->data);
+//			if ($user !== false) {
+//				$this->set('user', $user);
+//				$this->_sendVerificationEmail($user[$this->modelClass]['email']);
+//				$this->Session->setFlash(__d('users', 'Your account has been created. You should receive an e-mail shortly to authenticate your account. Once validated you will be able to login.', true));
+//				$this->redirect(array('action'=> 'login'));
+//			} else {
+//				unset($this->data[$this->modelClass]['passwd']);
+//				unset($this->data[$this->modelClass]['temppassword']);
+//				$this->Session->setFlash(__d('users', 'Your account could not be created. Please, try again.', true), 'default', array('class' => 'message warning'));
+//			}
+//		}
+//
+//		$this->_setLanguages();
+//	}
 
 /**
  * Common login action
  *
  * @return void
  */
-	public function login() {
+	public function admin_login() {
+            $this->layout = "backend/login";
 		if ($this->Auth->user()) {
 			$this->User->id = $this->Auth->user('id');
 			$this->User->saveField('last_login', date('Y-m-d H:i:s'));
@@ -313,7 +200,7 @@ class UsersController extends AppController {
  *
  * @return void
  */
-	public function search() {
+	public function admin_search() {
 		$searchTerm = '';
 		$this->Prg->commonProcess($this->modelClass, $this->modelClass, 'search', false);
 
@@ -350,7 +237,7 @@ class UsersController extends AppController {
  *
  * @return void
  */
-	public function logout() {
+	public function admin_logout() {
 		$message = sprintf(__d('users', '%s you have successfully logged out', true), $this->Auth->user('username'));
 		$this->Session->destroy();
 		$this->Cookie->destroy();
@@ -430,7 +317,7 @@ class UsersController extends AppController {
  *
  * @return void
  */
-	public function change_password() {
+	public function admin_change_password() {
 		if (!empty($this->data)) {
 			$this->data[$this->modelClass]['id'] = $this->Auth->user('id');
 			if ($this->User->changePassword($this->data)) {
@@ -450,7 +337,7 @@ class UsersController extends AppController {
  * @param string $user User Data
  * @return void
  */
-	public function reset_password($token = null, $user = null) {
+	public function admin_reset_password($token = null, $user = null) {
 		if (empty($token)) {
 			$admin = false;
 			if ($user) {
