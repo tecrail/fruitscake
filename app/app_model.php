@@ -2,14 +2,13 @@
 
 class AppModel extends Model {
 
-    public $actsAs = array('Containable');
+    public $actsAs = array(
+        'Containable',
+        'Search.Searchable'
+    );
 
-    public function  __construct($id = false, $table = null, $ds = null) {
-        if (Configure::read('debug')) {
-            $this->useDbConfig = 'production';
-        } else {
-            $this->useDbConfig = 'development';
-        }
+    public function __construct($id = false, $table = null, $ds = null) {
+        $this->useDbConfig = Configure::read('debug') ? 'production' : 'development';
         parent::__construct($id, $table, $ds);
     }
 
