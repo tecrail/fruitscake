@@ -13,7 +13,7 @@ class AppController extends Controller {
     }
 
     public function beforeRender() {
-        $this->set('title_for_layout', "{Configure::read('App.base_title')} {$this->_pageTitle}");
+        $this->set('title_for_layout', Configure::read('App.baseTitle') . " " . $this->_pageTitle);
     }
 
     protected function _setupAuthComponent() {
@@ -31,8 +31,10 @@ class AppController extends Controller {
 
     protected function _setupLayout() {
         if (isset($this->params['prefix']) && $this->params['prefix'] == 'admin') {
-            $this->layout = 'backend';
+            $this->layout = 'backend/default';
             $this->_pageTitle = __('backend', true);
+        } else {
+            $this->layout = 'default';
         }
     }
 

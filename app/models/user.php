@@ -1,27 +1,6 @@
 <?php
-/**
- * Copyright 2010, Cake Development Corporation (http://cakedc.com)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright 2010, Cake Development Corporation (http://cakedc.com)
- * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
- */
 
-/**
- * Users Plugin User Model
- *
- * @package users
- * @subpackage users.models
- */
 class User extends AppModel {
-
-/**
- * Name
- *
- * @var string
- */
 	public $name = 'User';
 
 /**
@@ -30,7 +9,6 @@ class User extends AppModel {
  * @var array
  */
 	public $actsAs = array(
-		'Search.Searchable',
 		'Utils.Sluggable' => array(
 			'label' => 'username',
 			'method' => 'multibyteSlug'));
