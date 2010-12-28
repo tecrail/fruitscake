@@ -206,7 +206,8 @@ fieldset legend {
 }
 
 /* content */
-.content {    
+.content > .right {
+    width: 330px;
 }
 
 .content .descr {

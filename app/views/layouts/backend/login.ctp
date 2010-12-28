@@ -30,12 +30,7 @@
 
                                 <div class="content">
 
-                                    <div class="left descr">
-                                        <h1><?php echo Configure::read('App.baseTitle') ?></h1>
-                                        <p>Accesso area di amminstrazione</p>
-                                        <?php echo $this->element('flash'); ?>
-                                    </div>
-                                    <div class="right"><?php echo $content_for_layout ?></div>
+                                    <?php echo $content_for_layout ?>
                                     <div class="clear">&nbsp;</div>
 
                                 </div>
