@@ -7,8 +7,8 @@
                 echo $this->Form->input('first_name');
                 echo $this->Form->input('last_name');
                 echo $this->Form->input('email');
-                echo $this->Form->input('passwd');
-                echo $this->Form->input('temppassword');
+                echo $this->Form->input('passwd', array('type' => 'password'));
+                echo $this->Form->input('temppassword', array('type' => 'password'));
                 echo $this->Form->input('active');
 	?>
 	</fieldset>

@@ -30,8 +30,8 @@
             <fieldset>
                 <legend><?php __d('users', 'Change password'); ?></legend>
                 <?php
-                echo $this->Form->input('passwd', array('disabled' => (isset($this->data['User']['change_password']) && $this->data['User']['change_password']) ? false: 'disabled' ));
-                echo $this->Form->input('temppassword', array('disabled' =>  (isset($this->data['User']['change_password']) && $this->data['User']['change_password']) ? false : 'disabled' ));
+                echo $this->Form->input('passwd', array('type' => 'password', 'disabled' => (isset($this->data['User']['change_password']) && $this->data['User']['change_password']) ? false: 'disabled' ));
+                echo $this->Form->input('temppassword', array('type' => 'password', 'disabled' =>  (isset($this->data['User']['change_password']) && $this->data['User']['change_password']) ? false : 'disabled' ));
                 ?>
             </fieldset>
             

@@ -18,7 +18,7 @@ class M4d17de526cfc4c41ad210c5bdf9508da extends CakeMigration {
         'up' => array(
             'create_table' => array(
                 'users' => array(
-                    'id' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 36, 'key' => 'primary'),
+                    'id' => array('type' => 'integer', 'null' => false, 'default' => 0, 'key' => 'primary'),
                     'username' => array('type' => 'string', 'null' => false, 'default' => NULL),
                     'slug' => array('type' => 'string', 'null' => false, 'default' => NULL),
                     'first_name' => array('type' => 'string', 'null' => false, 'default' => NULL),
