@@ -12,4 +12,6 @@
 <div class="users overview">
 	<h2><?php __d('users', 'Welcome'); ?> <?php echo $user[$model]['username']; ?></h2>
 	<h3><?php __d('users', 'Recent broadcasts'); ?></h3>
+        <p>Lorem ipsum...</p>
+        <?php echo $this->Html->link(__('Change password', true), array('action' => 'change_password')) ?>
 </div>

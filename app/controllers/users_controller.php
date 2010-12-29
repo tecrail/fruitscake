@@ -126,41 +126,6 @@ class UsersController extends AppController {
         $this->redirect(array('action' => 'index'));
     }
 
-    /**
-     * Search for a user
-     *
-     * @return void
-     */
-//	public function search() {
-//		$this->search();
-//	}
-///**
-// * User register action
-// *
-// * @return void
-// */
-//	public function register() {
-//		if ($this->Auth->user()) {
-//			$this->Session->setFlash(__d('users', 'You are already registered and logged in!', true));
-//			$this->redirect('/');
-//		}
-//
-//		if (!empty($this->data)) {
-//			$user = $this->User->register($this->data);
-//			if ($user !== false) {
-//				$this->set('user', $user);
-//				$this->_sendVerificationEmail($user[$this->modelClass]['email']);
-//				$this->Session->setFlash(__d('users', 'Your account has been created. You should receive an e-mail shortly to authenticate your account. Once validated you will be able to login.', true));
-//				$this->redirect(array('action'=> 'login'));
-//			} else {
-//				unset($this->data[$this->modelClass]['passwd']);
-//				unset($this->data[$this->modelClass]['temppassword']);
-//				$this->Session->setFlash(__d('users', 'Your account could not be created. Please, try again.', true), 'default', array('class' => 'message warning'));
-//			}
-//		}
-//
-//		$this->_setLanguages();
-//	}
 
     /**
      * Common login action
@@ -432,7 +397,7 @@ class UsersController extends AppController {
                 $this->redirect($this->Auth->loginAction);
             }
         }
-        $this->render('request_password_change');
+        $this->render('admin_request_password_change');
     }
 
     /**
