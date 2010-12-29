@@ -391,3 +391,39 @@ div#header .right a:hover {
     color: #367889;
     text-decoration: underline;
 }
+.searchbox > a {
+    display: block;
+    padding: 5px 0;
+}
+.searchbox fieldset {
+}
+
+.searchbox fieldset legend {
+}
+.searchbox .input, .searchbox .submit {
+    padding: 0;
+    font-size: 0.8em;
+}
+.searchbox .input label, .searchbox .input input {
+    display: block;
+    float: left;
+}
+.searchbox .input label {
+    width: 100px;
+    line-height: 23px;
+    vertical-align: middle;
+}
+.searchbox .input input {
+    width: 170px;
+    clear: none;
+    float: left;
+}
+.searchbox .input {
+    width: 335px;
+    float: left;
+    clear: none;
+}
+.searchbox .submit {
+/*    float: right;*/
+    margin: 0;
+}
