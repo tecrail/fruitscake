@@ -5,11 +5,12 @@ class UsersController extends AppController {
     public $name = 'Users';
     public $helpers = array('Html', 'Form', 'Session', 'Time', 'Text', 'Utils.Gravatar');
     public $components = array('Auth', 'Session', 'Email', 'Cookie', 'Search.Prg');
-    public $presetVars = array(
-        array('field' => 'search', 'type' => 'value'),
-        array('field' => 'username', 'type' => 'value'),
-        array('field' => 'email', 'type' => 'value')
-    );
+
+//    public $presetVars = array(
+//        array('field' => 'search', 'type' => 'value'),
+//        array('field' => 'username', 'type' => 'value'),
+//        array('field' => 'email', 'type' => 'value')
+//    );
 
     public function beforeFilter() {
         parent::beforeFilter();

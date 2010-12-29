@@ -6,30 +6,32 @@
         <meta name="description" content=""/>
         <meta name="keywords" content=""/>
         <meta name="author" content=""/>
-        <?php echo $this->Html->css(array('backend/css.menu', 'backend/cake.generic', 'backend/default')); ?>
-        <?php echo $this->Html->script(array('jquery-1.4.4.min', 'backend/application')); ?>
+
+        <?php echo $this->Html->css(array('backend/cake.generic', 'backend/superfish', 'backend/default', 'backend/css.menu')); ?>
+        <?php echo $this->Html->script(array('jquery-1.4.4.min', 'backend/hoverIntent', 'backend/jquery.bgiframe.min', 'backend/superfish', 'backend/supersubs', 'backend/application')); ?>
         <?php echo $scripts_for_layout ?>
+        
         <title><?php echo $title_for_layout ?></title>
     </head>
     <body>
         <div class="outer-container">
             <div class="inner-container">
-                <div class="graybox">
+                
+                <div class="grayboxa" id="header">
                     <div class="left">Backend :: <?php echo $this->Html->link(Configure::read('App.baseTitle'), '/', array('target' => '_blank')) ?></div>
-                    <?php if ($this->params["action"] != 'admin_login'): ?>
-                        <div class="right"><?php echo $this->Html->link('Logout', '/admin/users/logout') ?></div>
-                    <?php endif ?>
-                        <div class="clear">&nbsp;</div>
-                    </div>
-
+                    <div class="right"><?php echo $this->Html->link('Logout', '/admin/users/logout') ?></div>
                     <div class="clear">&nbsp;</div>
-                    <p>&nbsp;</p>
+                    <?php echo $this->element('backend_menu'); ?>
+                    <div class="clear">&nbsp;</div>
+                </div>
 
-                <?php echo $this->element('backend_menu'); ?>
+                <div class="clear">&nbsp;</div>
+                <p>&nbsp;</p>
 
-                        <div class="main">
 
-                            <div class="content">
+                <div class="main">
+
+                    <div class="content">
 
                         <?php echo $this->element('flash') ?>
 

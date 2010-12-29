@@ -1,5 +1,7 @@
 /app/config/database.php
-/app/tmp
+/app/tmp/logs
+/app/tmp/cache
+/app/tmp/cache
 /plugins
 /vendors
 nbproject/

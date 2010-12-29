@@ -1,16 +1,19 @@
-<?php if($this->params["action"] != 'admin_login'): ?>
-<div id="modernbricksmenu">
-    <ul>
-        <?php //UTENTI ?>
-        <li id="<?php echo ($this->params['controller'] == 'users' ? 'current' : '') ?>" style="margin-left: 1px"><?php echo $this->Html->link('Amministratori', array('controller' => 'users', 'action' => 'index', 'admin' => true)) ?></li>
-        <?php //NEWS ?>
-        <li id="<?php echo ($this->params['controller'] == 'news' ? 'current' : '') ?>"><?php echo $this->Html->link('News', array('controller' => 'news', 'action' => 'index', 'admin' => true)) ?></li>
-        <?php //CONFIGURAZIONI ?>
-        <li id="<?php echo ($this->params['controller'] == 'configurations' ? 'current' : '') ?>"><?php echo $this->Html->link('Configurazioni', array('controller' => 'configurations', 'action' => 'index', 'admin' => true)) ?></li>
+<div id="menu-container">
+    <ul class="sf-menu">
+        <li>
+            <?php echo $this->Html->link(__('Dashboard', true), array('controller' => 'users', 'action' => 'dashboard', 'admin' => true)) ?>
+        </li>
+        <li class="">
+            <?php echo $this->Html->link(__('Users', true), array('controller' => 'users', 'action' => 'index', 'admin' => true)) ?>
+            <ul>
+                <li>
+                    <?php echo $this->Html->link(__('Users index', true), array('controller' => 'users', 'action' => 'index', 'admin' => true)) ?>
+                </li>
+                <li class="">
+                    <?php echo $this->Html->link(__('Users add', true), array('controller' => 'users', 'action' => 'add', 'admin' => true)) ?>
+                </li>
+            </ul>
+        </li>
     </ul>
+    <div class="clear">&nbsp;</div>
 </div>
-<div id="modernbricksmenuline">
-    <ul style="margin-left:10px;">
-    </ul>
-</div>
-<?php endif ?>

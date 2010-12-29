@@ -8,7 +8,7 @@ class AppModel extends Model {
     );
 
     public function __construct($id = false, $table = null, $ds = null) {
-        $this->useDbConfig = Configure::read('debug') ? 'production' : 'development';
+//        $this->useDbConfig = Configure::read('debug') ? 'production' : 'development';
         parent::__construct($id, $table, $ds);
     }
 

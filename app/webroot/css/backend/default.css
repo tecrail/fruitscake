@@ -372,3 +372,22 @@ th.actions {
 dd {
     margin-left: 200px;
 }
+div#header {
+    padding: 10px 0px;
+    color: #666;
+    font-weight: bold;
+}
+div#header .left,
+div#header .right {
+    padding: 0 24px 5px 24px;
+}
+div#header .left a,
+div#header .right a {
+    color: #367889;
+    text-decoration: none;
+}
+div#header .left a:hover,
+div#header .right a:hover {
+    color: #367889;
+    text-decoration: underline;
+}

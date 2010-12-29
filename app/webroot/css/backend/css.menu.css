@@ -1,97 +1,45 @@
 @CHARSET "UTF-8";
 
-#modernbricksmenu{
-    padding: 0;
-    width: 100%;
-    background: transparent;
-    voice-family: "\"}\"";
-    voice-family: inherit;
+div#menu-container {
+    margin: 10px 0 0 0;
+    float: none;
+    background: #bbb;
+    border: 1px solid #bbb;
+    -moz-border-radius: 3px;
+    padding: 0 10px;
 }
-
-#modernbricksmenu ul{
-    font: bold 11px Arial;
-    margin:0;
-    margin-left: 8px; /*margin between first menu item and left browser edge*/
-    padding: 0;
-    list-style: none;
+ul.sf-menu {
+    margin-bottom: 0;
+    border-right: 1px solid #ddd;
 }
-
-#modernbricksmenu li{
-    display: inline;
-    margin: 0 2px 0 0;
-    padding: 0;
-    text-transform:uppercase;
+ul.sf-menu a {
+    border-left: 1px solid #ddd;
+    border-top: 0;
+    background: #bbb;
+    color: #fff;
 }
-
-#modernbricksmenu a{
-    float: left;
-    display: block;
-    color: white;
-    margin: 0 1px 0 0; /*Margin between each menu item*/
-    padding: 5px 10px;
+ul.sf-menu > li > a {
+    text-transform: uppercase;
+}
+ul.sf-menu > li.current > a {
+    background: #ccc;
+}
+.sf-menu a, .sf-menu a:visited {
+    color: #fff;
+}
+ul.sf-menu li:hover a,
+ul.sf-menu li.sfHover a {
+    background: #fff;
+    color: #666;
     text-decoration: none;
-    letter-spacing: 1px;
-    background-color: black; /*Default menu color*/
-    border-bottom: 1px solid white;
-    -moz-border-radius-topleft: 1px;
-    -moz-border-radius-topright: 1px;
-    -webkit-border-top-left-radius: 1px;
-    -webkit-border-top-right-radius: 1px;
-    border-top-left-radius: 1px;
-    border-top-left-radius: 1px;
 }
-
-#modernbricksmenu a:hover{
-    background-color: #22556e; /*Menu hover bgcolor
-    background-color: #003d4c;*/
-}
-
-#modernbricksmenu #current a{ /*currently selected tab*/
-    background-color: #949490;
-    border-color: #949490;
-}
-
-#modernbricksmenuline{
+ul.sf-menu > li.clear {
+    float: none;
+    height: 0;
+    overflow: hidden;
     clear: both;
-    padding: 0;
-    width: 100%;
-    background: #949490;
-    border-top: 3px solid #949490;
-    border-bottom: 5px solid #949490;
 }
-#modernbricksmenuline ul {
-    margin: 0px;
-    padding: 0px;
-    margin-left: 30px;
-}
-#modernbricksmenuline li {
-    display: inline;
-    margin: 0px;
-    padding: 0px;
-    margin-right: 20px;
-}
-#modernbricksmenuline a {
-    color: #fff;
-    text-decoration: none;
-}
-#modernbricksmenuline a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-#myform{ /*CSS for sample search box. Remove if desired */
-    float: right;
-    margin: 0;
-    padding: 0;
-}
-
-#myform .textinput{
-    width: 190px;
-    border: 1px solid gray;
-}
-
-#myform .submit{
-    font: bold 11px Verdana;
-    height: 22px;
-    background-color: lightyellow;
+ul.sf-menu ul > li {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
 }

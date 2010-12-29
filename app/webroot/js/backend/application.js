@@ -1,3 +1,4 @@
+/*** TINYMCE ***/
 //var returnURL = "";
 //var browserWindow;
 //var browserFieldName;
@@ -17,3 +18,7 @@
 //    browserWindow.document.forms[0].elements[browserFieldName].value = url;
 //}
 //
+// initialise plugins
+$(document).ready(function(){
+    $('ul.sf-menu').superfish();
+});
