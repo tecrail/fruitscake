@@ -14,6 +14,20 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <?php echo $this->Html->link(__('Navigation', true), '#') ?>
+                </li>
+                <li class="">
+            <?php echo $this->Html->link(__('Pages', true), '#') ?>
+                    <ul>
+                        <li>
+                    <?php echo $this->Html->link(__('Pages index', true), '#') ?>
+                </li>
+                <li class="">
+                    <?php echo $this->Html->link(__('Pages add', true), '#') ?>
+                </li>
+            </ul>
+        </li>
     </ul>
     <div class="clear">&nbsp;</div>
 </div>
