@@ -6,6 +6,8 @@ div#menu-container {
     background: #bbb;
     border: 1px solid #bbb;
     -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
     padding: 0 10px;
 }
 ul.sf-menu {

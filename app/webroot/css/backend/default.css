@@ -261,14 +261,18 @@ fieldset legend {
 
 /* footer */
 .footer, .graybox {
-    background: #949490;
     color: #F7F7F2;
     font: bold 1em sans-serif;
     margin-top: 5px;
-    padding: 10px 12px;
+
+    margin: 10px 0 0 0;
+    float: none;
+    background: #bbb;
+    border: 1px solid #bbb;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    padding: 9px 25px;
 }
 
 .graybox a {
