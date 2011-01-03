@@ -1,16 +1,7 @@
 <div class="users index">
     <h2><?php __d('users', 'Users'); ?></h2>
 
-    <div class="searchbox">
-        <?php echo $this->Html->link(__('Search', true), '#' ); ?>
-        <fieldset>
-            <legend><?php __('Filter') ?></legend>
-            <?php echo $this->Form->create($model, array('action' => 'index')); ?>
-                <?php echo $this->Form->input('username', array('label' => __d('users', 'Username', true))); ?>
-                <?php echo $this->Form->input('email', array('label' => __d('users', 'Email', true))); ?>
-            <?php echo $this->Form->end(__d('users', 'Search', true)); ?>
-        </fieldset>
-    </div>
+    <?php echo $this->element('backend/search') ?>
 
     <?php echo $this->element('paging'); ?>
             <table cellpadding="0" cellspacing="0">

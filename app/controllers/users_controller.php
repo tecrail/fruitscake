@@ -4,10 +4,9 @@ class UsersController extends AppController {
 
     public $name = 'Users';
     public $helpers = array('Html', 'Form', 'Session', 'Time', 'Text', 'Utils.Gravatar');
-    public $components = array('Auth', 'Session', 'Email', 'Cookie', 'Search.Prg');
+    public $components = array('Auth', 'Session', 'Email', 'Cookie');
 
     public $presetVars = array(
-        array('field' => 'search', 'type' => 'value'),
         array('field' => 'username', 'type' => 'value'),
         array('field' => 'email', 'type' => 'value')
     );
@@ -21,7 +20,6 @@ class UsersController extends AppController {
             $this->Auth->autoRedirect = false;
         }
 
-        $this->set('model', $this->modelClass);
         if (!Configure::read('App.defaultEmail')) {
             Configure::write('App.defaultEmail', 'noreply@' . env('HTTP_HOST'));
         }

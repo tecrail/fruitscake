@@ -20,5 +20,16 @@
 //
 // initialise plugins
 $(document).ready(function(){
+
     $('ul.sf-menu').superfish();
+
+    $(".search-link").click(function() {
+        $(this).toggleClass("selected");
+        if( $(this).hasClass('selected')) {
+            $(".search-fieldset").slideDown('fast');
+        } else {
+            $(".search-fieldset").slideUp('fast');
+        }
+    });
+    
 });

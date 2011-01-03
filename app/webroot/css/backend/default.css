@@ -7,6 +7,7 @@ html {
 * {
     margin: 0;
     padding: 0;
+    outline: none;
 }
 
 a {
@@ -14,9 +15,10 @@ a {
     background: transparent;
 }
 
-a:hover {
+a:hover, a.selected {
     color: #06C;
     background: transparent;
+    text-decoration: none;
 }
 
 body { 
@@ -351,18 +353,18 @@ div#map_canvas *{
 
 
 form.OrderedListForm {
-  padding: 0px;
-  margin: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 
 form.OrderedListForm select {
-  padding: 0px;
-  margin: 0px;
-  font-size: 9px;
-  line-height: 9px;
-  margin: 0px;
-  padding: 0px;
-  height: 19px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 9px;
+    line-height: 9px;
+    margin: 0px;
+    padding: 0px;
+    height: 19px;
 }
 
 th.actions {
@@ -424,6 +426,16 @@ div#header .right a:hover {
     clear: none;
 }
 .searchbox .submit {
-/*    float: right;*/
+    /*    float: right;*/
     margin: 0;
+}
+a.search-link {
+    display: block;
+    background: url(/img/backend/search.jpg) 2% 50% no-repeat;
+    padding: 5px 25px;
+    float: left;
+}
+
+.search-fieldset {
+    display: none;
 }

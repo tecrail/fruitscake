@@ -11,34 +11,15 @@ class User extends AppModel {
     public $actsAs = array(
         'Utils.Sluggable' => array(
             'label' => 'username',
-            'method' => 'multibyteSlug'));
-    
-    /**
-     * Additional Find methods
-     *
-     * @var array
-     */
-    public $_findMethods = array('search' => true);
-    
-    /**
-     * @todo comment me
-     *
-     * @var array
-     */
+            'method' => 'multibyteSlug')
+    );
+
     public $filterArgs = array(
-        array('name' => 'username', 'type' => 'string'),
-        array('name' => 'email', 'type' => 'string'));
-    /**
-     * Displayfield
-     *
-     * @var string $displayField
-     */
+        array('name' => 'username', 'type' => 'like'),
+        array('name' => 'email', 'type' => 'like')
+    );
+    
     public $displayField = 'username';
-    /**
-     * Validation parameters
-     *
-     * @var array
-     */
     public $validate = array();
 
     /**
@@ -470,77 +451,6 @@ class User extends AppModel {
             }
         }
         return $token;
-    }
-
-    /**
-     * Returns the search data
-     *
-     * @param string $state Find State
-     * @param string $query Query options
-     * @param string $results Result data
-     * @return array
-     */
-    protected function _findSearch($state, $query, $results = array()) {
-        if ($state == 'before') {
-            $this->Behaviors->attach('Containable', array('autoFields' => false));
-            $results = $query;
-            if (!empty($query['by'])) {
-                $by = $query['by'];
-            }
-
-            if (empty($query['search'])) {
-                $query['search'] = '';
-            }
-
-            $db = & ConnectionManager::getDataSource($this->useDbConfig);
-            $by = $query['by'];
-            $search = $query['search'];
-            $byQuoted = $db->value($search);
-            $like = '%' . $query['search'] . '%';
-
-            switch ($by) {
-                case 'username':
-                    $results['conditions'] = Set::merge(
-                                    $query['conditions'],
-                                    array($this->alias . '.username LIKE' => $like));
-                    break;
-                case 'email':
-                    $results['conditions'] = Set::merge(
-                                    $query['conditions'],
-                                    array($this->alias . '.email LIKE' => $like));
-                    break;
-                case 'any':
-                    $results['conditions'] = Set::merge(
-                                    $query['conditions'],
-                                    array('OR' => array(
-                                            array($this->alias . '.username LIKE' => $like),
-                                            array($this->alias . '.email LIKE' => $like))));
-                    break;
-                case '' :
-                    $results['conditions'] = $query['conditions'];
-                    break;
-                default :
-                    $results['conditions'] = Set::merge(
-                                    $query['conditions'],
-                                    array($this->alias . '.username LIKE' => $like));
-                    break;
-            }
-
-            if (isset($query['operation']) && $query['operation'] == 'count') {
-                $results['fields'] = array('COUNT(DISTINCT ' . $this->alias . '.id)');
-            } else {
-                //$results['fields'] = array('DISTINCT User.*');
-            }
-            return $results;
-        } elseif ($state == 'after') {
-            if (isset($query['operation']) && $query['operation'] == 'count') {
-                if (isset($query['group']) && is_array($query['group']) && !empty($query['group'])) {
-                    return count($results);
-                }
-                return $results[0][0]['COUNT(DISTINCT ' . $this->alias . '.id)'];
-            }
-            return $results;
-        }
     }
 
     /**

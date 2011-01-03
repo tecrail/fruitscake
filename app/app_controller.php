@@ -5,15 +5,29 @@ class AppController extends Controller {
     public $helpers = array('Html', 'Form', 'Session', 'Time', 'Number', 'Text', 'Utils.Gravatar');
     public $components = array('Auth', 'Session', 'Email', 'Cookie', 'Search.Prg', 'DebugKit.Toolbar');
     protected $_pageTitle = null;
+    public $presetVars = null;
 
     public function beforeFilter() {
         $this->_setupCookies();
         $this->_setupAuthComponent();
         $this->_setupLayout();
+        $this->set('presetVars', $this->presetVars);
+        $this->set('model', $this->modelClass);
     }
 
     public function beforeRender() {
         $this->set('title_for_layout', Configure::read('App.baseTitle') . " " . $this->_pageTitle);
+    }
+
+    public function admin_find() {
+        if ($this->presetVars) {
+            $this->Prg->commonProcess();
+            $this->paginate['conditions'] = $this->{$this->modelClass}->parseCriteria($this->passedArgs);
+            $this->set(Inflector::variable(Inflector::pluralize($this->modelClass)) , $this->paginate());
+            $this->render('admin_index');
+        } else {
+            $this->cakeError('error404');
+        }
     }
 
     protected function _setupAuthComponent() {
