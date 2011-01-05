@@ -5,7 +5,6 @@ class UsersController extends AppController {
     public $name = 'Users';
     public $helpers = array('Html', 'Form', 'Session', 'Time', 'Text', 'Utils.Gravatar');
     public $components = array('Auth', 'Session', 'Email', 'Cookie');
-
     public $presetVars = array(
         array('field' => 'username', 'type' => 'value'),
         array('field' => 'email', 'type' => 'value')
@@ -13,7 +12,7 @@ class UsersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-//		$this->Auth->allow('*');
+//        $this->Auth->allow('*');
         $this->Auth->allow('logout', 'admin_reset_password');
 
         if ($this->action == 'login') {
@@ -123,7 +122,6 @@ class UsersController extends AppController {
 
         $this->redirect(array('action' => 'index'));
     }
-
 
     /**
      * Common login action
