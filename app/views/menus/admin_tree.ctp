@@ -44,7 +44,7 @@
             <li class="edit"><?php echo $this->Html->link(__('Edit', true), array('action' => 'edit')); ?></li>
             <li class="delete separator"><?php echo $this->Html->link(__('Delete', true), array('action' => 'delete')); ?></li>
         </ul>
-    
+
     </div>
 
 <?php echo $this->element('backend/left_navigator'); ?>
