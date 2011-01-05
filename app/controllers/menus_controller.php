@@ -11,18 +11,11 @@ class MenusController extends AppController {
 
     public function admin_index() {
         $this->Menu->recursive = 0;
-//        $this->set('menus', $this->paginate());
 
         $this->helpers[] = 'Utils.Tree';
         $this->set('menus', $this->Menu->find('all', array('order' => 'Menu.lft')));
     }
 
-//    public function admin_tree() {
-//        $this->Menu->recursive = 0;
-//        $this->helpers[] = 'Utils.Tree';
-//        $this->set('menus', $this->Menu->find('all', array('order' => 'Menu.lft')));
-//    }
-//
     public function admin_view($slug = null) {
         try {
             $menu = $this->Menu->view($slug);

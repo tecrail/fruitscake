@@ -7,7 +7,7 @@ class Caa9bc72d1cc4476fbccp1e4beba7b4jk extends CakeMigration {
         'up' => array(
             'create_table' => array(
                 'menus' => array(
-                    'id' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 36, 'key' => 'primary'),
+                    'id' => array('type' => 'integer', 'null' => false, 'default' => NULL, 'key' => 'primary'),
                     'menu_id' => array('type' => 'string', 'null' => true, 'default' => NULL, 'length' => 36),
                     'foreign_key' => array('type' => 'string', 'null' => true, 'default' => NULL, 'length' => 36),
                     'model' => array('type' => 'string', 'null' => false, 'default' => NULL),
@@ -17,9 +17,16 @@ class Caa9bc72d1cc4476fbccp1e4beba7b4jk extends CakeMigration {
                     'name' => array('type' => 'string', 'null' => false, 'default' => NULL),
                     'slug' => array('type' => 'string', 'null' => false, 'default' => NULL),
                     'description' => array('type' => 'text', 'null' => true, 'default' => NULL),
+                    'url' => array('type' => 'string', 'null' => true, 'default' => NULL),
+                    'target' => array('type' => 'string', 'null' => true, 'default' => '_blank'),
                     'created' => array('type' => 'datetime', 'null' => true, 'default' => NULL),
                     'modified' => array('type' => 'datetime', 'null' => true, 'default' => NULL),
-                    'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1), 'UNIQUE_MENU_NAME' => array('column' => array('name'), 'unique' => 0))
+                    'indexes' => array(
+                        'PRIMARY' => array('column' => 'id', 'unique' => 1),
+                        'UNIQUE_MENU_NAME' => array('column' => array('name'), 'unique' => 0),
+                        'LEFT' => array('column' => array('lft'), 'unique' => 0),
+                        'RIGHT' => array('column' => array('rght'), 'unique' => 0)
+                    )
                 )
             ),
         ),
