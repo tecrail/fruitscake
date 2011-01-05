@@ -7,6 +7,8 @@
         echo $this->Form->input('menu_id', array('empty' => true));
         echo $this->Form->input('name');
         echo $this->Form->input('description');
+        echo $this->Form->input('url');
+        echo $this->Form->input('target', array('value' => '_blank'));
         ?>
     </fieldset>
     <?php echo $this->Form->end(__d('menus', 'Submit', true)); ?>
