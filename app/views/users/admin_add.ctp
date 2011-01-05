@@ -14,8 +14,5 @@
 	</fieldset>
 <?php echo $this->Form->end('Submit');?>
 </div>
-<div class="actions">
-	<ul>
-		<li><?php echo $this->Html->link(__d('users', 'List Users', true), array('action'=>'index'));?></li>
-	</ul>
-</div>
+
+<?php echo $this->element("backend/left_navigator") ?>

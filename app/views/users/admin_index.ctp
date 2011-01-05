@@ -42,3 +42,5 @@
         <?php endforeach; ?>
     </table>
 </div>
+
+<?php echo $this->element("backend/left_navigator") ?>

@@ -30,21 +30,17 @@
             <fieldset>
                 <legend><?php __d('users', 'Change password'); ?></legend>
                 <?php
-                echo $this->Form->input('passwd', array('type' => 'password', 'disabled' => (isset($this->data['User']['change_password']) && $this->data['User']['change_password']) ? false: 'disabled' ));
-                echo $this->Form->input('temppassword', array('type' => 'password', 'disabled' =>  (isset($this->data['User']['change_password']) && $this->data['User']['change_password']) ? false : 'disabled' ));
+                echo $this->Form->input('passwd', array('type' => 'password', 'disabled' => (isset($this->data['User']['change_password']) && $this->data['User']['change_password']) ? false : 'disabled'));
+                echo $this->Form->input('temppassword', array('type' => 'password', 'disabled' => (isset($this->data['User']['change_password']) && $this->data['User']['change_password']) ? false : 'disabled'));
                 ?>
             </fieldset>
-            
+
         </div>
         <?php
                 echo $this->Form->input('active');
         ?>
             </fieldset>
     <?php echo $this->Form->end('Submit'); ?>
-            </div>
-            <div class="actions">
-                <ul>
-                    <li><?php echo $this->Html->link(__d('users', 'Delete', true), array('action' => 'delete', $this->Form->value('User.id')), null, sprintf(__d('users', 'Are you sure you want to delete # %s?', true), $this->Form->value('User.id'))); ?></li>
-                    <li><?php echo $this->Html->link(__d('users', 'List Users', true), array('action' => 'index')); ?></li>
-    </ul>
 </div>
+
+<?php echo $this->element("backend/left_navigator") ?>
