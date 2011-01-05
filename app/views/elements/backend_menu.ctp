@@ -15,12 +15,26 @@
             </ul>
         </li>
         <li>
-            <?php echo $this->Html->link(__('Navigation', true), '#') ?>
+            <?php echo $this->Html->link(__('Navigation', true), array('controller' => 'menus', 'action' => 'index', 'admin' => true)) ?>
+            <ul>
+                <li>
+                    <?php echo $this->Html->link(__('Menus index', true), array('controller' => 'menus', 'action' => 'index', 'admin' => true)) ?>
                 </li>
                 <li class="">
+                    <?php echo $this->Html->link(__('Menus add', true), array('controller' => 'menus', 'action' => 'add', 'admin' => true)) ?>
+                </li>
+                <li>
+                    <?php echo $this->Html->link(__('Pages index', true), array('controller' => 'pages', 'action' => 'index', 'admin' => true)) ?>
+                </li>
+                <li class="">
+                    <?php echo $this->Html->link(__('Pages add', true), array('controller' => 'pages', 'action' => 'add', 'admin' => true)) ?>
+                </li>
+            </ul>
+        </li>
+        <li class="">
             <?php echo $this->Html->link(__('Pages', true), '#') ?>
-                    <ul>
-                        <li>
+            <ul>
+                <li>
                     <?php echo $this->Html->link(__('Pages index', true), '#') ?>
                 </li>
                 <li class="">
