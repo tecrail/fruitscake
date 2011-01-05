@@ -17,12 +17,12 @@ class MenusController extends AppController {
         $this->set('menus', $this->Menu->find('all', array('order' => 'Menu.lft')));
     }
 
-    public function admin_tree() {
-        $this->Menu->recursive = 0;
-        $this->helpers[] = 'Utils.Tree';
-        $this->set('menus', $this->Menu->find('all', array('order' => 'Menu.lft')));
-    }
-    
+//    public function admin_tree() {
+//        $this->Menu->recursive = 0;
+//        $this->helpers[] = 'Utils.Tree';
+//        $this->set('menus', $this->Menu->find('all', array('order' => 'Menu.lft')));
+//    }
+//
     public function admin_view($slug = null) {
         try {
             $menu = $this->Menu->view($slug);
@@ -86,6 +86,16 @@ class MenusController extends AppController {
         if (!empty($this->Menu->data['menu'])) {
             $this->set('menu', $this->Menu->data['menu']);
         }
+    }
+
+    public function admin_move_up($id = null) {
+        $menu = $this->Menu->moveup($id);
+        $this->redirect(array('action' => 'index'));
+    }
+
+    public function admin_move_down($id = null) {
+        $menu = $this->Menu->movedown($id);
+        $this->redirect(array('action' => 'index'));
     }
 
 }
