@@ -2,7 +2,7 @@
 
 class AppController extends Controller {
 
-    public $helpers = array('Html', 'Form', 'Session', 'Time', 'Number', 'Text', 'Utils.Gravatar');
+    public $helpers = array('Html', 'Form', 'Session', 'Time', 'Number', 'Text', 'Utils.Gravatar', 'Backend');
     public $components = array('Auth', 'Session', 'Email', 'Cookie', 'Search.Prg', 'DebugKit.Toolbar');
     protected $_pageTitle = null;
     public $presetVars = null;

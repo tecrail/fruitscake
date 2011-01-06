@@ -34,9 +34,9 @@
                 <?php echo $user[$model]['modified']; ?>
             </td>
             <td class="actions">
-                <?php echo $this->Html->link(__d('users', 'View', true), array('action' => 'view', $user[$model]['id'])); ?>
-                <?php echo $this->Html->link(__d('users', 'Edit', true), array('action' => 'edit', $user[$model]['id'])); ?>
-                <?php echo $this->Html->link(__d('users', 'Delete', true), array('action' => 'delete', $user[$model]['id']), null, sprintf(__d('users', 'Are you sure you want to delete # %s?', true), $user[$model]['id'])); ?>
+                <?php echo $this->Backend->actionLink(__d('users', 'View', true), array('action' => 'view', $user[$model]['id'])); ?>
+                <?php echo $this->Backend->actionLink(__d('users', 'Edit', true), array('action' => 'edit', $user[$model]['id'])); ?>
+                <?php echo $this->Backend->actionLink(__d('users', 'Delete', true), array('action' => 'delete', $user[$model]['id']), null, sprintf(__d('users', 'Are you sure you want to delete # %s?', true), $user[$model]['id'])); ?>
             </td>
         </tr>
         <?php endforeach; ?>

@@ -27,9 +27,9 @@
                 <td><?php echo $page['Page']['created']; ?>&nbsp;</td>
                 <td><?php echo $page['Page']['modified']; ?>&nbsp;</td>
                 <td class="actions">
-                <?php echo $this->Html->link(__('View', true), array('action' => 'view', $page['Page']['id'])); ?>
-                <?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $page['Page']['id'])); ?>
-                <?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $page['Page']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $page['Page']['id'])); ?>
+                <?php echo $this->Backend->actionLink(__('View', true), array('action' => 'view', $page['Page']['id'])); ?>
+                <?php echo $this->Backend->actionLink(__('Edit', true), array('action' => 'edit', $page['Page']['id'])); ?>
+                <?php echo $this->Backend->actionLink(__('Delete', true), array('action' => 'delete', $page['Page']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $page['Page']['id'])); ?>
             </td>
         </tr>
         <?php endforeach; ?>
