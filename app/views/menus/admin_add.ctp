@@ -8,7 +8,7 @@
         echo $this->Form->input('name');
         echo $this->Form->input('description');
         echo $this->Form->input('url');
-        echo $this->Form->input('target', array('value' => '_blank'));
+        echo $this->Form->input('target', array('type' => 'select', 'options' => array("_self" => __("Current window", true), '_blank' => __("New window", true))));
         ?>
     </fieldset>
     <?php echo $this->Form->end(__d('menus', 'Submit', true)); ?>
