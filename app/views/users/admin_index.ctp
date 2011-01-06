@@ -41,6 +41,9 @@
         </tr>
         <?php endforeach; ?>
     </table>
+
+    <?php echo $this->element('backend/paging'); ?>
+
 </div>
 
 <?php echo $this->element("backend/left_navigator") ?>

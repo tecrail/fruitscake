@@ -2,6 +2,7 @@
 $id = $this->params['pass'] && isset ($this->params['pass'][0]) ? $this->params['pass'][0] : false;
 ?>
 <div class="actions">
+    <h3><?php __('Actions'); ?></h3>
     <ul>
         
         <?php if ($this->params['action'] != 'admin_index'): ?>

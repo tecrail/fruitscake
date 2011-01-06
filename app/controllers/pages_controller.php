@@ -59,4 +59,3 @@ class PagesController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 }
-?>
