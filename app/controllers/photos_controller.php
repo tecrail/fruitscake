@@ -1,14 +1,14 @@
 <?php
 class PhotosController extends AppController {
 
-	var $name = 'Photos';
+	public $name = 'Photos';
 
-	function index() {
+	public function admin_index() {
 		$this->Photo->recursive = 0;
 		$this->set('photos', $this->paginate());
 	}
 
-	function view($id = null) {
+	public function admin_view($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid photo', true));
 			$this->redirect(array('action' => 'index'));
@@ -16,7 +16,7 @@ class PhotosController extends AppController {
 		$this->set('photo', $this->Photo->read(null, $id));
 	}
 
-	function add() {
+	public function admin_add() {
 		if (!empty($this->data)) {
 			$this->Photo->create();
 			if ($this->Photo->save($this->data)) {
@@ -30,7 +30,7 @@ class PhotosController extends AppController {
 		$this->set(compact('photoGalleries'));
 	}
 
-	function edit($id = null) {
+	public function admin_edit($id = null) {
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid photo', true));
 			$this->redirect(array('action' => 'index'));
@@ -50,7 +50,7 @@ class PhotosController extends AppController {
 		$this->set(compact('photoGalleries'));
 	}
 
-	function delete($id = null) {
+	public function admin_delete($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid id for photo', true));
 			$this->redirect(array('action'=>'index'));
@@ -63,4 +63,3 @@ class PhotosController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 }
-?>

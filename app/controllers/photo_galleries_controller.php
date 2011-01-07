@@ -1,14 +1,14 @@
 <?php
 class PhotoGalleriesController extends AppController {
 
-	var $name = 'PhotoGalleries';
+	public $name = 'PhotoGalleries';
 
-	function index() {
+	public function admin_index() {
 		$this->PhotoGallery->recursive = 0;
 		$this->set('photoGalleries', $this->paginate());
 	}
 
-	function view($id = null) {
+	public function admin_view($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid photo gallery', true));
 			$this->redirect(array('action' => 'index'));
@@ -16,7 +16,7 @@ class PhotoGalleriesController extends AppController {
 		$this->set('photoGallery', $this->PhotoGallery->read(null, $id));
 	}
 
-	function add() {
+	public function admin_add() {
 		if (!empty($this->data)) {
 			$this->PhotoGallery->create();
 			if ($this->PhotoGallery->save($this->data)) {
@@ -28,7 +28,7 @@ class PhotoGalleriesController extends AppController {
 		}
 	}
 
-	function edit($id = null) {
+	public function admin_edit($id = null) {
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid photo gallery', true));
 			$this->redirect(array('action' => 'index'));
@@ -46,7 +46,7 @@ class PhotoGalleriesController extends AppController {
 		}
 	}
 
-	function delete($id = null) {
+	public function admin_delete($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid id for photo gallery', true));
 			$this->redirect(array('action'=>'index'));
@@ -59,4 +59,3 @@ class PhotoGalleriesController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 }
-?>
