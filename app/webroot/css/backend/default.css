@@ -510,3 +510,92 @@ div#menu_tree_header .right {
     width: 280px;
     text-align: center;
 }
+
+ul.gallery-list {
+    list-style: none;
+    margin:0;
+    padding: 10px 0;
+}
+
+ul.gallery-list > li {
+    margin: 0 10px 0 0;
+    list-style: none;
+    height: 190px;
+    float: left;
+    display: block;
+    width: 168px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+ul.gallery-list div.image {
+    border: 1px solid #004488;
+    padding: 4px;
+    background: #ffffff;
+    cursor: pointer;
+}
+ul.gallery-list div.image:hover {
+    border: 1px solid #0066CC;
+}
+ul.gallery-list div.image a {
+    display: block;
+    height: 100px;
+}
+ul.gallery-list div.gallery a ,
+ul.gallery-list div.title a,
+ul.gallery-list div.actions {
+    display: block;
+    padding: 2px 5px;
+    line-height: 16px;
+}
+ul.gallery-list div.gallery a {
+    text-transform: uppercase;
+}
+ul.gallery-list div.actions {
+    float: none;
+    width: auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+ul.gallery-list div.actions a {
+    width: 52px;
+    text-align: center;
+    display: block;
+    float: left;
+    text-decoration: none;
+}
+ul.gallery-list div.actions a:hover {
+    text-decoration: underline;
+}
+ul.gallery-list li.unpublished .image-link-div {
+    background-color: #ccc;
+}
+ul.gallery-list li.published .image-link-div {
+    background-color: #333;
+}
+ul.gallery-list li.unpublished div.image {
+    border: 1px solid #ccc;
+}
+ul.gallery-list a.image-link {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+}
+.imageInput img.image-preview {
+    display: block;
+    background: #fff;
+    padding: 4px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+}
+.imageInput div.file {
+    float: right;
+    padding: 25px 0;
+}
+.image-frame {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 4px;
+    margin: 10px 0;
+}

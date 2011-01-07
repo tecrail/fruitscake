@@ -1,16 +1,12 @@
 <div class="photos form">
-<?php echo $this->Form->create('Photo');?>
+<?php echo $this->Form->create('Photo', array('type' => 'file'));?>
 	<fieldset>
  		<legend><?php __('Add Photo'); ?></legend>
 	<?php
 		echo $this->Form->input('title');
 		echo $this->Form->input('description');
 		echo $this->Form->input('published');
-		echo $this->Form->input('image');
-		echo $this->Form->input('image_dir');
-		echo $this->Form->input('image_mimetype');
-		echo $this->Form->input('image_filesize');
-		echo $this->Form->input('image_filename');
+		echo $this->Backend->imageInput('image');
 		echo $this->Form->input('photo_gallery_id');
 	?>
 	</fieldset>

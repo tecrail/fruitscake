@@ -31,6 +31,24 @@ $(document).ready(function(){
             $(".search-fieldset").slideUp('fast');
         }
     });
+
+    $("ul.gallery-list > li.published a.image-link").css({
+        opacity: 0.7
+    });
+    $("ul.gallery-list > li.published").hover(function(){
+        $(this).find("a.image-link").fadeTo(300, 1);
+    }, function() {
+        $(this).find("a.image-link").fadeTo(300, 0.7);
+    });
+    
+    $("ul.gallery-list > li.unpublished a.image-link").css({
+        opacity: 0.4
+    });
+    $("ul.gallery-list > li.unpublished").hover(function(){
+        $(this).find("a.image-link").fadeTo(300, 1);
+    }, function() {
+        $(this).find("a.image-link").fadeTo(300, 0.4);
+    });
     
 });
 

@@ -196,7 +196,7 @@ Configure::write('Session.checkAgent', true);
  * CakePHP session IDs are also regenerated between requests if
  * 'Security.level' is set to 'high'.
  */
-Configure::write('Security.level', 'medium');
+Configure::write('Security.level', 'low');
 
 /**
  * A random string used in security hashing methods.

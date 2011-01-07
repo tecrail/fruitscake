@@ -4,7 +4,6 @@
  		<legend><?php __('Add Photo Gallery'); ?></legend>
 	<?php
 		echo $this->Form->input('title');
-		echo $this->Form->input('slug');
 		echo $this->Form->input('description');
 		echo $this->Form->input('published');
 	?>

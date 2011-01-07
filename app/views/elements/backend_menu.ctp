@@ -31,14 +31,20 @@
                 </li>
             </ul>
         </li>
-        <li class="">
-            <?php echo $this->Html->link(__('Pages', true), '#') ?>
+        <li>
+            <?php echo $this->Html->link(__('Photo gallery', true), array('controller' => 'photo_galleries', 'action' => 'index', 'admin' => true)) ?>
             <ul>
                 <li>
-                    <?php echo $this->Html->link(__('Pages index', true), '#') ?>
+                    <?php echo $this->Html->link(__('Photo galleries index', true), array('controller' => 'photo_galleries', 'action' => 'index', 'admin' => true)) ?>
                 </li>
                 <li class="">
-                    <?php echo $this->Html->link(__('Pages add', true), '#') ?>
+                    <?php echo $this->Html->link(__('Photo galleries add', true), array('controller' => 'photo_galleries', 'action' => 'add', 'admin' => true)) ?>
+                </li>
+                <li>
+                    <?php echo $this->Html->link(__('Photos index', true), array('controller' => 'photos', 'action' => 'index', 'admin' => true)) ?>
+                </li>
+                <li class="">
+                    <?php echo $this->Html->link(__('Photos add', true), array('controller' => 'photos', 'action' => 'add', 'admin' => true)) ?>
                 </li>
             </ul>
         </li>
