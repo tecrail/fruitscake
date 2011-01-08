@@ -9,6 +9,8 @@
 
         <?php endforeach; ?>
 
+        <li>&nbsp;</li>
+        
      </ul>
 
     <?php echo $this->element("backend/paging") ?>
