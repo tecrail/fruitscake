@@ -582,6 +582,14 @@ ul.gallery-list a.image-link {
     background-repeat: no-repeat;
 
 }
+ul.gallery-list li.clear {
+    float: none;
+    display: block;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    clear: both;
+}
 .imageInput img.image-preview {
     display: block;
     background: #fff;
@@ -598,4 +606,13 @@ ul.gallery-list a.image-link {
     border: 1px solid #ccc;
     padding: 4px;
     margin: 10px 0;
+}
+div.related {
+    padding: 0 14px;
+}
+div.related div.actions {
+    padding-left: 0;
+}
+div.related ul.gallery-list > li {
+    margin-right: 14px;
 }
