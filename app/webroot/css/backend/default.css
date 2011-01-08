@@ -616,3 +616,22 @@ div.related div.actions {
 div.related ul.gallery-list > li {
     margin-right: 14px;
 }
+div.index-image-link {
+    display: block;
+    background: #fff;
+    padding: 4px;
+    border: 1px solid #cccccc;
+    margin: 5px 0;
+    float: left;
+}
+div.index-image-link:hover {
+    border: 1px solid #0066CC;
+}
+div.index-image-link > a {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    width: 135px;
+    height: 80px;
+    display: block;
+}
