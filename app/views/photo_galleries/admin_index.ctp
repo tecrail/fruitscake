@@ -31,7 +31,7 @@
                     </div>
                 </td>
                 <td><?php echo $photoGallery['PhotoGallery']['title']; ?>&nbsp;</td>
-                <td style="text-align: center;"><?php echo $this->Backend->isActive($photoGallery['PhotoGallery']['published']); ?>&nbsp;</td>
+                <td class="published"><?php echo $this->Backend->isActive($photoGallery['PhotoGallery']['published']); ?>&nbsp;</td>
                 <td><?php echo $photoGallery['PhotoGallery']['modified']; ?>&nbsp;</td>
                 <td class="actions">
                     <?php echo $this->Html->link(__('View', true), array('action' => 'view', $photoGallery['PhotoGallery']['id'])); ?>

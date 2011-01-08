@@ -638,3 +638,9 @@ div.index-image-link > a {
 .sf-menu ul {
     width: 16em;
 }
+td.published {
+    text-align: center;
+}
+div.form, div.index, div.view {
+    border-left: 1px solid #CCCCCC;
+}

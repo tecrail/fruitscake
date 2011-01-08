@@ -32,6 +32,17 @@
             </ul>
         </li>
         <li>
+            <?php echo $this->Html->link(__('News', true), array('controller' => 'news', 'action' => 'index', 'admin' => true)) ?>
+            <ul>
+                <li>
+                    <?php echo $this->Html->link(__('News index', true), array('controller' => 'news', 'action' => 'index', 'admin' => true)) ?>
+                </li>
+                <li class="">
+                    <?php echo $this->Html->link(__('News add', true), array('controller' => 'news', 'action' => 'add', 'admin' => true)) ?>
+                </li>
+            </ul>
+        </li>
+        <li>
             <?php echo $this->Html->link(__('Photo gallery', true), array('controller' => 'photo_galleries', 'action' => 'index', 'admin' => true)) ?>
             <ul>
                 <li>

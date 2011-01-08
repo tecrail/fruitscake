@@ -21,7 +21,7 @@ class Ma09328k494kfdksdnvi8365hsd9KUdsk extends CakeMigration {
                     'date' => array('type' => 'date', 'null' => false, 'default' => "0000-00-00"),
                     'date_from' => array('type' => 'date', 'null' => false, 'default' => "0000-00-00"),
                     'date_to' => array('type' => 'date', 'null' => false, 'default' => "0000-00-00"),
-                    'language_id' => array('type' => 'integer', 'null' => false, 'default' => 0),
+                    'language_id' => array('type' => 'integer', 'null' => true, 'default' => NULL),
                     'created' => array('type' => 'datetime', 'null' => true, 'default' => NULL),
                     'modified' => array('type' => 'datetime', 'null' => true, 'default' => NULL),
                     'indexes' => array(
