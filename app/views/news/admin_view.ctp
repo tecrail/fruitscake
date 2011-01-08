@@ -63,14 +63,5 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit News', true), array('action' => 'edit', $news['News']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('Delete News', true), array('action' => 'delete', $news['News']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $news['News']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List News', true), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New News', true), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Languages', true), array('controller' => 'languages', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Language', true), array('controller' => 'languages', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+
+<?php echo $this->element("backend/left_navigator") ?>

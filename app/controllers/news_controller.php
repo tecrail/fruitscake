@@ -1,14 +1,14 @@
 <?php
 class NewsController extends AppController {
 
-	var $name = 'News';
+	public $name = 'News';
 
-	function index() {
+	public function admin_index() {
 		$this->News->recursive = 0;
 		$this->set('news', $this->paginate());
 	}
 
-	function view($id = null) {
+	public function admin_view($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid news', true));
 			$this->redirect(array('action' => 'index'));
@@ -16,7 +16,7 @@ class NewsController extends AppController {
 		$this->set('news', $this->News->read(null, $id));
 	}
 
-	function add() {
+	public function admin_add() {
 		if (!empty($this->data)) {
 			$this->News->create();
 			if ($this->News->save($this->data)) {
@@ -30,7 +30,7 @@ class NewsController extends AppController {
 		$this->set(compact('languages'));
 	}
 
-	function edit($id = null) {
+	public function admin_edit($id = null) {
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid news', true));
 			$this->redirect(array('action' => 'index'));
@@ -50,7 +50,7 @@ class NewsController extends AppController {
 		$this->set(compact('languages'));
 	}
 
-	function delete($id = null) {
+	public function admin_delete($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid id for news', true));
 			$this->redirect(array('action'=>'index'));
@@ -63,4 +63,3 @@ class NewsController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 }
-?>
