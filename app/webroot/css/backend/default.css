@@ -635,3 +635,6 @@ div.index-image-link > a {
     height: 80px;
     display: block;
 }
+.sf-menu ul {
+    width: 18em;
+}
