@@ -644,3 +644,8 @@ td.published {
 div.form, div.index, div.view {
     border-left: 1px solid #CCCCCC;
 }
+a.avatar-username {
+    display: block;
+    padding: 5px 20px 5px 38px;
+    background: url(/img/backend/avatar.png) 0px 50% no-repeat;
+}
