@@ -49,6 +49,17 @@ $(document).ready(function(){
     }, function() {
         $(this).find("a.image-link").fadeTo(300, 0.4);
     });
+
+    $(".index-image-link a").css({
+        opacity: 0.8
+    });
+    $("tr.index-image-tr").hover(function(){
+//        alert('hover');
+        $(this).find(".index-image-link > a").fadeTo(300, 1);
+    }, function() {
+//        alert('unhover');
+        $(this).find(".index-image-link > a").fadeTo(300, 0.8);
+    });
     
 });
 

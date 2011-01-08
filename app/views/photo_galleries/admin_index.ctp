@@ -12,10 +12,10 @@
         foreach ($photoGalleries as $photoGallery):
             $class = null;
             if ($i++ % 2 == 0) {
-                $class = ' class="altrow"';
+                $class = ' altrow';
             }
         ?>
-            <tr<?php echo $class; ?>>
+            <tr class="<?php echo $class; ?> index-image-tr">
                 <td>
                     <div class="index-image-link">
                     <?php
@@ -23,7 +23,7 @@
                                 array('action' => 'view', $photoGallery['PhotoGallery']['id']),
                                 array(
                                     'style' => "background-image: url(/img/photos/thumb.{$photoGallery['Photo'][0]['image']});",
-                                    'class' => 'image-link',
+                                    'class' => 'image-link ' . $photoGallery['PhotoGallery']['published'] ? "published" : "unpublished",
                                     'title' => $photoGallery['PhotoGallery']['title']
                                 )
                         )
