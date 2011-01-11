@@ -2,8 +2,9 @@
 
 class AppController extends Controller {
 
-    public $helpers = array('Html', 'Form', 'Session', 'Time', 'Number', 'Text', 'Utils.Gravatar', 'Backend');
+    public $helpers = array('Html', 'Form', 'Session', 'Time', 'Number', 'Text', 'Utils.Gravatar', 'Backend', 'Frontend');
     public $components = array('Auth', 'Session', 'Email', 'Cookie', 'Search.Prg', 'DebugKit.Toolbar');
+    public $uses = array('Menu');
     protected $_pageTitle = null;
     public $presetVars = null;
 
@@ -47,7 +48,22 @@ class AppController extends Controller {
             $this->layout = 'backend/default';
             $this->_pageTitle = __('backend', true);
         } else {
+            $this->_getMenus();
             $this->layout = 'default';
+        }
+    }
+
+    protected function _getMenus() {
+        $this->Menu->recursive = -1;
+        $menus = $this->Menu->find('all', array('conditions' => "Menu.menu_id = '' OR Menu.menu_id IS NULL"));
+        foreach ($menus as $menu) {
+            $this->set(
+                    Inflector::variable($menu['Menu']['name']) . "FCMenu",
+                    array(
+                        'Menu' => $menu['Menu'],
+                        'Children' => $this->Menu->find('all', array('conditions' => array('Menu.menu_id' => $menu['Menu']['id'])))
+                    )
+            );
         }
     }
 
