@@ -13,7 +13,13 @@
         <title><?php echo $title_for_layout; ?></title>
     </head>
     <body>
-aaaaaaaaaaaaaaaaaaaa
+
+        <div id="header">
+
+            <?php echo $this->Frontend->menuList($mainFCMenu) ?>
+
+        </div>
+
         <?php echo $content_for_layout ?>
 
     </body>
