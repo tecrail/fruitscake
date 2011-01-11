@@ -1,0 +1,1 @@
+<h1>FruitsCake CMS!</h1>
