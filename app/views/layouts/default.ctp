@@ -13,7 +13,7 @@
         <title><?php echo $title_for_layout; ?></title>
     </head>
     <body>
-
+aaaaaaaaaaaaaaaaaaaa
         <?php echo $content_for_layout ?>
 
     </body>
