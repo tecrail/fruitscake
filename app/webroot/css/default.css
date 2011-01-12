@@ -2,6 +2,15 @@
 html, body {
 }
 
+.clear {
+    clear: both;
+    display: block;
+    float: none;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -21,4 +30,24 @@ ul, ol {
 
 div#header {
     background: #191919;
+    color: #ffffff;
+}
+
+div#header a {
+    color: #ffffff;
+}
+
+div.center {
+    width: 960px;
+    margin: 0 auto;
+}
+
+div#header ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+div#header ul > li {
+    float: left;
 }

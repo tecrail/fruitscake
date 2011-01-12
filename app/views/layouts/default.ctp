@@ -16,7 +16,9 @@
 
         <div id="header">
 
-            <?php echo $this->Frontend->menuList($mainFCMenu) ?>
+            <div class="center">
+                <?php echo $this->Frontend->menuList($mainFCMenu) ?>
+            </div>
 
         </div>
 
