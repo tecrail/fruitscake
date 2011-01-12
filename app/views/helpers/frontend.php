@@ -12,6 +12,7 @@ class FrontendHelper extends AppHelper {
         foreach ($menu['Children'] as $child) {
             $result.= "<li id='FCMenu{$child['Menu']['id']}' class=''>{$this->Html->link($child['Menu']['name'], empty($child['Menu']['url']) ? "#" : $child['Menu']['url'] )}</li>";
         }
+        $result.= "<li class='clear'>&nbsp;</li>";
         $result.= "</ul>";
 
         return $this->output($result);
