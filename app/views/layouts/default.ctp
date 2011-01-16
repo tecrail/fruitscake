@@ -24,12 +24,12 @@
 
                 <div id="banners">
 
-                    <div id="logo">
-
+                    <div class="overlay">
+                        <div class="logo_bg"><?php echo $this->Html->link(" ", "/", array('id' => 'logo')) ?></div>
                     </div>
 
                     <div id="slideshow">
-                        <?php echo $this->Html->image("slide_0.jpg") ?>
+                        <?php echo $this->Html->image("banner00.jpg") ?>
                     </div>
 
                 </div>
