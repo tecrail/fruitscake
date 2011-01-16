@@ -2,13 +2,8 @@
 html, body {
 }
 
-.clear {
-    clear: both;
-    display: block;
-    float: none;
-    height: 0;
-    line-height: 0;
-    overflow: hidden;
+* {
+    outline: none;
 }
 
 body {
@@ -26,6 +21,18 @@ body {
 ul, ol {
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+a {
+    color: #91BF04;
+}
+a:hover {
+    text-decoration: none;
 }
 
 div#header {
@@ -46,8 +53,107 @@ div#header ul {
     list-style: none;
     margin: 0;
     padding: 10px 0;
+    display: block;
 }
-
 div#header ul > li {
     float: left;
+    display: block;
+    padding-right: 45px;
+}
+div#header ul a {
+    display: block;
+    padding: 0px;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 50px;
+    color: #747474;
+}
+div#header ul a:hover {
+    /*    color: #ffffff;*/
+}
+div#header .menu {
+    margin-bottom: 5px;
+    border-bottom: 4px solid #ffffff;
+}
+div#header {
+    padding-bottom: 12px;
+}
+div#container {
+    background: url(/img/content_bg.png) 0 0 repeat-x;
+}
+div#navigator {
+    float: left;
+    padding: 35px 23px 30px 29px;
+    width: 198px;
+}
+div#content {
+    width: 671px;
+    margin-right: 39px;
+    background: #ffffff;
+    float: right;
+    position: relative;
+    margin: -52px 39px -56px 0;
+}
+div#content div.top {
+    min-height: 200px;
+    padding: 58px 58px 40px 58px;
+}
+div#content div.bottom {
+    background: #F2F2F2;
+    padding: 58px 58px 40px 58px;
+}
+
+div#footer {
+    background: #191919;
+    color: #ffffff;
+}
+div#footer div.center {
+    padding: 25px 30px;
+}
+div#footer div.center a {
+
+}
+div#navigator ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div#navigator ul > li {
+    display: block;
+    margin-bottom: 3px;
+    padding-left: 8px;
+    background-color: #e6e6e6;
+}
+div#navigator ul a {
+    color: #1A1A1A;
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 15px;
+    padding-left: 5px;
+}
+div#navigator ul > li:hover {
+    background: url(/img/lm_bg_h.png)   ;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    color: #e6e6e6;
+}
+div#navigator ul > li:hover a {
+    background: #91BF04 ;
+    color: #e6e6e6;
+}
+
+
+
+.clear,
+div#header ul > li.clear,
+div#navigator ul > li.clear {
+    clear: both;
+    display: block;
+    float: none;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
 }
