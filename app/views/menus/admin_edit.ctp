@@ -3,14 +3,7 @@
     <?php echo $this->Form->create('Menu'); ?>
     <fieldset>
         <legend><?php __d('menus', 'Edit Menu'); ?></legend>
-        <?php
-        echo $this->Form->input('id');
-        echo $this->Form->input('menu_id', array('empty' => false));
-        echo $this->Form->input('name');
-        echo $this->Form->input('description');
-//        echo $this->Form->input('url');
-        echo $this->Form->input('target', array('type' => 'select', 'options' => array("_self" => __("Current window", true), '_blank' => __("New window", true))));
-        ?>
+        <?php echo $this->element( empty($this->data['Menu']['menu_id']) ? "backend/menus/edit_root_menu" : "backend/menus/edit_menu" ); ?>
     </fieldset>
     <?php echo $this->Form->end(__d('menus', 'Submit', true)); ?>
 

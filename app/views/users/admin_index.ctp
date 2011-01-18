@@ -8,7 +8,6 @@
         <tr>
             <th><?php echo $paginator->sort('username'); ?></th>
             <th><?php echo $paginator->sort('email'); ?></th>
-            <th><?php echo $paginator->sort('created'); ?></th>
             <th><?php echo $paginator->sort('modified'); ?></th>
             <th class="actions"><?php __d('users', 'Actions'); ?></th>
         </tr>
@@ -26,9 +25,6 @@
                 </td>
                 <td>
                     <?php echo $user[$model]['email']; ?>
-                </td>
-                <td>
-                    <?php echo $user[$model]['created']; ?>
                 </td>
                 <td>
                     <?php echo $user[$model]['modified']; ?>

@@ -19,10 +19,11 @@
                 <td>
                     <div class="index-image-link">
                     <?php
+                        $background_image = (isset($photoGallery['Photo'][0]['image']) && !empty($photoGallery['Photo'][0]['image'])) ? "/img/photos/thumb.{$photoGallery['Photo'][0]['image']}" : "/img/backend/missing.png";
                         echo $this->Html->link(" ",
                                 array('action' => 'view', $photoGallery['PhotoGallery']['id']),
                                 array(
-                                    'style' => "background-image: url(/img/photos/thumb.{$photoGallery['Photo'][0]['image']});",
+                                    'style' => "background-image: url({$background_image});",
                                     'class' => 'image-link ' . $photoGallery['PhotoGallery']['published'] ? "published" : "unpublished",
                                     'title' => $photoGallery['PhotoGallery']['title']
                                 )

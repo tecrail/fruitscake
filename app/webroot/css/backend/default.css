@@ -106,7 +106,7 @@ fieldset legend {
     padding-right: 2px;
 }
 
-label {
+label, input[type=submit] {
     cursor: pointer;
 }
 /* misc */
@@ -558,6 +558,18 @@ ul.gallery-list div.actions {
     display: block;
     padding: 2px 5px;
     line-height: 16px;
+}
+ul.gallery-list div.actions div.left,
+ul.gallery-list div.actions div.right {
+    width: 50%;
+    text-align: center;
+}
+ul.gallery-list div.actions div.left a,
+ul.gallery-list div.actions div.right a {
+    display: block;
+    text-align: center;
+    width: auto;
+    float: none;
 }
 ul.gallery-list div.gallery a {
     text-transform: uppercase;
