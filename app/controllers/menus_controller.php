@@ -42,12 +42,50 @@ class MenusController extends AppController {
         if (!empty($this->data) && !empty($menu_id)) {
             $this->data['Menu']['menu_id'] = $menu_id;
         }
-        $menus = $this->Menu->find('list');
+        $menus = $this->Menu->find('list', array('conditions' => "menu_id = '' OR menu_id IS NULL"));
         $this->set(compact('menus'));
     }
 
 
     public function admin_edit($id = null) {
+        try {
+            $result = $this->Menu->edit($id, $this->data);
+            if ($result === true) {
+                $this->Session->setFlash(__('Menu saved', true));
+                $this->redirect(array('action' => 'view', $this->Menu->data['Menu']['slug']));
+            } else {
+                $this->data = $result;
+            }
+        } catch (OutOfBoundsException $e) {
+            $this->Session->setFlash($e->getMessage());
+            $this->redirect('/');
+        }
+        $menus = $this->Menu->find('list', array('conditions' => "menu_id = '' OR menu_id IS NULL"));
+        $this->set(compact('menus'));
+    }
+
+        public function admin_add_parent($menu_id = null) {
+        try {
+            $result = $this->Menu->add($this->data);
+            if ($result === true) {
+                $this->Session->setFlash(__('The menu has been saved', true));
+                $this->redirect(array('action' => 'index'));
+            }
+        } catch (OutOfBoundsException $e) {
+            $this->Session->setFlash($e->getMessage());
+        } catch (Exception $e) {
+            $this->Session->setFlash($e->getMessage());
+            $this->redirect(array('action' => 'index'));
+        }
+        if (!empty($this->data) && !empty($menu_id)) {
+            $this->data['Menu']['menu_id'] = $menu_id;
+        }
+        $menus = $this->Menu->find('list');
+        $this->set(compact('menus'));
+    }
+
+
+    public function admin_edit_parent($id = null) {
         try {
             $result = $this->Menu->edit($id, $this->data);
             if ($result === true) {

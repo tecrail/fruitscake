@@ -7,10 +7,9 @@
         <meta name="keywords" content=""/>
         <meta name="author" content=""/>
 
-        <?php //echo $this->Html->css(array('jquery.contextmenu', 'jquery.treeview', 'basic')); ?>
         <?php echo $this->Html->css(array('backend/cake.generic', 'backend/superfish', 'backend/default', 'backend/css.menu')); ?>
         <?php echo $this->Html->script(array('jquery-1.4.4.min', 'backend/hoverIntent', 'backend/jquery.bgiframe.min', 'backend/superfish', 'backend/supersubs', 'backend/application')); ?>
-        <?php //echo $this->Html->script(array('backend/jquery.contextmenu', 'backend/jquery.treeview.async', 'backend/jquery.treeview.pack')); ?>
+        
         <?php echo $scripts_for_layout ?>
         
         <title><?php echo $title_for_layout ?></title>
@@ -23,7 +22,7 @@
                     <div class="left">Backend :: <?php echo $this->Html->link(Configure::read('App.baseTitle'), '/', array('target' => '_blank')) ?></div>
                     <div class="right"><?php echo $this->Html->link('Logout', '/admin/users/logout') ?></div>
                     <div class="clear">&nbsp;</div>
-                    <?php echo $this->element('backend_menu'); ?>
+                    <?php echo $this->element('backend/main_navigator'); ?>
                     <div class="clear">&nbsp;</div>
                 </div>
 

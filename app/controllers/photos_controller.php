@@ -27,6 +27,10 @@ class PhotosController extends AppController {
 			}
 		}
 		$photoGalleries = $this->Photo->PhotoGallery->find('list');
+                if(empty($photoGalleries)) {
+                    $this->Session->setFlash(__('You have to create a photo gallery first', true));
+                    $this->redirect(array('controller' => 'photo_galleries', 'action'=>'add'));
+                }
 		$this->set(compact('photoGalleries'));
 	}
 

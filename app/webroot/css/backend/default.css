@@ -106,6 +106,9 @@ fieldset legend {
     padding-right: 2px;
 }
 
+label {
+    cursor: pointer;
+}
 /* misc */
 .clearer, .clear {
     clear: both;
@@ -490,6 +493,14 @@ ul#menu_tree a.menu-tree-link {
     padding: 10px 30px;
     background: url(/img/backend/page.png) 0% 50% no-repeat;
 }
+
+ul#menu_tree a.parent_menu {
+    display: block;
+    float: left;
+    padding: 10px 30px;
+    background: url(/img/backend/li2.png) 10% 50% no-repeat;
+}
+
 ul#menu_tree ul a.menu-tree-link {
     margin-left: 30px;
 }
@@ -648,4 +659,9 @@ a.avatar-username {
     display: block;
     padding: 5px 20px 5px 38px;
     background: url(/img/backend/avatar.png) 0px 50% no-repeat;
+}
+a.listing {
+/*    display: block;*/
+    background: url(/img/backend/li2.png) 5px 50% no-repeat;
+    padding-left: 22px;
 }

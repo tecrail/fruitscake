@@ -17,7 +17,7 @@
             }
         ?>
             <tr<?php echo $class; ?>>
-                <td><?php echo $news['News']['title']; ?>&nbsp;</td>
+                <td><?php echo$this->Backend->actionLink( $news['News']['title'], array('controller' => 'news', 'action' => 'edit', $news['News']['id']), array('class' => 'listing')); ?>&nbsp;</td>
                 <td class="published"><?php echo $this->Backend->isActive($news['News']['published']); ?>&nbsp;</td>
                 <td><?php echo $news['News']['date']; ?>&nbsp;</td>
             <td><?php echo $news['News']['modified']; ?>&nbsp;</td>

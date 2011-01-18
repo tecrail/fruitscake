@@ -33,7 +33,7 @@ class AppController extends Controller {
 
     protected function _setupAuthComponent() {
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login', 'admin' => true);
-        $this->Auth->loginRedirect = array('controller' => 'users', 'action' => 'dashboard', 'admin' => true);
+        $this->Auth->loginRedirect = array('controller' => 'menus', 'action' => 'index', 'admin' => true);
         $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login', 'admin' => true);
         $this->Auth->fields = array('username' => 'email', 'password' => 'passwd');
     }
