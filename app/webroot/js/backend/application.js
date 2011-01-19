@@ -60,6 +60,8 @@ $(document).ready(function(){
 //        alert('unhover');
         $(this).find(".index-image-link > a").fadeTo(300, 0.8);
     });
+
+    $("select, input:checkbox, input:radio, input:file, input, textarea").uniform();
     
 });
 

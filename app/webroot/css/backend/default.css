@@ -106,7 +106,8 @@ fieldset legend {
     padding-right: 2px;
 }
 
-label, input[type=submit] {
+label, input[type=submit], div.selector, div.checker, div.checker span,
+div.selector span,  div.selector select {
     cursor: pointer;
 }
 /* misc */
