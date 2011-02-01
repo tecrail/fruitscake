@@ -46,6 +46,23 @@
             </ul>
         </li>
         <li class="">
+            <?php echo $this->Html->link(__('Newsletters', true), array('controller' => 'newsletters', 'action' => 'index', 'admin' => true)) ?>
+            <ul>
+                <li>
+                    <?php echo $this->Html->link(__('Newsletters index', true), array('controller' => 'newsletters', 'action' => 'index', 'admin' => true)) ?>
+                </li>
+                <li class="">
+                    <?php echo $this->Html->link(__('Newsletters add', true), array('controller' => 'newsletters', 'action' => 'add', 'admin' => true)) ?>
+                </li>
+                <li>
+                    <?php echo $this->Html->link(__('Newsletter Users index', true), array('controller' => 'newsletter_users', 'action' => 'index', 'admin' => true)) ?>
+                </li>
+                <li class="">
+                    <?php echo $this->Html->link(__('Newsletter Users add', true), array('controller' => 'newsletter_users', 'action' => 'add', 'admin' => true)) ?>
+                </li>
+            </ul>
+        </li>
+        <li class="">
             <?php echo $this->Html->link(__('Users', true), array('controller' => 'users', 'action' => 'index', 'admin' => true)) ?>
             <ul>
                 <li>
@@ -53,6 +70,17 @@
                 </li>
                 <li class="">
                     <?php echo $this->Html->link(__('Users add', true), array('controller' => 'users', 'action' => 'add', 'admin' => true)) ?>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <?php echo $this->Html->link(__('Configurations', true), array('controller' => 'variables', 'action' => 'index', 'admin' => true)) ?>
+            <ul>
+                <li>
+                    <?php echo $this->Html->link(__('Variables index', true), array('controller' => 'variables', 'action' => 'index', 'admin' => true)) ?>
+                </li>
+                <li>
+                    <?php echo $this->Html->link(__('Languages index', true), array('controller' => 'languages', 'action' => 'index', 'admin' => true)) ?>
                 </li>
             </ul>
         </li>

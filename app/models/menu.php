@@ -23,12 +23,16 @@ class Menu extends AppModel {
         )
     );
     public $validate = array();
+    public $availableMenus = array();
+
+
 
     public function __construct($id = false, $table = null, $ds = null) {
         parent::__construct($id, $table, $ds);
         $this->validate = array(
             'name' => array(
-                'required' => array('rule' => array('notEmpty'), 'required' => true, 'allowEmpty' => false, 'message' => __d('categories', 'Please enter a category name', true))));
+                'required' => array('rule' => array('notEmpty'), 'required' => true, 'allowEmpty' => false, 'message' => __d('menus', 'Please enter a menu name', true))));
+
     }
 
     public function add($data = null) {
@@ -39,7 +43,7 @@ class Menu extends AppModel {
                 $this->data = array_merge($data, $result);
                 return true;
             } else {
-                throw new OutOfBoundsException(__d('categories', 'Could not save the category, please check your inputs.', true));
+                throw new OutOfBoundsException(__d('menus', 'Could not save the menu, please check your inputs.', true));
             }
             return $return;
         }
@@ -72,9 +76,9 @@ class Menu extends AppModel {
     }
 
     /**
-     * Returns the record of a Category.
+     * Returns the record of a Menu.
      *
-     * @param string $slug, category slug.
+     * @param string $slug, menu slug.
      * @return array
      * @throws OutOfBoundsException If the element does not exists
      */
@@ -96,7 +100,7 @@ class Menu extends AppModel {
     /**
      * Validates the deletion
      *
-     * @param string $id, category id 
+     * @param string $id, menu id
      * @param string $userId, user id
      * @param array $data, controller post data usually $this->data
      * @return boolean True on success

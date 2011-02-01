@@ -9,6 +9,8 @@ class Memri39KJ38KJdslksdfLKW49SLKlk49s extends CakeMigration {
                 'languages' => array(
                     'id' => array('type' => 'integer', 'null' => false, 'default' => NULL, 'key' => 'primary'),
                     'title' => array('type' => 'string', 'null' => false, 'default' => NULL),
+                    'locale' => array('type' => 'string', 'null' => false, 'default' => NULL),
+                    'slug' => array('type' => 'string', 'null' => false, 'default' => NULL),
                     'published' => array('type' => 'boolean', 'null' => false, 'default' => false),
                     'created' => array('type' => 'datetime', 'null' => true, 'default' => NULL),
                     'modified' => array('type' => 'datetime', 'null' => true, 'default' => NULL),

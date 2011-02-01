@@ -36,7 +36,7 @@ class BackendHelper extends AppHelper {
 
 
         $output.= $this->Form->input($fieldName, $options);
-        
+
         if ($preview) {
             $output.= "<div class=\"preview_image\">" . ($previewLabel ? $previewLabel : __('Current image', true) . ':') . "<br/>" . $this->Html->image($preview['url'], array('class' => 'image-preview')) . "</div>";
         }
@@ -48,6 +48,43 @@ class BackendHelper extends AppHelper {
         $output.= '</fieldset>';
 
         return $this->output($output);
+    }
+
+    public function fileInput($fieldName = null, $options = array()) {
+        $defaultOptions = array('type' => 'file', 'preview' => false, 'delete'  => false);
+        $options = array_merge($defaultOptions, $options);
+
+        $options['type'] = 'file';
+        $options['label'] = false;
+        $deletable = $options['delete'] ? true : false;
+        $preview = $options['preview'] ? $options['preview'] : false;
+        $previewLabel = false;
+        if ($preview && isset($preview['preview']) && !empty($preview['preview'])) {
+            $previewLabel = $preview['preview'];
+        }
+
+        $output = '';
+        $output.= "<fieldset class='imageInput fileInput'>";
+        $output.= "<legend>" . (isset($options['legend']) ? $options['legend'] : __(Inflector::humanize($fieldName), true)) . "</legend>";
+
+
+        $output.= $this->Form->input($fieldName, $options);
+
+        if ($preview) {
+            $output.= "<div class=\"preview_file\">" . ($previewLabel ? $previewLabel : __('Current attachment', true) . ':') . "<br/>" . $this->Html->link($preview['url'], $preview['url'], array('class' => 'file-preview')) . "</div>";
+        }
+
+        if ($deletable) {
+            $output.= $this->Form->input("delete_{$fieldName}", array('label' => __('Delete', true), 'type' => 'checkbox'));
+        }
+
+        $output.= '</fieldset>';
+
+        return $this->output($output);
+    }
+
+    public function htmlEditor($fieldName, $options = array()) {
+        return $this->output($this->Form->input($fieldName, $options));
     }
 
 }

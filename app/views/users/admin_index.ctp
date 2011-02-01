@@ -1,15 +1,15 @@
 <div class="users index">
-    <h2><?php __d('users', 'Users'); ?></h2>
+    <h2><?php __('Users'); ?></h2>
 
     <?php echo $this->element('backend/search') ?>
 
     <?php echo $this->element('paging'); ?>
     <table cellpadding="0" cellspacing="0">
         <tr>
-            <th><?php echo $paginator->sort('username'); ?></th>
-            <th><?php echo $paginator->sort('email'); ?></th>
-            <th><?php echo $paginator->sort('modified'); ?></th>
-            <th class="actions"><?php __d('users', 'Actions'); ?></th>
+            <th><?php echo $this->Paginator->sort('username'); ?></th>
+            <th><?php echo $this->Paginator->sort('email'); ?></th>
+            <th><?php echo $this->Paginator->sort('modified'); ?></th>
+            <th class="actions"><?php __('Actions'); ?></th>
         </tr>
         <?php
         $i = 0;
@@ -30,9 +30,9 @@
                     <?php echo $user[$model]['modified']; ?>
                 </td>
                 <td class="actions">
-                    <?php echo $this->Backend->actionLink(__d('users', 'View', true), array('action' => 'view', $user[$model]['id'])); ?>
-                    <?php echo $this->Backend->actionLink(__d('users', 'Edit', true), array('action' => 'edit', $user[$model]['id'])); ?>
-                    <?php echo $this->Backend->actionLink(__d('users', 'Delete', true), array('action' => 'delete', $user[$model]['id']), null, sprintf(__d('users', 'Are you sure you want to delete # %s?', true), $user[$model]['id'])); ?>
+                    <?php echo $this->Backend->actionLink(__('View', true), array('action' => 'view', $user[$model]['id'])); ?>
+                    <?php echo $this->Backend->actionLink(__('Edit', true), array('action' => 'edit', $user[$model]['id'])); ?>
+                    <?php echo $this->Backend->actionLink(__('Delete', true), array('action' => 'delete', $user[$model]['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $user[$model]['id'])); ?>
                 </td>
             </tr>
         <?php endforeach; ?>

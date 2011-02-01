@@ -1,12 +1,12 @@
 <?php
-if (empty($Paginator) || !is_a($Paginator, 'PaginatorHelper')) {
-	$Paginator = $this->Paginator;
+if (empty($this->Paginator) || !is_a($this->Paginator, 'PaginatorHelper')) {
+	$this->Paginator = $this->Paginator;
 }
 ?>
-<?php if ($Paginator->hasNext() || $Paginator->hasPrev()): ?>
+<?php if ($this->Paginator->hasNext() || $this->Paginator->hasPrev()): ?>
 	<div class="paging">
-		<?php echo $Paginator->prev('< prev', array(), null, array('class' => 'disabled'));?>
-		<?php echo $Paginator->numbers(array('separator' => ' '));?>
-		<?php echo $Paginator->next('next >', array(), null, array('class' => 'disabled'));?>
+		<?php echo $this->Paginator->prev('< prev', array(), null, array('class' => 'disabled'));?>
+		<?php echo $this->Paginator->numbers(array('separator' => ' '));?>
+		<?php echo $this->Paginator->next('next >', array(), null, array('class' => 'disabled'));?>
 	</div>
 <?php endif; ?>

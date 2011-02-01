@@ -36,18 +36,18 @@ $(document).ready(function(){
         opacity: 0.7
     });
     $("ul.gallery-list > li.published").hover(function(){
-        $(this).find("a.image-link").fadeTo(300, 1);
+        $(this).find("a.image-link").stop(false, true).fadeTo(300, 1);
     }, function() {
-        $(this).find("a.image-link").fadeTo(300, 0.7);
+        $(this).find("a.image-link").stop(false, true).fadeTo(300, 0.7);
     });
     
     $("ul.gallery-list > li.unpublished a.image-link").css({
         opacity: 0.4
     });
     $("ul.gallery-list > li.unpublished").hover(function(){
-        $(this).find("a.image-link").fadeTo(300, 1);
+        $(this).find("a.image-link").stop(false, true).fadeTo(300, 1);
     }, function() {
-        $(this).find("a.image-link").fadeTo(300, 0.4);
+        $(this).find("a.image-link").stop(false, true).fadeTo(300, 0.4);
     });
 
     $(".index-image-link a").css({
@@ -55,10 +55,10 @@ $(document).ready(function(){
     });
     $("tr.index-image-tr").hover(function(){
 //        alert('hover');
-        $(this).find(".index-image-link > a").fadeTo(300, 1);
+        $(this).find(".index-image-link > a").stop(false, true).fadeTo(300, 1);
     }, function() {
 //        alert('unhover');
-        $(this).find(".index-image-link > a").fadeTo(300, 0.8);
+        $(this).find(".index-image-link > a").stop(false, true).fadeTo(300, 0.8);
     });
 
     $("select, input:checkbox, input:radio, input:file, input, textarea").uniform();

@@ -10,7 +10,7 @@
         <div class="clear">&nbsp;</div>
     </div>
 
-    <?php echo $this->Tree->generate($menus, array('element' => 'backend/tree_item', 'class' => 'menu_tree', 'id' => 'menu_tree')); ?>
+    <?php echo $this->Tree->generate($menus, array('element' => 'backend/menus/tree_item', 'class' => 'menu_tree', 'id' => 'menu_tree')); ?>
 
 </div>
 
