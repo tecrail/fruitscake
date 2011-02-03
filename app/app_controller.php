@@ -30,7 +30,7 @@ class AppController extends Controller {
             $this->cakeError('error404');
         }
     }
-
+    
     protected function _setupAuthComponent() {
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login', 'admin' => true);
         $this->Auth->loginRedirect = array('controller' => 'menus', 'action' => 'index', 'admin' => true);

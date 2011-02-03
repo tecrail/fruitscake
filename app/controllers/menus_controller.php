@@ -8,42 +8,42 @@ class MenusController extends AppController {
 
     public function  __construct() {
         parent::__construct();
-        $this->_availableMenus = array(
-            'Page' => array(
-                array(
-                    'url' => array('controler' => 'pages', 'action' => 'view'),
-                    'label' => __('Show page', true),
-                    'slaggable' => true
-                )
-            ),
-            'News' => array(
-                array(
-                    'url' => array('controler' => 'news', 'action' => 'index'),
-                    'label' => __('List news', true)
-                ),
-                array(
-                    'url' => array('controler' => 'news', 'action' => 'view'),
-                    'label' => __('Show news', true),
-                    'slaggable' => true
-                ),
-                array(
-                    'url' => array('controler' => 'news', 'action' => 'feed'),
-                    'label' => __('Feed', true)
-                )
-            ),
-            'PhotoGallery' => array(
-                array(
-                    'url' => array('controler' => 'photo_galleries', 'action' => 'index'),
-                    'label' => __('Show photo gallery', true),
-                    'slaggable' => true
-                ),
-                array(
-                    'url' => array('controler' => 'photo_galleries', 'action' => 'view'),
-                    'label' => __('Show photo', true),
-                    'slaggable' => true
-                )
-            )
-        );
+//        $this->_availableMenus = array(
+//            'Page' => array(
+//                array(
+//                    'url' => array('controler' => 'pages', 'action' => 'view'),
+//                    'label' => __('Show page', true),
+//                    'slaggable' => true
+//                )
+//            ),
+//            'News' => array(
+//                array(
+//                    'url' => array('controler' => 'news', 'action' => 'index'),
+//                    'label' => __('List news', true)
+//                ),
+//                array(
+//                    'url' => array('controler' => 'news', 'action' => 'view'),
+//                    'label' => __('Show news', true),
+//                    'slaggable' => true
+//                ),
+//                array(
+//                    'url' => array('controler' => 'news', 'action' => 'feed'),
+//                    'label' => __('Feed', true)
+//                )
+//            ),
+//            'PhotoGallery' => array(
+//                array(
+//                    'url' => array('controler' => 'photo_galleries', 'action' => 'index'),
+//                    'label' => __('Show photo gallery', true),
+//                    'slaggable' => true
+//                ),
+//                array(
+//                    'url' => array('controler' => 'photo_galleries', 'action' => 'view'),
+//                    'label' => __('Show photo', true),
+//                    'slaggable' => true
+//                )
+//            )
+//        );
     }
 
 
@@ -86,7 +86,7 @@ class MenusController extends AppController {
         }
         $menus = $this->Menu->find('list', array('conditions' => "menu_id = '' OR menu_id IS NULL"));
         $this->set(compact('menus'));
-        $this->set('availableMenus', $this->_availableMenus);
+//        $this->set('availableMenus', $this->_availableMenus);
     }
 
 
@@ -105,7 +105,7 @@ class MenusController extends AppController {
         }
         $menus = $this->Menu->find('list', array('conditions' => "menu_id = '' OR menu_id IS NULL"));
         $this->set(compact('menus'));
-        $this->set('availableMenus', $this->_availableMenus);
+//        $this->set('availableMenus', $this->_availableMenus);
     }
 
         public function admin_add_parent($menu_id = null) {

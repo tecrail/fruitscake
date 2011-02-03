@@ -662,3 +662,35 @@ ul.urlBuilderList li a {
 ul.urlBuilderList li a:hover {
     background: #fff;
 }
+.overlay {
+    height: 0;
+    overflow: visible;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+a.close_url_builder {
+    float: right;
+    position: relative;
+    display: block;
+    top: -23px;
+    right: -18px;
+}
+div#urlBuilderSpinner {
+    position: relative;
+    display: block;
+    background: url(/img/backend/spinner.gif) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    left: 250px;
+    top: 25px;
+}
+.urlBuilderBox {
+    display: none;
+}
+fieldset.urlBuilder {
+    height: 130px;
+}
+.urlBuilderBox .box {
+    margin: 0;
+}
