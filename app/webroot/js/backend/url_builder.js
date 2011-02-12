@@ -48,7 +48,7 @@ $(document).ready(function() {
 
             showRighted: function(callback) {
                 $(config.spinner_selector).css({
-                    left: 400,
+                    left: 470,
                     top: 25,
                     display: 'none'
                 }).stop(false, true)

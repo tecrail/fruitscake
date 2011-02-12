@@ -37,6 +37,7 @@
 
             <?php else: ?>
                 $("#url_builder_input_field").val("<?php echo $action['url'] ?>");
+                $("#thirdUrlBuilderBox").fadeOut(600);
                 UrlBuilder.hide();
             <?php endif ?>
             
