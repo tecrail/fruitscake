@@ -634,10 +634,12 @@ fieldset.urlBuilder {
 }
 div.urlBuilderBox {
     margin: 0px;
-    padding: 5px;
-    width: 217px;
+    padding: 2px;
+    width: 205px;
     height: 100px;
     overflow-y: scroll;
+    float: left;
+    clear: none;
 }
 div.urlBuilderBox h4 {
     padding: 0 10px;
@@ -670,11 +672,10 @@ ul.urlBuilderList li a:hover {
     margin: 0;
 }
 a.close_url_builder {
-    float: right;
-    position: relative;
+    position: absolute;
     display: block;
-    top: -23px;
-    right: -18px;
+    top: -30px;
+    right: -20px;
 }
 div#urlBuilderSpinner {
     position: relative;

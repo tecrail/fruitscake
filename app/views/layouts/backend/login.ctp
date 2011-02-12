@@ -7,7 +7,7 @@
         <meta name="keywords" content=""/>
         <meta name="author" content=""/>
         <?php echo $this->Html->css(array('backend/css.menu', 'backend/cake.generic', 'backend/login')); ?>
-        <?php echo $this->Html->script(array('backend/application')); ?>
+        <?php echo $this->Html->script(array('jquery-1.5.min', 'backend/application')); ?>
         <?php echo $scripts_for_layout ?>
         <title><?php echo $title_for_layout ?></title>
     </head>

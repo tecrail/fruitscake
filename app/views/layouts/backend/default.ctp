@@ -13,7 +13,7 @@
 //            'backend/uniform.aristo'
             )); ?>
         <?php echo $this->Html->script(array(
-            'jquery-1.4.4.min', 'backend/hoverIntent', 'backend/jquery.bgiframe.min', 'backend/superfish', 'backend/supersubs', 'backend/jquery.uniform.min',
+            'jquery-1.5.min', 'backend/hoverIntent', 'backend/jquery.bgiframe.min', 'backend/superfish', 'backend/supersubs', 'backend/jquery.uniform.min',
             'backend/application'
             )); ?>
         

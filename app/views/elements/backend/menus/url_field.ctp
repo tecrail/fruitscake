@@ -11,24 +11,24 @@
             <div id="urlBuilderSpinner"></div>
         </div>
 
-        <div class="urlBuilderBox">
+        <div class="urlBuilderBox" id="firstUrlBuilderBox">
             <div id="urlBuilderModelsBox" class="box">
                 <h4><?php echo __("Content type selection") ?>:</h4>
                 <ul id="avaliableModels" class="urlBuilderList"></ul>
             </div>
         </div>
 
-        <div class="urlBuilderBox">
+        <div class="urlBuilderBox" id="secondUrlBuilderBox">
             <div id="urlBuilderModelActionsBox" class="box">
-                <h4><?php echo __("Content type selection") ?>:</h4>
-                <ul id="avaliableModels" class="urlBuilderList"></ul>
+                <h4><?php echo __("Actions list") ?>:</h4>
+                <ul id="avaliableActions" class="urlBuilderList"></ul>
             </div>
         </div>
 
-        <div class="urlBuilderBox">
+        <div class="urlBuilderBox" id="thirdUrlBuilderBox">
             <div id="urlBuilderModelValuesBox" class="box">
-                <h4><?php echo __("Content type selection") ?>:</h4>
-                <ul id="avaliableModels" class="urlBuilderList"></ul>
+                <h4><?php echo __("Items list") ?>:</h4>
+                <ul id="avaliableItems" class="urlBuilderList"></ul>
             </div>
         </div>
         

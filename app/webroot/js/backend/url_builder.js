@@ -1,6 +1,7 @@
 // url builder js
 
 var UrlBuilder = null;
+var Spinner = null;
 
 $(document).ready(function() {
 
@@ -27,37 +28,57 @@ $(document).ready(function() {
 
         config = $.extend({}, $.UrlBuilder.default_settings, config);
 
-        var spinner = {
+        Spinner = {
 
-            showCentered: function() {
+            showCentered: function(callback) {
                 $(config.spinner_selector).css({
                     left: 250,
                     top: 25,
                     display: 'none'
-                }).fadeIn(300, function(){
+                }).stop(false, true)
+                .fadeIn(300, function(){
                     $(this).css({
                         display: 'block'
                     });
+                    if(callback) {
+                        callback();
+                    }
                 });
             },
 
-            showRighted: function() {
+            showRighted: function(callback) {
                 $(config.spinner_selector).css({
                     left: 400,
                     top: 25,
                     display: 'none'
-                }).fadeIn(300, function(){
+                }).stop(false, true)
+                .fadeIn(400, function(){
+                    
                     $(this).css({
                         display: 'block'
                     });
+
+                    if(callback) {
+                        callback();
+                    }
+
                 });
             },
 
-            hide: function() {
-                $(config.spinner_selector).fadeOut(600, function(){
+            hide: function(callback) {
+
+                $(config.spinner_selector)
+                .stop(false, true)
+                .fadeOut(400, function(){
+
                     $(this).css({
                         display: 'none'
                     });
+                    
+                    if(callback) {
+                        callback();
+                    }
+                    
                 });
             }
 
@@ -73,22 +94,29 @@ $(document).ready(function() {
                 display: 'none'
             });
 
-            spinner.showCentered();
+            Spinner.showCentered();
+
+            //initial load
             $.ajax({
                 url: config.get_models_url,
                 dataType: 'json',
                 type: "GET",
-                success: function(obj) {
+                success: function(obj, textStatus, jqXHR) {
                     jsonModelList = obj
-                    for (key in obj) {
+                    for (var key in obj) {
                         $(config.model_ul_selector).append(
-                            "<li><a href='#" + key + "'>" + obj[key] + "</a></li>"
-                        );
+                            "<li><a href='#" + key + "'>" + obj[key].label + "</a></li>"
+                            );
                     }
                     $("#urlBuilderModelsBox").parent('div').fadeIn(600, function() {
-                        $(this).css({display: 'block'});
-                    })
-                    spinner.hide();
+                        $(this).css({
+                            display: 'block'
+                        });
+                    });
+                },
+
+                complete: function() {
+                    Spinner.hide();
                 }
             });
 
@@ -103,20 +131,44 @@ $(document).ready(function() {
             });
 
 
-            $(config.model_ancors_selector).click(function () {
-                spinner.showCentered();
+            $(config.model_ancors_selector).live('click', function() {
+                $("#urlBuilderModelActionsBox ul.urlBuilderList").fadeOut(400, function() {
+                    $(this).css({
+                        display: 'none'
+                    });
+                });
                 
                 var modelName = $(this).attr('href').replace('#', '');
+                
+                $.ajax({
+                    url: config.get_actions_base_url + modelName,
+                    dataType: 'script',
+                    cache: false,
 
-                //                $.ajax({
-                //                    url: config.get_actions_base_url + modelName
-                //                });
+                    beforeSend: function(jqXHR, settings) {
+                        Spinner.showCentered();
+                    },
+
+                    success: function(data, textStatus, jqXHR) {
+                        $("#secondUrlBuilderBox").fadeOut(400, function() {
+                            $("#urlBuilderModelActionsBox").html(data);
+                        });
+                    },
+
+                    complete: function() {
+                        Spinner.hide(function(){
+                            $("#secondUrlBuilderBox").fadeIn(400, function() {
+                                $(this).css({
+                                    display: 'block'
+                                });
+                            });
+                        });
+                    }
+                    
+                });
 
                 return false;
             });
-
-            
-
 
             return public_methods;
         }

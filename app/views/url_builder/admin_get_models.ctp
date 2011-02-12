@@ -1,1 +1,2 @@
-<?php echo json_encode($availableModels) ?>
+<?php
+echo json_encode($availableModels);
