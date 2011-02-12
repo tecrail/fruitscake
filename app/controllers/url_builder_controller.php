@@ -62,34 +62,45 @@ class UrlBuilderController extends AppController {
 
         foreach ($actions as $key => $action) {
 
-            if(!isset($action['url']) || empty($action['url'])
+            if (!isset($action['url']) || empty($action['url'])
                     && (!isset($action['thirdStep']) || !$action['thirdStep'])) {
 
-                $action['url'] =  Router::url(array(
-                    'controller' => Inflector::pluralize($model),
-                    'action' => $key,
-                    'admin' => false
-                ));
+                $action['url'] = Router::url(array(
+                            'controller' => Inflector::pluralize($model),
+                            'action' => $key,
+                            'admin' => false
+                        ));
             }
-            
-            if (isset($action['thirdStep']) && !empty($action['thirdStep']) 
-                    && (!isset($action['thirdStep']['url']) || !($action['thirdStep']['url'])) ) {
 
-                $action['thirdStep']['url'] =  Router::url(array(
-                    'controller' => Inflector::pluralize($model),
-                    'action' => 'get_items',
-                    'admin' => true
-                ));
+            if (isset($action['thirdStep']) && !empty($action['thirdStep'])
+                    && (!isset($action['thirdStep']['url']) || !($action['thirdStep']['url']))) {
+
+                $action['thirdStep']['url'] = Router::url(array(
+                            'controller' => 'url_builder', //Inflector::pluralize($model),
+                            'action' => 'get_items',
+                            $model,
+                            'admin' => true
+                        ));
                 $action['url'] = null;
-                
             }
 
             $result[$key] = $action;
-            
         }
 
         $this->set('actions', $result);
-        
+    }
+
+    public function admin_get_items($model = null) {
+
+        if ($model) {
+            $camelizeModel = Inflector::camelize($model);
+            $this->loadModel($camelizeModel);
+
+            $items = $this->{$camelizeModel}->find('list');
+
+            $this->set('items', $items);
+            $this->set('model', $model);
+        }
     }
 
 }

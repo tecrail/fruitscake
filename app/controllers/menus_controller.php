@@ -134,7 +134,7 @@ class MenusController extends AppController {
             $result = $this->Menu->edit($id, $this->data);
             if ($result === true) {
                 $this->Session->setFlash(__('Menu saved', true));
-                $this->redirect(array('action' => 'view', $this->Menu->data['Menu']['slug']));
+                $this->redirect(array('action' => 'view', $this->Menu->data['Menu']['id']));
             } else {
                 $this->data = $result;
             }

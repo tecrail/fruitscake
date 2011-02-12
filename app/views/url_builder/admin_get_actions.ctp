@@ -20,7 +20,7 @@
 
                     success: function(data, textStatus, jqXHR) {
                         $("#thirdUrlBuilderBox").fadeOut(400, function() {
-//                            $("#urlBuilderModelValuesBox").html(data);
+                            $("#urlBuilderModelValuesBox").html(data);
                         });
                     },
 
