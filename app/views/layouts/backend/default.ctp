@@ -8,13 +8,13 @@
         <meta name="author" content=""/>
 
         <?php echo $this->Html->css(array(
-            'backend/cake.generic', 'backend/superfish', 'backend/default', 'backend/css.menu', 
-            'backend/uniform.default',
+            'backend/cake.generic', 'backend/superfish', 'backend/css.menu', 
+            'backend/uniform.default', 'backend/jquery.fancybox-1.3.4', 'backend/default'
 //            'backend/uniform.aristo'
             )); ?>
         <?php echo $this->Html->script(array(
             'jquery-1.5.min', 'backend/hoverIntent', 'backend/jquery.bgiframe.min', 'backend/superfish', 'backend/supersubs', 'backend/jquery.uniform.min',
-            'backend/application'
+            'backend/jquery.fancybox-1.3.4.pack', 'backend/jquery.mousewheel-3.0.4.pack', 'backend/application'
             )); ?>
         
         <?php echo $scripts_for_layout ?>
