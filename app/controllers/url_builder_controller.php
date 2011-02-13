@@ -24,7 +24,19 @@ class UrlBuilderController extends AppController {
                 'label' => __('Newsletters', true)
             ),
             'newsletter_user' => array(
-                'label' => __('Newsletters users', true)
+                'label' => __('Newsletters users', true),
+                'actions' => array(
+                    'index' => array(
+                        'label' => __('Subscription', true),
+                        'thirdStep' => false,
+                        'url' => null
+                    ),
+                    'unsubscription' => array(
+                        'label' => __('Unsubscription', true),
+                        'thirdStep' => false,
+                        'url' => null
+                    )
+                )
             )
         );
 

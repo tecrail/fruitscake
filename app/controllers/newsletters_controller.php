@@ -211,4 +211,3 @@ class NewslettersController extends AppController {
     }
 
 }
-?>

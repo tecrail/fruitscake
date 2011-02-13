@@ -28,6 +28,9 @@
  */
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
 
+        Router::connect('/newsletters/subscription', array('controller' => 'newsletter_users', 'action' => 'index', 'admin' => false));
+        Router::connect('/newsletters/unsubscription', array('controller' => 'newsletter_users', 'action' => 'unsubscription', 'admin' => false));
+
 	Router::connect('/admin', array('controller' => 'users', 'action' => 'login', 'admin' => true));
 /**
  * ...and connect the rest of 'Pages' controller's urls.
