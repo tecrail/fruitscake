@@ -14,11 +14,17 @@ class UrlBuilderController extends AppController {
             'page' => array(
                 'label' => __('Page', true)
             ),
+            'photo_gallery' => array(
+                'label' => __('Photo gallery', true)
+            ),
             'news' => array(
                 'label' => __('News', true)
             ),
-            'photo_gallery' => array(
-                'label' => __('Photo gallery', true)
+            'newsletter' => array(
+                'label' => __('Newsletters', true)
+            ),
+            'newsletter_user' => array(
+                'label' => __('Newsletters users', true)
             )
         );
 
