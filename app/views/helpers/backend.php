@@ -2,7 +2,8 @@
 
 class BackendHelper extends AppHelper {
 
-    public $helpers = array('Html', 'Form');
+    public $helpers = array('Html', 'Form', 'Javascript');
+    private $__htmlEditorLibsLoaded = false;
 
     public function actionLink($title, $url = null, $options = array(), $confirmMessage = false) {
         return $this->Html->link($title, $url, $options, $confirmMessage);
@@ -18,7 +19,7 @@ class BackendHelper extends AppHelper {
     }
 
     public function imageInput($fieldName = null, $options = array()) {
-        $defaultOptions = array('type' => 'file', 'preview' => false, 'delete'  => false);
+        $defaultOptions = array('type' => 'file', 'preview' => false, 'delete' => false);
         $options = array_merge($defaultOptions, $options);
 
         $options['type'] = 'file';
@@ -51,7 +52,7 @@ class BackendHelper extends AppHelper {
     }
 
     public function fileInput($fieldName = null, $options = array()) {
-        $defaultOptions = array('type' => 'file', 'preview' => false, 'delete'  => false);
+        $defaultOptions = array('type' => 'file', 'preview' => false, 'delete' => false);
         $options = array_merge($defaultOptions, $options);
 
         $options['type'] = 'file';
@@ -84,7 +85,30 @@ class BackendHelper extends AppHelper {
     }
 
     public function htmlEditor($fieldName, $options = array()) {
-        return $this->output($this->Form->input($fieldName, $options));
+        $this->_loadHtmlEditorLibs();
+
+        $output = "<div class='htmlEditor'>";
+        
+        $output.= $this->Html->link('HTML', "#{$fieldName}HtmlFancyContainer", array('id' => $fieldName.'HtmlEditor', 'class' => 'fancyHtmlEditorLink'));
+        $output.= $this->Form->input($fieldName, $options);
+
+        $output.= "
+            <div id='{$fieldName}HtmlFancyContainer' class='htmlFancyContainer'>
+                Ciao Mondo!
+            </div>"
+        ;
+        $output.= "</div>";
+
+        return $this->output($output);
+    }
+
+    protected function _loadHtmlEditorLibs() {
+        if(!$this->__htmlEditorLibsLoaded) {
+
+            $this->Html->script('backend/html_editor', array('inline' => false));
+            $this->__htmlEditorLibsLoaded = true;
+            
+        }
     }
 
 }

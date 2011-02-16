@@ -17,7 +17,7 @@
             'backend/jquery.fancybox-1.3.4.pack', 'backend/jquery.mousewheel-3.0.4.pack', 'backend/application'
             )); ?>
         
-        <?php echo $scripts_for_layout ?>
+        <?php echo  $scripts_for_layout ?>
         
         <title><?php echo $title_for_layout ?></title>
     </head>

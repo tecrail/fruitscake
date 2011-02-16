@@ -695,3 +695,18 @@ fieldset.urlBuilder {
 .urlBuilderBox .box {
     margin: 0;
 }
+.htmlFancyContainer {
+    display: none;
+}
+.htmlEditor {
+    padding: 0;
+    margin: 0;
+}
+div.htmlEditor {
+    position: relative;
+}
+a.fancyHtmlEditorLink {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+}
