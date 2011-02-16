@@ -93,9 +93,11 @@ class BackendHelper extends AppHelper {
         $output.= $this->Form->input($fieldName, $options);
 
         $output.= "
+        <div style='display: none;'>
             <div id='{$fieldName}HtmlFancyContainer' class='htmlFancyContainer'>
-                Ciao Mondo!
-            </div>"
+                <textarea id='{$fieldName}TextareaContent' name='{$fieldName}TextareaContent' class='tinymceEditor' style='width:800px; height:582px;'></textarea>
+            </div>
+        </div>"
         ;
         $output.= "</div>";
 
@@ -105,6 +107,7 @@ class BackendHelper extends AppHelper {
     protected function _loadHtmlEditorLibs() {
         if(!$this->__htmlEditorLibsLoaded) {
 
+            $this->Html->script('backend/tiny_mce/jquery.tinymce', array('inline' => false));
             $this->Html->script('backend/html_editor', array('inline' => false));
             $this->__htmlEditorLibsLoaded = true;
             

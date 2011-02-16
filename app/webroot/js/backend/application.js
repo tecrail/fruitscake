@@ -61,7 +61,7 @@ $(document).ready(function(){
         $(this).find(".index-image-link > a").stop(false, true).fadeTo(300, 0.8);
     });
 
-    $("select, input:checkbox, input:radio, input:file, input, textarea").uniform();
+    $("select, input:checkbox, input:radio, input:file, input, textarea:not(.tinymceEditor)").uniform();
     
 });
 

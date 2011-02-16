@@ -696,7 +696,8 @@ fieldset.urlBuilder {
     margin: 0;
 }
 .htmlFancyContainer {
-    display: none;
+    width: 800px;
+    height: 600px;
 }
 .htmlEditor {
     padding: 0;
