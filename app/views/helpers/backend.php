@@ -72,7 +72,7 @@ class BackendHelper extends AppHelper {
         $output.= $this->Form->input($fieldName, $options);
 
         if ($preview) {
-            $output.= "<div class=\"preview_file\">" . ($previewLabel ? $previewLabel : __('Current attachment', true) . ':') . "<br/>" . $this->Html->link($preview['url'], $preview['url'], array('class' => 'file-preview')) . "</div>";
+            $output.= "<div class=\"preview_file\">" . ($previewLabel ? $previewLabel : __('Current attachment', true) . ':') . " " . $this->Html->link(__('Download', true), $preview['url'], array('class' => 'file-preview')) . "</div>";
         }
 
         if ($deletable) {
