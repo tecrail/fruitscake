@@ -5,7 +5,7 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('title');
-		echo $this->Form->input('description');
+		echo $this->Backend->htmlEditor('description');
 		echo $this->Form->input('published');
 		echo $this->Backend->imageInput('image', array('preview' => array('url' => '/img/photos/thumb.' . $this->data['Photo']['image'])));
 		echo $this->Form->input('photo_gallery_id');

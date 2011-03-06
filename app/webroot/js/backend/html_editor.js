@@ -22,7 +22,6 @@
 
                 var href = $(this).attr('href');
                 editorContentPreserver = $(href).html();
-                alert(editorContentPreserver);
 
                 $(this).fancybox({
                     //modal: true,

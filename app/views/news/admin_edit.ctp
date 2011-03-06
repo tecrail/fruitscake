@@ -6,7 +6,7 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('title');
 		echo $this->Form->input('short_description');
-		echo $this->Form->input('description');
+		echo $this->Backend->htmlEditor('description');
                 echo $this->Backend->imageInput('image', empty($this->data['News']['image']) ? array() : array(
                     'preview' => array("url" => "/img/news/thumb." . $this->data['News']['image']),
                     'delete' => true

@@ -4,7 +4,7 @@
  		<legend><?php __('Add Photo'); ?></legend>
 	<?php
 		echo $this->Form->input('title');
-		echo $this->Form->input('description');
+		echo $this->Backend->htmlEditor('description');
 		echo $this->Form->input('published');
 		echo $this->Backend->imageInput('image');
 		echo $this->Form->input('photo_gallery_id');

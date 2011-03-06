@@ -4,7 +4,7 @@
  		<legend><?php __('Add Page'); ?></legend>
 	<?php
 		echo $this->Form->input('title');
-		echo $this->Form->input('description');
+		echo $this->Backend->htmlEditor('description');
 		echo $this->Form->input('published');
 	?>
 	</fieldset>

@@ -5,7 +5,7 @@
 	<?php
 		echo $this->Form->input('title');
 		echo $this->Form->input('short_description');
-		echo $this->Form->input('description');
+		echo $this->Backend->htmlEditor('description');
                 echo $this->Backend->imageInput('image');
 		echo $this->Form->input('published');
 		echo $this->Form->input('date');
