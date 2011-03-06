@@ -94,8 +94,8 @@ class BackendHelper extends AppHelper {
 
         $output.= "
         <div style='display: none;'>
-            <div id='{$fieldName}HtmlFancyContainer' class='htmlFancyContainer'>
-                <textarea id='{$fieldName}TextareaContent' name='{$fieldName}TextareaContent' class='tinymceEditor' style='width:800px; height:582px;'></textarea>
+            <div class='htmlFancyContainer'  id='{$fieldName}HtmlFancyContainer'>
+                <textarea name='{$fieldName}TextareaContent' class='tinymceEditor {$fieldName}TextareaContent' style='width:800px; height:582px;'></textarea>
             </div>
         </div>"
         ;
