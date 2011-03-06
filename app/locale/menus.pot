@@ -1,0 +1,41 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2011-03-06 16:17+0100\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: /models/menu.php:34
+msgid "Please enter a menu name"
+msgstr ""
+
+#: /models/menu.php:46
+msgid "Could not save the menu, please check your inputs."
+msgstr ""
+
+#: /views/menus/admin_add.ctp:5
+#: /views/menus/admin_add_parent.ctp:5
+msgid "Add Menu"
+msgstr ""
+
+#: /views/menus/admin_add.ctp:14
+#: /views/menus/admin_add_parent.ctp:14
+#: /views/menus/admin_edit.ctp:8
+#: /views/menus/admin_edit_parent.ctp:15
+msgid "Submit"
+msgstr ""
+
+#: /views/menus/admin_edit.ctp:5
+#: /views/menus/admin_edit_parent.ctp:5
+msgid "Edit Menu"
+msgstr ""
+
