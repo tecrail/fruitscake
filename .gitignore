@@ -8,6 +8,8 @@ app/tmp/cache/persistent/cake*
 plugins
 vendors
 nbproject/
+.settings/
+.project
 app/webroot/img/photos/
 app/webroot/img/news/
 cake/console/templates/skel/tmp
