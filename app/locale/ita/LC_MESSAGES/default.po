@@ -1,18 +1,3 @@
-# LANGUAGE translation of CakePHP Application
-# Copyright YEAR NAME <EMAIL@ADDRESS>
-#
-#, fuzzy
-msgid ""
-msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2011-03-06 16:17+0100\n"
-"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
-"Last-Translator: NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: /app_controller.php:49
 msgid "backend"
@@ -809,197 +794,162 @@ msgstr "Sei sicuro di voler eliminare il contatto # %s?"
 
 #: /views/newsletter_users/admin_index.ctp:46
 msgid "precedente"
-msgstr ""
+msgstr "Precedente"
 
 #: /views/newsletter_users/admin_index.ctp:48
 msgid "successivo"
-msgstr ""
+msgstr "Successivo"
 
 #: /views/newsletter_users/admin_index.ctp:52
 msgid "Nuovo Utente"
-msgstr ""
+msgstr "Nuovo utente"
 
 #: /views/newsletter_users/admin_view.ctp:2
 msgid "Iscritto Newsletter"
-msgstr ""
+msgstr "Iscritto newsletter"
 
 #: /views/newsletter_users/admin_view.ctp:9
 msgid "Nome"
-msgstr ""
+msgstr "Nome"
 
 #: /views/newsletter_users/admin_view.ctp:14
 msgid "Cognome"
-msgstr ""
+msgstr "Cognome"
 
 #: /views/newsletter_users/admin_view.ctp:19
 #: /views/elements/login.ctp:12
 #: /views/users/admin_login.ctp:14
 #: /views/users/admin_view.ctp:14
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: /views/newsletter_users/admin_view.ctp:24
 #: /views/newsletters/admin_view.ctp:24
 msgid "Lingua"
-msgstr ""
+msgstr "Lingua"
 
 #: /views/newsletter_users/admin_view.ctp:29
 msgid "Attivo"
-msgstr ""
+msgstr "Attivo"
 
 #: /views/newsletter_users/admin_view.ctp:38
 msgid "Modifica Utente Newsletter"
-msgstr ""
+msgstr "Modifica dati iscritto"
 
 #: /views/newsletter_users/admin_view.ctp:39
 msgid "Elimina Utente Newsletter"
-msgstr ""
+msgstr "Elimina iscritto"
 
 #: /views/newsletter_users/admin_view.ctp:39
 msgid "Sei sicuro di voler eliminare il contatto \\n\\t # %s?"
-msgstr ""
+msgstr "Sei sicuro di voler eliminare il contatto # %s?"
 
 #: /views/newsletter_users/delete.ctp:4
 #: /views/newsletter_users/index.ctp:26
 #: /views/newsletter_users/unsubscription.ctp:3
 msgid "lbl_delete_from_newsletter"
-msgstr ""
+msgstr "Cancella iscrizione alla newsletter"
 
 #: /views/newsletter_users/delete.ctp:6
 #: /views/newsletter_users/index.ctp:16
 msgid "lbl_first_name"
-msgstr ""
+msgstr "Nome"
 
 #: /views/newsletter_users/delete.ctp:7
 #: /views/newsletter_users/index.ctp:17
 msgid "lbl_last_name"
-msgstr ""
+msgstr "Cognome"
 
 #: /views/newsletter_users/delete.ctp:8
 #: /views/newsletter_users/index.ctp:18
 msgid "lbl_email"
-msgstr ""
+msgstr "Email"
 
 #: /views/newsletter_users/delete.ctp:9
 msgid "lbl_next"
-msgstr ""
+msgstr "Avanti"
 
 #: /views/newsletter_users/index.ctp:1
 #: /views/newsletter_users/unsubscription.ctp:1
 msgid "lbl_newsletter"
-msgstr ""
+msgstr "Newsletter"
 
 #: /views/newsletter_users/index.ctp:3
 msgid "lbl_subscribe_newsletter"
-msgstr ""
+msgstr "Iscrizione newsletter"
 
 #: /views/newsletter_users/index.ctp:7
-msgid "lbl_text_subscribe_newsletter"
-msgstr ""
+msgid "lbl_text_subscribe_newsletter_of_site"
+msgstr "Per essere sempre informato dei nuovi eventi e delle promozioni del "
 
 #: /views/newsletter_users/index.ctp:19
 msgid "lbl_language"
-msgstr ""
+msgstr "Lingua"
 
 #: /views/newsletter_users/index.ctp:22
 msgid "lbl_subscription"
-msgstr ""
+msgstr "Invia"
 
 #: /views/newsletter_users/unsubscription.ctp:5
 msgid "lbl_remove_me_from_the_newsletter_text"
-msgstr ""
+msgstr "Cancellami dalla newsletter"
 
 #: /views/newsletter_users/unsubscription.ctp:15
 msgid "lbl_send"
-msgstr ""
+msgstr "Invia"
 
 #: /views/newsletters/admin_add.ctp:4
 msgid "Scrivi Newsletter"
-msgstr ""
-
-#: /views/newsletters/admin_deliver_old.ctp:2
-msgid "Newsletter:"
-msgstr ""
-
-#: /views/newsletters/admin_deliver_old.ctp:4
-msgid "Titolo (italiano)"
-msgstr ""
-
-#: /views/newsletters/admin_deliver_old.ctp:9
-msgid "Titolo (inglese)"
-msgstr ""
-
-#: /views/newsletters/admin_deliver_old.ctp:14
-msgid "Titolo (francese)"
-msgstr ""
-
-#: /views/newsletters/admin_deliver_old.ctp:19
-msgid "Titolo (tedesco)"
-msgstr ""
-
-#: /views/newsletters/admin_deliver_old.ctp:26
-msgid "Seleziona le lingue di cui vuoi spedire la newsletter:"
-msgstr ""
-
-#: /views/newsletters/admin_deliver_old.ctp:39
-#: /views/newsletters/admin_edit.ctp:29
-#: /views/newsletters/admin_view.ctp:49
-msgid "Elenco Newsletters"
-msgstr ""
-
-#: /views/newsletters/admin_deliver_old.ctp:40
-#: /views/newsletters/admin_view.ctp:50
-msgid "Nuova Newsletter"
-msgstr ""
+msgstr "Scrivi newsletter"
 
 #: /views/newsletters/admin_edit.ctp:4
 msgid "Modifica Newsletter"
-msgstr ""
+msgstr "Modifica newsletter"
 
 #: /views/newsletters/admin_index.ctp:36
 #: /views/newsletters/admin_view.ctp:48
 msgid "Spedisci"
-msgstr ""
+msgstr "Spedisci"
 
 #: /views/newsletters/admin_view.ctp:2
 msgid "Newsletter"
-msgstr ""
+msgstr "Newsletter"
 
 #: /views/newsletters/admin_view.ctp:9
 msgid "Titolo"
-msgstr ""
+msgstr "Titolo"
 
 #: /views/newsletters/admin_view.ctp:14
 msgid "Descrizione [HTML]"
-msgstr ""
+msgstr "Descrizione [HTML]"
 
 #: /views/newsletters/admin_view.ctp:19
 msgid "Descrizione [TEXT]"
-msgstr ""
+msgstr "Descrizione [TEXT]"
 
 #: /views/newsletters/admin_view.ctp:29
 msgid "Allegato"
-msgstr ""
+msgstr "Allegato"
 
 #: /views/newsletters/admin_view.ctp:37
 msgid "Utente"
-msgstr ""
+msgstr "Utente"
 
 #: /views/pages/admin_add.ctp:4
 msgid "Add Page"
-msgstr ""
+msgstr "Nuova pagina"
 
 #: /views/pages/admin_edit.ctp:4
 msgid "Edit Page"
-msgstr ""
+msgstr "Modifica pagina"
 
 #: /views/pages/admin_index.ctp:2
 msgid "Pages"
-msgstr ""
+msgstr "Elenco pagine"
 
 #: /views/photo_galleries/admin_add.ctp:4
 msgid "Add Photo Gallery"
-msgstr ""
+msgstr "Nuova gallery"
 
 #: /views/photo_galleries/admin_add.ctp:17
 #: /views/photo_galleries/admin_edit.ctp:19
@@ -1009,7 +959,7 @@ msgstr ""
 #: /views/photos/admin_index.ctp:23
 #: /views/photos/admin_view.ctp:53
 msgid "List Photo Galleries"
-msgstr ""
+msgstr "Elenco gallery"
 
 #: /views/photo_galleries/admin_add.ctp:18
 #: /views/photo_galleries/admin_edit.ctp:20
@@ -1019,7 +969,7 @@ msgstr ""
 #: /views/photos/admin_edit.ctp:21
 #: /views/photos/admin_view.ctp:51
 msgid "List Photos"
-msgstr ""
+msgstr "Elenco foto"
 
 #: /views/photo_galleries/admin_add.ctp:19
 #: /views/photo_galleries/admin_edit.ctp:21
@@ -1028,16 +978,16 @@ msgstr ""
 #: /views/photos/admin_index.ctp:22
 #: /views/photos/admin_view.ctp:52
 msgid "New Photo"
-msgstr ""
+msgstr "Carica foto"
 
 #: /views/photo_galleries/admin_edit.ctp:4
 #: /views/photo_galleries/admin_view.ctp:39
 msgid "Edit Photo Gallery"
-msgstr ""
+msgstr "Modifica gallery"
 
 #: /views/photo_galleries/admin_index.ctp:2
 msgid "Photo Galleries"
-msgstr ""
+msgstr "Foto gallery"
 
 #: /views/photo_galleries/admin_index.ctp:51
 #: /views/photo_galleries/admin_view.ctp:42
@@ -1046,340 +996,308 @@ msgstr ""
 #: /views/photos/admin_index.ctp:24
 #: /views/photos/admin_view.ctp:54
 msgid "New Photo Gallery"
-msgstr ""
+msgstr "Nuova gallery"
 
 #: /views/photo_galleries/admin_view.ctp:2
 #: /views/photos/admin_view.ctp:9
 msgid "Photo Gallery"
-msgstr ""
+msgstr "Foto gallery"
 
 #: /views/photo_galleries/admin_view.ctp:40
 msgid "Delete Photo Gallery"
-msgstr ""
+msgstr "Elimina gallery"
 
 #: /views/photo_galleries/admin_view.ctp:48
 msgid "Related Photos"
-msgstr ""
+msgstr "Foto della gallery"
 
 #: /views/photos/admin_add.ctp:4
 msgid "Add Photo"
-msgstr ""
+msgstr "Carica foto"
 
 #: /views/photos/admin_edit.ctp:4
 #: /views/photos/admin_view.ctp:49
 msgid "Edit Photo"
-msgstr ""
+msgstr "Modifica foto"
 
 #: /views/photos/admin_index.ctp:2
 msgid "Photos"
-msgstr ""
+msgstr "Elenco Foto"
 
 #: /views/photos/admin_view.ctp:2
 msgid "Photo"
-msgstr ""
+msgstr "Foto"
 
 #: /views/photos/admin_view.ctp:50
 msgid "Delete Photo"
-msgstr ""
+msgstr "Elimina foto"
 
 #: /views/users/admin_dashboard.ctp:16
 #: /views/users/admin_edit.ctp:31
 msgid "Change password"
-msgstr ""
+msgstr "Modifica password"
 
 #: /views/users/admin_login.ctp:5
 msgid "reset password"
-msgstr ""
+msgstr "Nuova password"
 
 #: /views/variables/admin_add.ctp:4
 msgid "Add Variable"
-msgstr ""
+msgstr "Nuova variabile"
 
 #: /views/variables/admin_add.ctp:16
 #: /views/variables/admin_edit.ctp:16
 #: /views/variables/admin_view.ctp:35
 msgid "List Variables"
-msgstr ""
+msgstr "Impostazioni"
 
 #: /views/variables/admin_edit.ctp:4
 #: /views/variables/admin_view.ctp:34
 msgid "Edit Variable"
-msgstr ""
+msgstr "Modifica valore"
 
 #: /views/variables/admin_index.ctp:2
 msgid "Variables"
-msgstr ""
+msgstr "Impostazioni"
 
 #: /views/variables/admin_index.ctp:33
 msgid "No actions available"
-msgstr ""
+msgstr "Nessuna azione disponibile"
 
 #: /views/variables/admin_view.ctp:2
 msgid "Variable"
-msgstr ""
+msgstr "Valore"
 
 #: /views/variables/admin_view.ctp:9
 msgid "Key"
-msgstr ""
+msgstr "Variabile"
 
 #: /views/variables/admin_view.ctp:14
 msgid "Value"
-msgstr ""
-
-#: /webroot/test.php:88
-msgid "Debug setting does not allow access to this url."
-msgstr ""
+msgstr "Valore"
 
 #: /controllers/users_controller.php:62
 msgid "Invalid User."
-msgstr ""
+msgstr "Utente non valido"
 
 #: /controllers/users_controller.php:75
 msgid "The User has been saved"
-msgstr ""
+msgstr "L'elemento è stato salvato correttamente"
 
 #: /controllers/users_controller.php:92
 msgid "User saved"
-msgstr ""
+msgstr "L'elemento è stato salvato correttamente"
 
 #: /controllers/users_controller.php:118
 msgid "User deleted"
-msgstr ""
+msgstr "L'elemento è stato eliminato correttamente"
 
 #: /controllers/users_controller.php:120
 msgid "Invalid User"
-msgstr ""
+msgstr "L'elemento non è stato trovato"
 
 #: /controllers/users_controller.php:141
 msgid "%s you have successfully logged in"
-msgstr ""
+msgstr "È stato effettuato l'accesso"
 
 #: /controllers/users_controller.php:203
 msgid "%s you have successfully logged out"
-msgstr ""
+msgstr "Logout avvenuto con successo"
 
 #: /controllers/users_controller.php:229
 msgid "There url you accessed is not longer valid"
-msgstr ""
+msgstr "L'indirizzo non è più valido"
 
 #: /controllers/users_controller.php:252;366
 msgid "Password Reset"
-msgstr ""
+msgstr "Reimposta password"
 
 #: /controllers/users_controller.php:254
 msgid "Your password has been reset"
-msgstr ""
+msgstr "La passwors è stata resettata"
 
 #: /controllers/users_controller.php:255
 msgid "Please login using this password and change your password"
-msgstr ""
+msgstr "Effettua il login utilizzando la seguente password e reimpostane una nuova"
 
 #: /controllers/users_controller.php:258
 msgid "Your password was sent to your registered email account"
-msgstr ""
+msgstr "La password è stata inviata alla tua email"
 
 #: /controllers/users_controller.php:264
 #: /tests/cases/controllers/users_controller.test.php:231
 msgid "Your e-mail has been validated!"
-msgstr ""
+msgstr "Email validata"
 
 #: /controllers/users_controller.php:268
 msgid "There was an error trying to validate your e-mail address. Please check your e-mail for the URL you should use to verify your e-mail address."
-msgstr ""
+msgstr "Si è verificato un errore nel tentativo di convalidare il tuo indirizzo email. Ti è stata spedita un'email per la convalidazione dell'account."
 
 #: /controllers/users_controller.php:272
 #: /tests/cases/controllers/users_controller.test.php:236
 msgid "The url you accessed is not longer valid"
-msgstr ""
+msgstr "Indirizzo non è più valido"
 
 #: /controllers/users_controller.php:286
 msgid "Password changed."
-msgstr ""
+msgstr "Password modificata"
 
 #: /controllers/users_controller.php:342
 msgid "Account verification"
-msgstr ""
+msgstr "Verifica account"
 
 #: /controllers/users_controller.php:384
 msgid "%s has been sent an email with instruction to reset their password."
-msgstr ""
+msgstr "%s ha inviato un'email con le istruzioni per reimpostare una nuova password"
 
 #: /controllers/users_controller.php:388
 msgid "You should receive an email with further instructions shortly"
-msgstr ""
+msgstr "A breve dovresti ricevere un'email con ulteriori istruzioni"
 
 #: /controllers/users_controller.php:392
 msgid "No user was found with that email."
-msgstr ""
+msgstr "Email non trovata"
 
 #: /controllers/users_controller.php:439
 msgid "Invalid password reset token, try again."
-msgstr ""
+msgstr "Token non valido"
 
 #: /controllers/users_controller.php:445
 msgid "Password changed, you can now login with your new password."
-msgstr ""
+msgstr "La password è stata modifica."
 
 #: /models/user.php:39
 msgid "Please enter a username"
-msgstr ""
+msgstr "Inserire il proprio username"
 
 #: /models/user.php:42
 msgid "The username must be alphanumeric"
-msgstr ""
+msgstr "Inserire solamente caratteri alfanumerici"
 
 #: /models/user.php:45
 msgid "This username is already in use."
-msgstr ""
+msgstr "Username già in uso"
 
 #: /models/user.php:48
 msgid "The username must have at least 3 characters."
-msgstr ""
+msgstr "Lo username dev'essere domposto da almeno 3 caratteri"
 
 #: /models/user.php:53
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Inserire un'indirizzo email valido"
 
 #: /models/user.php:56
 msgid "This email is already in use."
-msgstr ""
+msgstr "Email già in uso"
 
 #: /models/user.php:60
 msgid "The password must have at least 8 characters."
-msgstr ""
+msgstr "La password dec'essere composta da almeno 8 caratteri"
 
 #: /models/user.php:63
 msgid "Please enter a password."
-msgstr ""
+msgstr "Inserire una password"
 
 #: /models/user.php:66
 msgid "The passwords are not equal, please try again."
-msgstr ""
+msgstr "Le password non corrispondono"
 
 #: /models/user.php:75;249
 msgid "The passwords are not equal."
-msgstr ""
+msgstr "Le password non corrispondono"
 
 #: /models/user.php:77
 msgid "Invalid password."
-msgstr ""
-
-#: /models/user.php:296
-msgid "$this->data['"
-msgstr ""
+msgstr "Password non valida"
 
 #: /models/user.php:344
 msgid "The user does not exist."
-msgstr ""
+msgstr "Utente non trovato"
 
 #: /models/user.php:387
 msgid "Please enter your email address."
-msgstr ""
+msgstr "Inserire il proprio indirizzo email"
 
 #: /models/user.php:397
 msgid "The email address does not exist in the system"
-msgstr ""
+msgstr "Email non travata"
 
 #: /models/user.php:402
 msgid "Your account is already authenticaed."
-msgstr ""
+msgstr "L'account è già stato autenticato"
 
 #: /models/user.php:407
 msgid "Your account is disabled."
-msgstr ""
-
-#: /tests/cases/controllers/users_controller.test.php:48
-msgid "Sorry, but you need to login to access this location."
-msgstr ""
-
-#: /tests/cases/controllers/users_controller.test.php:49;188
-msgid "Invalid e-mail / password combination.  Please try again"
-msgstr ""
-
-#: /tests/cases/controllers/users_controller.test.php:182
-msgid "testuser you have successfully logged in"
-msgstr ""
-
-#: /tests/cases/controllers/users_controller.test.php:207
-msgid "Your account has been created. You should receive an e-mail shortly to authenticate your account. Once validated you will be able to login."
-msgstr ""
-
-#: /tests/cases/controllers/users_controller.test.php:218
-msgid "Your account could not be created. Please, try again."
-msgstr ""
-
-#: /tests/cases/controllers/users_controller.test.php:248
-msgid "floriank you have successfully logged out"
-msgstr ""
+msgstr "Account disabilitato"
 
 #: /views/elements/login.ctp:14
 #: /views/users/admin_login.ctp:15
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #: /views/elements/login.ctp:16
 #: /views/users/admin_login.ctp:11
 #: /views/users/admin_reset_password.ctp:8
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 #: /views/elements/email/text/account_verification.ctp:12
 msgid "Hello %s,"
-msgstr ""
+msgstr "Ciao %s, "
 
 #: /views/elements/email/text/account_verification.ctp:14
 msgid "to validate your account, you must visit the URL below within 24 hours"
-msgstr ""
+msgstr "per autenticare il tuo account clicca il seguente link:"
 
 #: /views/elements/email/text/password_reset_request.ctp:12
 msgid "A request to reset your password was sent. To change your password click the link below."
-msgstr ""
+msgstr "Questa email ti è stata inviata in seguito ad una richiesta di reset della password. Per procedere alla modifica della password clicca il seguente link:"
 
 #: /views/users/admin_add.ctp:4
 msgid "Add User"
-msgstr ""
+msgstr "Nuovo utente"
 
 #: /views/users/admin_change_password.ctp:12
 msgid "Change your password"
-msgstr ""
+msgstr "Modifica password"
 
 #: /views/users/admin_change_password.ctp:14
 msgid "Please enter your old password because of security reasons and then your new password twice."
-msgstr ""
+msgstr "Inserisci la tua password e reimpostane una nuova"
 
 #: /views/users/admin_change_password.ctp:19
 msgid "Old Password"
-msgstr ""
+msgstr "Password"
 
 #: /views/users/admin_change_password.ctp:22
 #: /views/users/admin_reset_password.ctp:13
 msgid "New Password"
-msgstr ""
+msgstr "Nuova password"
 
 #: /views/users/admin_change_password.ctp:25
 #: /views/users/admin_reset_password.ctp:14
 msgid "Confirm"
-msgstr ""
+msgstr "Conferma password"
 
 #: /views/users/admin_dashboard.ctp:13
 msgid "Welcome"
-msgstr ""
+msgstr "Benvenuto"
 
 #: /views/users/admin_dashboard.ctp:14
 msgid "Recent broadcasts"
-msgstr ""
+msgstr "Attivita recenti"
 
 #: /views/users/admin_edit.ctp:19
 msgid "Edit User"
-msgstr ""
+msgstr "Modifica utente"
 
 #: /views/users/admin_login.ctp:16
 msgid "Remember Me"
-msgstr ""
+msgstr "Ricormami su questo computer"
 
 #: /views/users/admin_request_password_change.ctp:8
 msgid "Forgot your password?"
-msgstr ""
+msgstr "Password dimenticata?"
 
 #: /views/users/admin_request_password_change.ctp:10
 msgid "Please enter the email you used for registration and you'll get an email with further instructions."
@@ -1387,508 +1305,46 @@ msgstr ""
 
 #: /views/users/admin_request_password_change.ctp:14
 msgid "Your Email"
-msgstr ""
+msgstr "La tua Email"
 
 #: /views/users/admin_reset_password.ctp:9
 msgid "Reset your password"
-msgstr ""
+msgstr "Reimposta password"
 
 #: /views/users/admin_view.ctp:2
 msgid "User"
-msgstr ""
+msgstr "Utente"
 
 #: /views/users/admin_view.ctp:5
 msgid "Username"
-msgstr ""
+msgstr "Username"
 
 #: /views/users/admin_view.ctp:8
 msgid "First Name"
-msgstr ""
+msgstr "Nome"
 
 #: /views/users/admin_view.ctp:11
 msgid "Last Name"
-msgstr ""
+msgstr "Cognome"
 
 #: /views/users/admin_view.ctp:17
 msgid "Active"
-msgstr ""
+msgstr "Attivo"
 
 #: /models/menu.php:34
 msgid "Please enter a menu name"
-msgstr ""
+msgstr "Inserire il nome del menu"
 
 #: /models/menu.php:46
 msgid "Could not save the menu, please check your inputs."
-msgstr ""
+msgstr "L'elemento non può essere salvato. Verifica che tutti i dati inseriti nei campi obbligatori siano corretti"
 
 #: /views/menus/admin_add.ctp:5
 #: /views/menus/admin_add_parent.ctp:5
 msgid "Add Menu"
-msgstr ""
+msgstr "Nuovo menu"
 
 #: /views/menus/admin_edit.ctp:5
 #: /views/menus/admin_edit_parent.ctp:5
 msgid "Edit Menu"
-msgstr ""
-
-#: /plugins/debug_kit/controllers/components/toolbar.php:99
-msgid "Component intitailization"
-msgstr ""
-
-#: /plugins/debug_kit/controllers/components/toolbar.php:100
-msgid "Component initialization and startup"
-msgstr ""
-
-#: /plugins/debug_kit/controllers/components/toolbar.php:170
-msgid "Controller action"
-msgstr ""
-
-#: /plugins/debug_kit/controllers/components/toolbar.php:171
-msgid "Controller action start"
-msgstr ""
-
-#: /plugins/debug_kit/controllers/components/toolbar.php:199
-msgid "Render Controller Action"
-msgstr ""
-
-#: /plugins/debug_kit/controllers/components/toolbar.php:200
-msgid "Controller render start"
-msgstr ""
-
-#: /plugins/debug_kit/controllers/components/toolbar.php:266
-msgid "Could not load DebugToolbar panel %s"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/debug_kit_debugger.php:185
-msgid "Core Processing (Derived)"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/fire_cake.php:297
-msgid "Headers already sent in %s on line %s. Cannot send log data to FirePHP."
-msgstr ""
-
-#: /plugins/debug_kit/vendors/fire_cake.php:318
-msgid "Incorrect parameter count for FireCake::fb()"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/fire_cake.php:397
-msgid "Maximum number (99,999) of messages reached!"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:50
-msgid "-> Testing :url"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:76
-msgid "Total Requests made: :requests"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:77
-msgid "Total Time elapsed: :duration (seconds)"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:81
-msgid "Requests/Second: :rps req/sec"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:85
-msgid "Average request time: :average-time seconds"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:89
-msgid "Standard deviation of average request time: :std-dev"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:93
-msgid "Longest/shortest request: :longest sec/:shortest sec"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:145
-msgid "DebugKit Benchmark Shell"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:147
-msgid "\tAllows you to obtain some rough benchmarking statistics \n\tabout a fully qualified URL."
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:149
-msgid "\tUse:"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:150
-msgid "\t\tcake benchmark [-n iterations] [-t timeout] url"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:152
-msgid "\tParams:"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:153
-msgid "\t\t-n Number of iterations to perform. Defaults to 10. \n\t\t   Must be an integer."
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:154
-msgid "\t\t-t Maximum total time for all iterations, in seconds. \n\t\t   Defaults to 100. Must be an integer."
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:156
-msgid "\tIf a single iteration takes more than the \n\ttimeout specified, only one request will be made."
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:158
-msgid "\tExample Use:"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:159
-msgid "\t\tcake benchmark -n 10 -t 100 http://localhost/testsite"
-msgstr ""
-
-#: /plugins/debug_kit/vendors/shells/benchmark.php:161
-msgid "\tNote that this benchmark does not include browser render time"
-msgstr ""
-
-#: /plugins/debug_kit/views/debug.php:41
-msgid "Rendering %s"
-msgstr ""
-
-#: /plugins/debug_kit/views/debug.php:63
-msgid "Starting to render"
-msgstr ""
-
-#: /plugins/debug_kit/views/debug.php:67
-msgid "Finished"
-msgstr ""
-
-#: /plugins/debug_kit/views/debug.php:83
-msgid "Rendering View"
-msgstr ""
-
-#: /plugins/debug_kit/views/debug.php:89
-msgid "View render complete"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/debug_toolbar.ctp:25
-msgid "There are no active panels. You must enable a panel to see its output."
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/history_panel.ctp:21
-msgid "Request History"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/history_panel.ctp:23
-msgid "No previous requests logged."
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/history_panel.ctp:25
-msgid "previous requests available"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/history_panel.ctp:27
-msgid "Restore to current request"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/log_panel.ctp:21
-msgid "Logs"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/log_panel.ctp:28
-msgid "Time"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/log_panel.ctp:28
-#: /plugins/debug_kit/views/elements/timer_panel.ctp:40;64
-msgid "Message"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/log_panel.ctp:37
-msgid "There were no log entries made this request"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/request_panel.ctp:21
-msgid "Request"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/request_panel.ctp:35
-msgid "Current Route"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/session_panel.ctp:21
-msgid "Session"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/sql_log_panel.ctp:25
-msgid "Sql Logs"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/sql_log_panel.ctp:40
-msgid "Query Explain:"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/sql_log_panel.ctp:43
-msgid "Click an \"Explain\" link above, to see the query explanation."
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/sql_log_panel.ctp:48
-msgid "No active database connections"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/timer_panel.ctp:33
-msgid "Memory"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/timer_panel.ctp:36
-msgid "Peak Memory Use"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/timer_panel.ctp:40
-msgid "Memory use"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/timer_panel.ctp:53
-msgid "Timers"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/timer_panel.ctp:55
-msgid "%s (ms)"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/timer_panel.ctp:56
-msgid "Total Request Time:"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/timer_panel.ctp:65
-msgid "Time in ms"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/timer_panel.ctp:66
-msgid "Graph"
-msgstr ""
-
-#: /plugins/debug_kit/views/elements/variables_panel.ctp:21
-msgid "View Variables"
-msgstr ""
-
-#: /plugins/debug_kit/views/helpers/html_toolbar.php:182
-msgid "Explain"
-msgstr ""
-
-#: /plugins/debug_kit/views/helpers/simple_graph.php:77
-msgid "Starting %sms into the request, taking %sms"
-msgstr ""
-
-#: /plugins/debug_kit/views/helpers/toolbar.php:158
-msgid "maybe slow"
-msgstr ""
-
-#: /plugins/migrations/libs/migration_version.php:162
-msgid "Class `%1$s` not found on file `%2$s` for %3$s."
-msgstr ""
-
-#: /plugins/migrations/libs/migration_version.php:271
-msgid "File `%1$s` not found in the %2$s."
-msgstr ""
-
-#: /plugins/migrations/libs/migration_version.php:281
-msgid "%2$s does not contain a proper map.php file."
-msgstr ""
-
-#: /plugins/migrations/libs/model/cake_migration.php:156
-msgid "Migration direction (%s) is not one of valid directions."
-msgstr ""
-
-#: /plugins/migrations/libs/model/cake_migration.php:216
-msgid "Migration action type (%s) is not one of valid actions type."
-msgstr ""
-
-#: /plugins/migrations/libs/model/cake_migration.php:236;293
-msgid "Table \"%s\" already exists in database."
-msgstr ""
-
-#: /plugins/migrations/libs/model/cake_migration.php:243;269;300;372;388
-msgid "SQL Error: %s"
-msgstr ""
-
-#: /plugins/migrations/libs/model/cake_migration.php:262;289
-msgid "Table \"%s\" does not exists in database."
-msgstr ""
-
-#: /plugins/migrations/libs/model/cake_migration.php:332
-msgid "Field \"%s\" does not exists in \"%s\"."
-msgstr ""
-
-#: /plugins/migrations/libs/model/cake_migration.php:340
-msgid "Field \"%s\" already exists in \"%s\"."
-msgstr ""
-
-#: /plugins/migrations/libs/model/cake_migration.php:423
-msgid "Interrupted when running \"%s\" callback."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:76
-msgid "Cake Migration Shell"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:92
-msgid "Creating table :table."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:93
-msgid "Dropping table :table."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:94
-msgid "Renaming table :old_name to :new_name."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:95
-msgid "Adding field :field to :table."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:96
-msgid "Dropping field :field from :table."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:97
-msgid "Changing field :field from :table."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:98
-msgid "Renaming field :old_name to :new_name on :table."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:99
-msgid "Adding index :index to :table."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:100
-msgid "Dropping index :index from :table."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:129
-msgid "No migrations available."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:145;159;181
-msgid "Not a valid migration version."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:167
-msgid "Please, choose what version you want to migrate to. [q]uit or [c]lean."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:188
-msgid "Running migrations:"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:192
-msgid "An error occurred when processing the migration:"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:193
-msgid "Migration: %s"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:194
-msgid "Error: %s"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:200
-msgid "All migrations have completed."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:213
-msgid "Please enter the descriptive name of the migration to generate:"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:216
-msgid "Migration name (%s) is invalid. It must only contain alphanumeric characters."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:229
-msgid "Do you want compare the schema.php file to the database?"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:232
-msgid "Comparing schema.php to the database..."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:243
-msgid "Do you want generate a dump from current database?"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:246
-msgid "Generating dump from current database..."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:260
-msgid "Generating Migration..."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:276
-msgid "Mapping Migrations..."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:284
-msgid "Done."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:321
-msgid "Current version:"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:326
-msgid "None applied."
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:329
-msgid "Latest version:"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:397
-msgid "Current migration version:"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:402
-msgid "Available migrations:"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:408
-msgid "applied"
-msgstr ""
-
-#: /plugins/migrations/vendors/shells/migration.php:410
-msgid "not applied"
-msgstr ""
-
-#: /plugins/search/controllers/components/prg.php:232
-msgid "Please correct the errors below."
-msgstr ""
-
-#: /plugins/utils/controllers/components/archive.php:156
-msgid "No %s found for that date range"
-msgstr ""
-
-#: /plugins/utils/controllers/components/form_preserver.php:77
-msgid "Your form data is preserved you'll be redirected to it after login."
-msgstr ""
-
-#: /plugins/utils/models/behaviors/csv_import.php:142
-msgid "%s for Row %d failed to save."
-msgstr ""
-
-#: /plugins/utils/models/behaviors/toggleable.php:48
-msgid "You need to define at least one field to be toggleable."
-msgstr ""
-
-#: /plugins/utils/models/behaviors/toggleable.php:69
-msgid "The field %s is not in the list of toggleable fields."
-msgstr ""
-
-#: /plugins/utils/models/behaviors/toggleable.php:73
-msgid "The field %s does not have two toggleable states defined."
-msgstr ""
-
-#: /plugins/utils/models/behaviors/toggleable.php:93
-msgid "Invalid record"
-msgstr ""
-
+msgstr "Modifica menu"

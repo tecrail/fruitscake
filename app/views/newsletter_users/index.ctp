@@ -4,26 +4,26 @@
 
 <div class="page_content">
 
-    <p style="text-align:center;"><?php __('lbl_text_subscribe_newsletter');?>.</p>
+    <p style="text-align:center;"><?php __('lbl_text_subscribe_newsletter_of_site');?> <?php echo Configure::read("App.baseTitle") ?>.</p>
 
     <div class="newsletter_form_subscription">
 
-        <?php echo $form->create('NewsletterUser', array('action' => 'index'));?>
+        <?php echo $this->Form->create('NewsletterUser', array('action' => 'index'));?>
 
-        <?php if ($session->check('Message.flash')) $session->flash(); ?>
+        <?php if ($this->Session->check('Message.flash')) $this->Session->flash(); ?>
 
         <?php
-        echo $form->input('first_name', array('label' => __('lbl_first_name', true)));
-        echo $form->input('last_name', array('label' => __('lbl_last_name', true)));
-        echo $form->input('email', array('label' => __('lbl_email', true)));
-        echo $form->input('languages', array('label' => __('lbl_language', true), 'options' => $options_languages));
+        echo $this->Form->input('first_name', array('label' => __('lbl_first_name', true)));
+        echo $this->Form->input('last_name', array('label' => __('lbl_last_name', true)));
+        echo $this->Form->input('email', array('label' => __('lbl_email', true)));
+        echo $this->Form->input('languages', array('label' => __('lbl_language', true), 'options' => $options_languages));
         ?>
 
-        <?php echo $form->end(__('lbl_subscription', true));?>
+        <?php echo $this->Form->end(__('lbl_subscription', true));?>
 
     </div>
 
-    <?php echo $html->link(__('lbl_delete_from_newsletter', true), array('controller' => 'newsletter_users', 'action' => 'unsubscription')); ?>
+    <?php echo $this->Html->link(__('lbl_delete_from_newsletter', true), array('controller' => 'newsletter_users', 'action' => 'unsubscription')); ?>
 
 </div>
 <div class="clear"></div>
