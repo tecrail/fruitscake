@@ -6,10 +6,20 @@ class PagesController extends AppController {
 
     public function  beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow("display");
+        $this->Auth->allow("view");
     }
+	
+	
+    public function admin_view($slug = null) {
+        if (!$slug) {
+            $this->Session->setFlash(__('Invalid page', true));
+            $this->redirect(array('action' => 'index'));
+        }
+        $this->set('page', $this->Page->read(null, $slug));
+    }
+	
 
-    function display() {
+    /*function display() {
         $path = func_get_args();
 
         $count = count($path);
@@ -29,7 +39,7 @@ class PagesController extends AppController {
         }
         $this->set(compact('page', 'subpage', 'title_for_layout'));
         $this->render(implode('/', $path));
-    }
+    }*/
 
     public function admin_index() {
         $this->Page->recursive = 0;

@@ -3,6 +3,28 @@
 class PhotoGalleriesController extends AppController {
 
     public $name = 'PhotoGalleries';
+	
+
+    public function index() {
+        $this->paginate['PhotoGallery'] = array(
+            'contain' => array('Photo' => array(
+                'limit' => 1,
+                'conditions' => array('Photo.published' => true)
+            )),
+            'order' => array('PhotoGallery.modified' => 'DESC')
+        );
+
+        $this->PhotoGallery->recursive = 0;
+        $this->set('photoGalleries', $this->paginate());
+    }
+
+    public function view($id = null) {
+        if (!$id) {
+            $this->Session->setFlash(__('Invalid photo gallery', true));
+            $this->redirect(array('action' => 'index'));
+        }
+        $this->set('photoGallery', $this->PhotoGallery->read(null, $id));
+    }
 
     public function admin_index() {
         $this->paginate['PhotoGallery'] = array(
