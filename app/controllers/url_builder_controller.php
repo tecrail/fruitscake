@@ -20,21 +20,35 @@ class UrlBuilderController extends AppController {
             'news' => array(
                 'label' => __('News', true)
             ),
-            'newsletter' => array(
+            /*'newsletter' => array(
                 'label' => __('Newsletters', true)
-            ),
-            'newsletter_user' => array(
-                'label' => __('Newsletters users', true),
+            ),*/
+            'newsletter' => array(
+                'label' => __('Newsletters', true),
                 'actions' => array(
-                    'index' => array(
+	                'index' => array(
+	                    'label' => __('Model index', true),
+	                    'thirdStep' => false,
+	                    'url' => null
+	                ),
+	                'view' => array(
+	                    'label' => __('Model view', true),
+	                    'url' => null,
+	                    'thirdStep' => array(
+	                        'url' => null
+	                    )
+	                ),
+                    'subscription' => array(
+                    	'model' => 'newsletter_user',
                         'label' => __('Subscription', true),
                         'thirdStep' => false,
-                        'url' => null
+                        'url' => array('controller' => 'newsletter_user', 'action' => 'index')
                     ),
                     'unsubscription' => array(
+                    	'model' => 'newsletter_user',
                         'label' => __('Unsubscription', true),
                         'thirdStep' => false,
-                        'url' => null
+                        'url' => array('controller' => 'newsletter_user', 'action' => 'unsubscription')
                     )
                 )
             )
@@ -79,12 +93,14 @@ class UrlBuilderController extends AppController {
         $result = array();
 
         foreach ($actions as $key => $action) {
+        	
+			$actionModel = isset($action['model']) ? $action['model'] : $model;
 
             if (!isset($action['url']) || empty($action['url'])
                     && (!isset($action['thirdStep']) || !$action['thirdStep'])) {
 
                 $action['url'] = Router::url(array(
-                            'controller' => Inflector::pluralize($model),
+                            'controller' => Inflector::pluralize($actionModel),
                             'action' => $key,
                             'admin' => false
                         ));
@@ -96,7 +112,7 @@ class UrlBuilderController extends AppController {
                 $action['thirdStep']['url'] = Router::url(array(
                             'controller' => 'url_builder', //Inflector::pluralize($model),
                             'action' => 'get_items',
-                            $model,
+                            $actionModel,
                             'admin' => true
                         ));
                 $action['url'] = null;

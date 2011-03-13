@@ -36,7 +36,7 @@
                 });
 
             <?php else: ?>
-                $("#url_builder_input_field").val("<?php echo $action['url'] ?>");
+                $("#url_builder_input_field").val("<?php echo Router::url($action['url']) ?>");
                 $("#thirdUrlBuilderBox").fadeOut(600);
                 UrlBuilder.hide();
             <?php endif ?>
