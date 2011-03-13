@@ -7,6 +7,9 @@ class UrlBuilderController extends AppController {
     public $layout = 'ajax';
     private $__defaultModelSettings = array();
     protected $_availableMenus = array();
+	protected $_defaultRouterOptions = array(
+		'admin' => false
+	);
 
     public function __construct() {
         parent::__construct();
@@ -42,13 +45,13 @@ class UrlBuilderController extends AppController {
                     	'model' => 'newsletter_user',
                         'label' => __('Subscription', true),
                         'thirdStep' => false,
-                        'url' => array('controller' => 'newsletter_user', 'action' => 'index')
+                        'url' => array('controller' => 'newsletter_users', 'action' => 'index')
                     ),
                     'unsubscription' => array(
                     	'model' => 'newsletter_user',
                         'label' => __('Unsubscription', true),
                         'thirdStep' => false,
-                        'url' => array('controller' => 'newsletter_user', 'action' => 'unsubscription')
+                        'url' => array('controller' => 'newsletter_users', 'action' => 'unsubscription')
                     )
                 )
             )
@@ -104,7 +107,9 @@ class UrlBuilderController extends AppController {
                             'action' => $key,
                             'admin' => false
                         ));
-            }
+            } else {
+            	$action['url'] = Router::url(array_merge($action['url'], $this->_defaultRouterOptions));
+           	}
 
             if (isset($action['thirdStep']) && !empty($action['thirdStep'])
                     && (!isset($action['thirdStep']['url']) || !($action['thirdStep']['url']))) {
