@@ -413,7 +413,7 @@ ul#menu_tree li  .root-item {
 }
 ul#menu_tree div.actions {
     float: right;
-    width: 280px;
+    width: 300px;
     text-align: center;
 }
 ul#menu_tree div.actions a {
@@ -635,7 +635,7 @@ fieldset.urlBuilder {
 div.urlBuilderBox {
     margin: 0px;
     padding: 2px;
-    width: 205px;
+    width: 32%;
     height: 100px;
     overflow-y: scroll;
     float: left;

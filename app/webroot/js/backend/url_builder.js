@@ -32,7 +32,7 @@ $(document).ready(function() {
 
             showCentered: function(callback) {
                 $(config.spinner_selector).css({
-                    left: 250,
+                    left: '40%',
                     top: 25,
                     display: 'none'
                 }).stop(false, true)
@@ -48,7 +48,7 @@ $(document).ready(function() {
 
             showRighted: function(callback) {
                 $(config.spinner_selector).css({
-                    left: 470,
+                    left: '75%',
                     top: 25,
                     display: 'none'
                 }).stop(false, true)
