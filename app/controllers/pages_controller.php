@@ -10,7 +10,7 @@ class PagesController extends AppController {
     }
 	
 	
-    public function admin_view($slug = null) {
+    public function view($slug = null) {
         if (!$slug) {
             $this->Session->setFlash(__('Invalid page', true));
             $this->redirect(array('action' => 'index'));
