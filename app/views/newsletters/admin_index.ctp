@@ -20,7 +20,7 @@
             }
         ?>
             <tr<?php echo $class; ?>>
-                <td>
+            <td>
                     <?php echo$this->Backend->actionLink( $newsletter['Newsletter']['title'], array('controller' => 'newsletters', 'action' => 'edit', $newsletter['Newsletter']['id']), array('class' => 'listing')); ?>&nbsp;
             </td>
             <td>
@@ -38,10 +38,9 @@
         </tr>
         <?php endforeach; ?>
             </table>
+            
+		<?php echo $this->element("backend/paging") ?>
+
         </div>
-
-
-<?php echo $this->element("backend/paging") ?>
-
 
 <?php echo $this->element("backend/left_navigator") ?>
