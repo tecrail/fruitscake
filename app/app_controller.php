@@ -56,6 +56,7 @@ class AppController extends Controller {
     protected function _getMenus() {
         $this->Menu->recursive = -1;
         $menus = $this->Menu->find('all', array('conditions' => "Menu.menu_id = '' OR Menu.menu_id IS NULL"));
+        
         foreach ($menus as $menu) {
             $this->set(
                     Inflector::variable($menu['Menu']['name']) . "FCMenu",

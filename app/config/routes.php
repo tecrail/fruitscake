@@ -26,7 +26,7 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/views/pages/home.ctp)...
  */
-Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
+Router::connect('/', array('controller' => 'homepage', 'action' => 'index'));
 
 Router::connect('/newsletters/subscription', array('controller' => 'newsletter_users', 'action' => 'index', 'admin' => false));
 Router::connect('/newsletters/unsubscription', array('controller' => 'newsletter_users', 'action' => 'unsubscription', 'admin' => false));
@@ -37,4 +37,4 @@ Router::connect('/admin', array('controller' => 'users', 'action' => 'login', 'a
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */
-Router::connect('/pages/view/*', array('controller' => 'pages', 'action' => 'view', 'admin' => false));
+Router::connect('/page/*', array('controller' => 'pages', 'action' => 'view', 'admin' => false));
