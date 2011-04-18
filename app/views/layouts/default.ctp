@@ -7,7 +7,7 @@
         <meta name="keywords" content=""/>
         <?php
         echo $this->Html->css(array('default'));
-        echo $this->Html->script(array('jquery-1.4.4.min', 'jquery.animate-colors-min', 'http://maps.google.com/maps/api/js?sensor=false', 'application'));
+        echo $this->Html->script(array('jquery-1.5.2.min', 'jquery.animate-colors-min', 'http://maps.google.com/maps/api/js?sensor=false', 'application'));
         echo $scripts_for_layout
         ?>
         <title><?php echo $title_for_layout; ?></title>
