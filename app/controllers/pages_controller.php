@@ -1,5 +1,4 @@
 <?php
-
 class PagesController extends AppController {
 
     public $name = 'Pages';
