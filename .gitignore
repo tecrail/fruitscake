@@ -1,10 +1,10 @@
 app/config/database.php
 app/tmp/logs
-app/tmp/cache/models
-app/tmp/cache/persistent
+app/tmp/cache/models/cake_*
+app/tmp/cache/persistent/cake_*
 app/tmp/cache/cake_toolbar_cache*
-app/tmp/cache/models/cake*
-app/tmp/cache/persistent/cake*
+app/tmp/cache/models/cake_*
+app/tmp/cache/persistent/cake_*
 plugins
 vendors
 nbproject/
