@@ -10,6 +10,7 @@
         echo $this->Html->script(array('jquery-1.5.2.min', 'jquery.animate-colors-min', 'http://maps.google.com/maps/api/js?sensor=false', 'application'));
         echo $scripts_for_layout
         ?>
+        <?php echo $this->Html->css(array('ie')); ?>
         <title><?php echo $title_for_layout; ?></title>
     </head>
     <body>
@@ -45,28 +46,28 @@
                 <div id="navigator">
 
                     <?php echo $this->Frontend->menuList($navigatorFCMenu) ?>
-                    
-                </div>
 
-                <div id="content">
+                    </div>
 
-                    <div class="top">
+                    <div id="content">
+
+                        <div class="top">
 
                         <?php echo $content_for_layout ?>
-                        
+
                     </div>
                     <div class="bottom">
 
                         <h3>Lorem ipsum dolor sit amet</h3>
 
                         <p>consectetuer adipiscing elit, sed diam non- ummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim cing elit, sed diam nonummy nibh.</p>
-                        
+
                     </div>
-                    
+
                 </div>
 
                 <div class="clear">&nbsp;</div>
-                
+
             </div>
 
         </div>
@@ -78,7 +79,7 @@
                 credits: <?php echo $this->Html->link("tecrail.com", "http://www.tecrail.com") ?>
 
             </div>
-            
+
         </div>
 
     </body>

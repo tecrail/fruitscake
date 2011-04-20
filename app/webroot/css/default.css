@@ -52,7 +52,7 @@ div.center {
 div#header ul {
     list-style: none;
     margin: 0;
-    padding: 10px 0;
+    padding: 10px 20px;
     display: block;
 }
 div#header ul > li {
@@ -64,16 +64,17 @@ div#header ul a {
     display: block;
     padding: 0px;
     text-decoration: none;
-    font-size: 17px;
-    line-height: 50px;
+    font-size: 12px;
+    line-height: 18px;
     color: #747474;
+    text-transform: uppercase;
 }
 div#header ul a:hover {
     /*    color: #ffffff;*/
 }
 div#header .menu {
-/*    margin-bottom: 5px;
-    border-bottom: 4px solid #ffffff;*/
+    /*    margin-bottom: 5px;
+        border-bottom: 4px solid #ffffff;*/
 }
 div#header {
     padding-bottom: 12px;
@@ -90,8 +91,8 @@ div#container {
 }
 div#navigator {
     float: left;
-    padding: 35px 23px 30px 29px;
-    width: 198px;
+    padding: 35px 20px;
+    width: 210px;
 }
 div#content {
     width: 671px;
@@ -99,7 +100,7 @@ div#content {
     background: #ffffff;
     float: right;
     position: relative;
-    margin: -52px 39px -56px 0;
+    margin: -38px 25px -56px 0;
 }
 div#content div.top {
     min-height: 200px;
@@ -112,7 +113,8 @@ div#content div.bottom {
 
 div#footer {
     background: #191919;
-    color: #ffffff;
+    color: #ccc;
+    padding-left: 55px;
 }
 div#footer a {
     color: #666;
@@ -120,6 +122,7 @@ div#footer a {
 }
 div#footer a:hover {
     color: #aaa;
+    text-decoration: underline;
 }
 div#footer div.center {
     padding: 25px 30px;
@@ -132,14 +135,12 @@ div#navigator ul {
     margin: 0;
     padding: 0;
 }
-div#navigator ul > li {
+div#navigator ul li {
     display: block;
     margin-bottom: 3px;
-/*    padding-left: 8px;*/
-    background-color: #e6e6e6;
 }
 div#navigator ul a {
-    color: #1A1A1A;
+    color: #666;
     display: block;
     height: 34px;
     line-height: 34px;
@@ -147,22 +148,49 @@ div#navigator ul a {
     text-transform: none;
     font-size: 15px;
     padding-left: 15px;
+    position: relative;
+    -webkit-box-shadow: #ccc 0px 1px 2px;
+    -moz-box-shadow: #ccc 0px 1px 2px;
+    box-shadow: #ccc 0px 1px 2px;
+    background: #eeeefe;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#eeeefe));
+    background: -moz-linear-gradient(#fff, #eeeefe);
+    background: linear-gradient(#fff, #eeeefe);
+    -pie-background: linear-gradient(#fff, #eeeefe);
 }
-div#navigator ul > li:hover {
-/*    background: url(/img/lm_bg_h.png)   ;*/
-    background-position: 0% 50%;
-    background-repeat: no-repeat;
-    color: #e6e6e6;
-}
-div#navigator ul > li:hover a {
-    background: url(/img/lm_bg_h1.png) left center #4776a2 no-repeat;
-    color: #fff;
+div#navigator a:hover {
+    color: #444;
+    background: #fff;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eeeefe), to(#fff));
+    background: -moz-linear-gradient(#eeeefe, #fff);
+    background: linear-gradient(#eeeefe, #fff);
+    -pie-background: linear-gradient(#eeeefe, #fff);
+
 }
 #logo {
     display: block;
     height: 300px;
     background: transparent url(/img/logo02.png) center center no-repeat;
     width: 250px;
+}
+
+body #content {
+    -webkit-box-shadow: #aaa 0px 2px 3px;
+    -moz-box-shadow: #aaa 0px 2px 3px;
+    box-shadow: #aaa 0px 2px 3px;
+    
+    ﻿border: 1px solid #696;
+    padding: 0px 0px 0px 0px;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+
+    background: #EEFF99;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#eeeefe));
+    background: -moz-linear-gradient(#fff, #eeeefe);
+    background: linear-gradient(#fff, #eeeefe);
+    -pie-background: linear-gradient(#fff, #eeeefe);
 }
 
 
