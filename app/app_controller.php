@@ -44,7 +44,7 @@ class AppController extends Controller {
     }
 
     protected function _setupLayout() {
-        if ($this->params['prefix'] == 'admin' && $this->params['admin'] ) {
+        if ( isset($this->params['prefix']) && $this->params['prefix'] == 'admin' && $this->params['admin'] ) {
             $this->layout = 'backend/default';
             $this->_pageTitle = __('backend', true);
         } else {
