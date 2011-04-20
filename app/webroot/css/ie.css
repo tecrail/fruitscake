@@ -1,4 +1,5 @@
-*, #content, #navigatorFCMenu li {
+#content, #navigatorFCMenu li,
+ul.indexList li {
     behavior: url(/pie/PIE.php);
 /*    behavior: url(http://fetchak.com/ie-css3/ie-css3.htc);*/
 }
