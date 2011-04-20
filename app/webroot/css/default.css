@@ -11,7 +11,7 @@ body {
     padding: 0;
     height: 100%;
     background: #ffffff;
-    color: #333;
+    color: #666666;
     font-family: Arial,Helvetica,sans-serif;
     font: 13px/20px "Trebuchet MS", Arial, Sans-Serif;
     text-transform: none;
@@ -25,6 +25,7 @@ ul, ol {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 10px 0;
+    color: #888;
 }
 
 a {
@@ -103,7 +104,8 @@ div#content {
 }
 div#content div.top {
     min-height: 200px;
-    padding: 58px 58px 40px 58px;
+    padding: 42px 30px;
+    min-height: 300px;
 }
 div#content div.bottom {
     background: #F2F2F2;
@@ -188,7 +190,31 @@ body #content {
     background: linear-gradient(#fff, #eeeefe);
     -pie-background: linear-gradient(#fff, #eeeefe);
 }
-
+ul.indexList {
+    list-style: none;
+    display: block;
+}
+ul.indexList li {
+    -webkit-box-shadow: #ccc 0px 0px 2px;
+    -moz-box-shadow: #ccc 0px 0px 2px;
+    box-shadow: #ccc 0px 0px 2px;
+    padding: 10px 15px;
+    color: #666666;
+}
+a.image-link {
+    border: 1px solid #eee;
+    padding: 5px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+a.image-link span{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+}
 
 .clear,
 div#header ul > li.clear,

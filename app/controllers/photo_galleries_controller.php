@@ -3,7 +3,11 @@
 class PhotoGalleriesController extends AppController {
 
     public $name = 'PhotoGalleries';
-	
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow(array('index', 'view'));
+    }
 
     public function index() {
         $this->paginate['PhotoGallery'] = array(
