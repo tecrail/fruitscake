@@ -543,7 +543,7 @@ ul.gallery-list li.unpublished div.image {
     border: 1px solid #ccc;
 }
 ul.gallery-list a.image-link {
-    background-position: 50% 50%;
+    background-position: 50% 5%;
     background-repeat: no-repeat;
 
 }

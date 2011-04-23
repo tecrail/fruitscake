@@ -21,9 +21,12 @@
         <div class="abstract">
             <?php echo $photoGallery['PhotoGallery']['description'] ?>
         </div>
+        <?php echo $this->Html->link("Vedi gallery &gt;", array('controller' => 'photo_galleries', 'action' => 'view', $photoGallery['PhotoGallery']['id']), array('escape' => false, 'class' => 'show_link')) ?>
 
-        <div class="clear">&nbsp;</div>
+            <div class="clear">&nbsp;</div>
 
-    </li>
+        </li>
     <?php endforeach; ?>
 </ul>
+
+<?php echo $this->element("paginator") ?>

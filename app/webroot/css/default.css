@@ -24,8 +24,10 @@ ul, ol {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    padding: 10px 0;
+    margin: 5px 0 15px 0;
+    padding: 5px 15px;
     color: #888;
+    border-bottom: 2px solid #eef;
 }
 
 a {
@@ -195,11 +197,15 @@ ul.indexList {
     display: block;
 }
 ul.indexList li {
-    -webkit-box-shadow: #ccc 0px 0px 2px;
+/*    -webkit-box-shadow: #ccc 0px 0px 2px;
     -moz-box-shadow: #ccc 0px 0px 2px;
-    box-shadow: #ccc 0px 0px 2px;
+    box-shadow: #ccc 0px 0px 2px;*/
+    border-bottom: 1px solid #eef;
     padding: 10px 15px;
     color: #666666;
+}
+ul.indexList li .abstract {
+    min-height: 60px;
 }
 a.image-link {
     border: 1px solid #eee;
@@ -215,6 +221,37 @@ a.image-link span{
     background-position: 50% 0%;
     background-repeat: no-repeat;
 }
+a.show_link {
+    float: right;
+    font-style: italic;
+    text-decoration: none;
+}
+.paginator_container {
+    background: #eef;
+    padding: 5px 15px;
+    margin: 20px 0 5px 0;
+}
+.paginator_container .disabled,
+.paginator_container .paginator {
+    color: #ccc;
+}
+.paginator_container .paginator {
+    float: right;
+}
+.paginator_container .counter {
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .clear,
 div#header ul > li.clear,

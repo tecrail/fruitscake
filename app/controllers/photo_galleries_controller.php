@@ -15,7 +15,8 @@ class PhotoGalleriesController extends AppController {
                 'limit' => 1,
                 'conditions' => array('Photo.published' => true)
             )),
-            'order' => array('PhotoGallery.modified' => 'DESC')
+            'order' => array('PhotoGallery.created' => 'DESC'),
+            'limit' => 5
         );
 
         $this->PhotoGallery->recursive = 0;

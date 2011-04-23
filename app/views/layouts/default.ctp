@@ -58,10 +58,7 @@
                     </div>
                     <div class="bottom">
 
-                        <h3>Lorem ipsum dolor sit amet</h3>
-
-                        <p>consectetuer adipiscing elit, sed diam non- ummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim cing elit, sed diam nonummy nibh.</p>
-
+                        <?php echo $this->element('company_info') ?>
                     </div>
 
                 </div>
