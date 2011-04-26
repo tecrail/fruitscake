@@ -28,7 +28,17 @@ class PhotoGalleriesController extends AppController {
             $this->Session->setFlash(__('Invalid photo gallery', true));
             $this->redirect(array('action' => 'index'));
         }
-        $this->set('photoGallery', $this->PhotoGallery->read(null, $id));
+        $this->PhotoGallery->recursive = -1;
+        $photoGallery = $this->PhotoGallery->read(null, $id);
+        $this->set('photoGallery', $photoGallery);
+
+        $this->paginate['Photo'] = array(
+            'conditions' => array("Photo.photo_gallery_id" => $photoGallery['PhotoGallery']['id']),
+            'order' => array('Photo.created' => 'DESC'),
+            'limit' => 16
+        );
+        $this->PhotoGallery->Photo->recursive = -1;
+        $this->set('photos', $this->paginate('Photo'));
     }
 
     public function admin_index() {

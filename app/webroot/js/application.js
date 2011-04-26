@@ -1,3 +1,7 @@
+Shadowbox.init({
+    overlayOpacity: 0.8
+});
+
 $(document).ready(function() {
 
 

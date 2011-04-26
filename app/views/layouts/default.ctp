@@ -6,8 +6,8 @@
         <meta name="description" content=""/>
         <meta name="keywords" content=""/>
         <?php
-        echo $this->Html->css(array('default'));
-        echo $this->Html->script(array('jquery-1.5.2.min', 'jquery.animate-colors-min', 'http://maps.google.com/maps/api/js?sensor=false', 'application'));
+        echo $this->Html->css(array('/shadowbox/shadowbox', 'default'));
+        echo $this->Html->script(array('jquery-1.5.2.min', 'jquery.animate-colors-min', '/shadowbox/shadowbox', 'http://maps.google.com/maps/api/js?sensor=false', 'application'));
         echo $scripts_for_layout
         ?>
         <?php echo $this->Html->css(array('ie')); ?>

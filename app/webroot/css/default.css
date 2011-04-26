@@ -82,8 +82,8 @@ div#header {
     padding-bottom: 12px;
 }
 div#banners {
-    border-top: 4px solid #FFFFFF;
-    border-bottom: 4px solid #FFFFFF;
+    border-top: 4px solid #eef;
+    border-bottom: 4px solid #eef;
     padding: 5px 0;
     height: 300px;
     overflow: hidden;
@@ -208,7 +208,7 @@ ul.indexList li .abstract {
     min-height: 60px;
 }
 a.image-link {
-    border: 1px solid #eee;
+    border: 1px solid #eef;
     padding: 5px;
     display: block;
     float: left;
@@ -220,6 +220,9 @@ a.image-link span{
     height: 100px;
     background-position: 50% 0%;
     background-repeat: no-repeat;
+}
+a.image-link:hover {
+    border-color: #91BF04;
 }
 a.show_link {
     float: right;
@@ -241,9 +244,56 @@ a.show_link {
 .paginator_container .counter {
     float: left;
 }
-
-
-
+.paginator_container a {
+    text-decoration: none;
+}
+.paginator_container a:hover {
+    text-decoration: underline;
+}
+h2 a {
+    color: #888888;
+    text-decoration: none;
+}
+h2 a:hover {
+    color: #bbc;
+    text-decoration: none;
+}
+h2 strong {
+    font-size: 0.85em;
+}
+#content p {
+    margin: 0 15px 10px 15px;
+    color: #888;
+}
+#content .bottom p {
+    margin: 10px 0px 10px;
+}
+ul.gallery-list {
+    list-style: none;
+    min-height: 165px;
+    display: block;
+    padding: 15px;
+}
+ul.gallery-list li {
+    display: block;
+    float: left;
+    margin: 0 10px 15px 0;
+}
+ul.gallery-list li a.image-link {
+    border: 1px solid #eef;
+    margin: 0;
+}
+ul.gallery-list li a.image-link:hover {
+    border: 1px solid #91BF04;
+}
+ul.gallery-list li a.image-link span{
+    display: block;
+    width: 123px;
+    height: 123px;
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    margin: 0;
+}
 
 
 
@@ -255,13 +305,17 @@ a.show_link {
 
 .clear,
 div#header ul > li.clear,
-div#navigator ul > li.clear {
+div#navigator ul > li.clear,
+ul.gallery-list li.clear {
     clear: both;
     display: block;
     float: none;
     height: 0;
     line-height: 0;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 .overlay {
     height: 0px;
