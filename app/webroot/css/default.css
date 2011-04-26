@@ -331,6 +331,36 @@ ul.gallery-list li a.image-link span{
 .wrapper {
     min-height: 200px;
 }
+#content ul.gallery-list {
+    list-style: none;
+    min-height: 165px;
+    display: block;
+    padding: 15px;
+    margin: 15px 0px;
+}
+#content ul.gallery-list li {
+    display: block;
+    float: left;
+    margin: 0 10px 15px 0;
+}
+#content ul.gallery-list li a.image-link {
+    border: 1px solid #eef;
+    margin: 0;
+}
+#content ul.gallery-list li a.image-link:hover {
+    border: 1px solid #91BF04;
+}
+#content ul.gallery-list li a.image-link span{
+    display: block;
+    width: 123px;
+    height: 123px;
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+
+
 
 
 
@@ -339,7 +369,7 @@ ul.gallery-list li a.image-link span{
 .clear,
 div#header ul > li.clear,
 div#navigator ul > li.clear,
-ul.gallery-list li.clear {
+#content ul.gallery-list li.clear {
     clear: both;
     display: block;
     float: none;
