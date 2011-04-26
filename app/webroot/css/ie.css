@@ -1,6 +1,7 @@
 #content, #navigatorFCMenu li,
 ul.indexList li,
-div#navigator ul a {
+div#navigator ul a,
+a.image-link {
     position: relative;
     behavior: url(/pie/PIE.php);
 }

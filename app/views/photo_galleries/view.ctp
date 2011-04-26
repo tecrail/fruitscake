@@ -1,10 +1,14 @@
 
-<h2><?php echo $this->Html->link(__('Photo Gallery', true), array('controller' => 'photo_galleries', 'action' => 'index')) ?> &gt; <strong><?php echo $photoGallery['PhotoGallery']['title']; ?></strong></h2>
+<h2>
+<?php echo $this->Html->link(__('Photo Gallery', true), array('controller' => 'photo_galleries', 'action' => 'index')) ?><strong> &gt; <?php echo $photoGallery['PhotoGallery']['title']; ?></strong>
+</h2>
 
 <div class="wrapper">
 
 
-    <p><?php echo $photoGallery['PhotoGallery']['description']; ?></p>
+    <p>
+        <strong><?php echo $photoGallery['PhotoGallery']['description']; ?></strong>
+    </p>
 
     <ul class="gallery-list">
 

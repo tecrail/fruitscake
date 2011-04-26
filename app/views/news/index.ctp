@@ -1,38 +1,45 @@
-<div class="news index">
-    <h2><?php __('News'); ?></h2>
-    <table cellpadding="0" cellspacing="0">
-        <tr>
-            <th><?php echo $this->Paginator->sort('title'); ?></th>
-            <th><?php echo $this->Paginator->sort('published'); ?></th>
-            <th><?php echo $this->Paginator->sort('date'); ?></th>
-            <th><?php echo $this->Paginator->sort('modified'); ?></th>
-            <th class="actions"><?php __('Actions'); ?></th>
-        </tr>
-        <?php
-        $i = 0;
-        foreach ($news as $news):
-            $class = null;
-            if ($i++ % 2 == 0) {
-                $class = ' class="altrow"';
-            }
-        ?>
-            <tr<?php echo $class; ?>>
-                <td><?php echo$this->Backend->actionLink( $news['News']['title'], array('controller' => 'news', 'action' => 'edit', $news['News']['id']), array('class' => 'listing')); ?>&nbsp;</td>
-                <td class="published"><?php echo $this->Backend->isActive($news['News']['published']); ?>&nbsp;</td>
-                <td><?php echo $news['News']['date']; ?>&nbsp;</td>
-            <td><?php echo $news['News']['modified']; ?>&nbsp;</td>
-            <td class="actions">
-                <?php echo $this->Html->link(__('View', true), array('action' => 'view', $news['News']['id'])); ?>
-                <?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $news['News']['id'])); ?>
-                <?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $news['News']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $news['News']['id'])); ?>
-            </td>
-        </tr>
+
+<h2><?php __('News'); ?></h2>
+
+<div class="wrapper">
+
+    <ul class="news indexList">
+        <?php $i = 0;
+        foreach ($news as $news_item): ?>
+            <li class="<?php echo ($i++ % 2 == 0) ? 'altrow' : ''; ?>">
+                
+                <?php
+                $background_image = isset($news_item['News']['image']) && !empty($news_item['News']['image']) ? "/img/news/thumb.{$news_item['News']['image']}" : false;
+                if ($background_image) {
+                    echo $this->Html->link("<span style='background-image: url({$background_image});'></span>",
+                            array('action' => 'view', $news_item['News']['id']),
+                            array(
+                                'class' => 'image-link',
+                                'title' => $news_item['News']['title'],
+                                'escape' => false
+                            )
+                    );
+                }
+                ?>
+                <?php 
+                echo $this->Html->link(
+                        "<div class='date'>{$news_item['News']['date']}</div>{$news_item['News']['title']}",
+                        array('controller' => 'news', 'action' => 'view', $news_item['News']['id']),
+                        array('escape' => false, 'class' => 'title')
+                );
+                ?>
+
+                <div class="abstract">
+                    <?php echo $news_item['News']['short_description'] ?>
+                </div>
+                <?php echo $this->Html->link("Leggi tutto &gt;", array('controller' => 'news', 'action' => 'view', $news_item['News']['id']), array('escape' => false, 'class' => 'show_link')) ?>
+
+                <div class="clear">&nbsp;</div>
+
+            </li>
         <?php endforeach; ?>
-            </table>
+    </ul>
 
-    <?php echo $this->element("backend/paging") ?>
+</div>
 
-            </div>
-
-
-<?php echo $this->element("backend/left_navigator") ?>
+<?php echo $this->element("paginator") ?>
