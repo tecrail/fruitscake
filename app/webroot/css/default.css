@@ -138,7 +138,7 @@ div#navigator ul {
 }
 div#navigator ul li {
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
 }
 div#navigator ul a {
     color: #666;
