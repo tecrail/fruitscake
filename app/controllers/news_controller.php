@@ -3,6 +3,24 @@ class NewsController extends AppController {
 
 	public $name = 'News';
 
+        public function beforeFilter() {
+            parent::beforeFilter();
+            $this->Auth->allow(array("index", "view"));
+        }
+
+	public function index() {
+		$this->News->recursive = 0;
+		$this->set('news', $this->paginate());
+	}
+
+	public function view($id = null) {
+		if (!$id) {
+			$this->Session->setFlash(__('Invalid news', true));
+			$this->redirect(array('action' => 'index'));
+		}
+		$this->set('news', $this->News->read(null, $id));
+	}
+
 	public function admin_index() {
 		$this->News->recursive = 0;
 		$this->set('news', $this->paginate());

@@ -12,7 +12,7 @@
                 $class = ' class="altrow"';
             }
         ?>
-            <li<?php echo $class; ?>>
+        <li<?php echo $class; ?>>
             <?php
             echo $this->Html->link(
                     "{$page['Page']['title']} &raquo;",
