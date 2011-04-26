@@ -5,10 +5,16 @@ class PagesController extends AppController {
 
     public function  beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow(array("view"));
+        $this->Auth->allow(array("index", "view"));
     }
 	
 	
+    public function index() {
+        $this->Page->recursive = 0;
+        $this->set('pages', $this->paginate());
+    }
+
+
     public function view($slug = null) {
         if (!$slug) {
             $this->Session->setFlash(__('Invalid page', true));
@@ -17,6 +23,7 @@ class PagesController extends AppController {
         $this->set('page', $this->Page->read(null, $slug));
     }
 	
+
     public function admin_index() {
         $this->Page->recursive = 0;
         $this->set('pages', $this->paginate());
