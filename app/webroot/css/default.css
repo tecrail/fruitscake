@@ -344,6 +344,10 @@ ul.gallery-list li a.image-link span{
     text-transform: uppercase;
     border-bottom: 1px dotted #eee;
 }
+#content ul.pages_index li a span {
+    float: right;
+    text-transform: lowercase;
+}
 #content ul.pages_index li.altrow a {
     background: #fff;
 }

@@ -15,8 +15,14 @@ class NewslettersController extends AppController {
           'host' => 'out.alice.it'
           );
           $this->Email->delivery = 'smtp'; */
-        $this->Auth->allow(array('view'));
+        $this->Auth->allow(array('index', 'view'));
     }
+
+    public function index() {
+        $this->Newsletter->recursive = 0;
+        $this->set('newsletters', $this->paginate());
+    }
+
 
     public function admin_index() {
         $this->Newsletter->recursive = 0;
