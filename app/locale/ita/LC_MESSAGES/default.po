@@ -1381,3 +1381,9 @@ msgstr "Password"
 
 msgid "Temppassword"
 msgstr "Ripeti password"
+
+msgid "List Page"
+msgstr "Elenco Pagine"
+
+msgid "New Page"
+msgstr "Nuova Pagina"
