@@ -448,6 +448,10 @@ form .error-message {
     text-align: left;
     width: 120px;
 }
+#flashMessage {
+    padding: 10px 0;
+    font-weight: bold;
+}
 
 
 
