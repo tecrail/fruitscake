@@ -1,6 +1,6 @@
 <h2><?php __('lbl_subscribe_newsletter');?></h2>
 
-<div class="page_content">
+<div class="content_description newsletters">
 
     <p><?php __('lbl_text_subscribe_newsletter_of_site');?> <?php echo Configure::read("App.baseTitle") ?>.</p>
 
@@ -22,7 +22,9 @@
 
     </div>
 
-    <?php echo $this->Html->link(__('lbl_delete_from_newsletter', true), array('controller' => 'newsletter_users', 'action' => 'unsubscription')); ?>
+    <p>&nbsp;</p>
+
+    <?php echo $this->Html->link(__('lbl_delete_from_newsletter', true) . " &raquo;", array('controller' => 'newsletter_users', 'action' => 'unsubscription'), array('escape' => false)); ?>
 
 </div>
 <div class="clear"></div>
