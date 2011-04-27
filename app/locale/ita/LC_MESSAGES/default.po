@@ -1039,7 +1039,7 @@ msgstr "Modifica password"
 
 #: /views/users/admin_login.ctp:5
 msgid "reset password"
-msgstr "Nuova password"
+msgstr "Hai dimenticato la password?"
 
 #: /views/variables/admin_add.ctp:4
 msgid "Add Variable"
@@ -1301,11 +1301,11 @@ msgstr "Password dimenticata?"
 
 #: /views/users/admin_request_password_change.ctp:10
 msgid "Please enter the email you used for registration and you'll get an email with further instructions."
-msgstr ""
+msgstr "Inserisci l'email che hai usato per la registrazione, ricevera un'email con le istruzioni per il reset della password"
 
 #: /views/users/admin_request_password_change.ctp:14
 msgid "Your Email"
-msgstr "La tua Email"
+msgstr "Inserisci la tua Email"
 
 #: /views/users/admin_reset_password.ctp:9
 msgid "Reset your password"
@@ -1348,3 +1348,36 @@ msgstr "Nuovo menu"
 #: /views/menus/admin_edit_parent.ctp:5
 msgid "Edit Menu"
 msgstr "Modifica menu"
+
+msgid "List Menu"
+msgstr "Elenco Menu"
+
+msgid "New Menu"
+msgstr "Inserisci Menu"
+
+msgid "List News"
+msgstr "Elenco News"
+
+msgid "New News"
+msgstr "Inserisci News"
+
+msgid "New image"
+msgstr "Inserisci foto"
+
+msgid "List Newsletter"
+msgstr "Elenco Newsletter"
+
+msgid "New Newsletter"
+msgstr "Inserisci Newsletter"
+
+msgid "New User"
+msgstr "Inserisci Utente"
+
+msgid "List User"
+msgstr "Elenco Utenti"
+
+msgid "Passwd"
+msgstr "Password"
+
+msgid "Temppassword"
+msgstr "Ripeti password"
