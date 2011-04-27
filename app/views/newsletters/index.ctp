@@ -17,7 +17,7 @@
             echo $this->Html->link(
                     "{$newsletter['Newsletter']['title']} <span>visualizza &raquo;</span>",
                     array('controller' => 'newsletters', 'action' => 'view', $newsletter['Newsletter']['id']),
-                    array('escape' => false)
+                    array('escape' => false, 'target' => '_blank')
             );
             ?>
         </li>

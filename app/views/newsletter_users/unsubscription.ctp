@@ -1,21 +1,27 @@
 <h2><?php __('lbl_delete_from_newsletter'); ?></h2>
 
-<p><?php __('lbl_remove_me_from_the_newsletter_text'); ?></p><br/>
+<div class="content_description newsletters">
+    <?php
+    if ($this->Session->check('Message.flash')) {
+        echo $this->Session->flash();
+    }
+    ?>
 
-<div class="newsletter_form_subscription">
+    <p><?php __('lbl_remove_me_from_the_newsletter_text'); ?></p><br/>
 
-    <?php echo $this->Form->create('NewsletterUser', array('action' => 'unsubscription', 'class' => 'new_comment')); ?>
+    <div class="newsletter_form_subscription">
 
-    <?php if ($this->Session->check('Message.flash')) {
-        $this->Session->flash();
-    } ?>
+        <?php echo $this->Form->create('NewsletterUser', array('action' => 'unsubscription', 'class' => 'new_comment')); ?>
 
-    <?php echo $this->Form->input('email'); ?>
 
-    <?php echo $this->Form->end(__('lbl_send', true)); ?>
+        <?php echo $this->Form->input('email'); ?>
+
+        <?php echo $this->Form->end(__('lbl_send', true)); ?>
+
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="hr"></div>
 
 </div>
-
-<div class="clear"></div>
-
-<div class="hr"></div>

@@ -11,6 +11,7 @@ class PagesController extends AppController {
 	
     public function index() {
         $this->Page->recursive = 0;
+        $this->paginate['Page'] = array('limit' => 10);
         $this->set('pages', $this->paginate());
     }
 
