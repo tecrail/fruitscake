@@ -7,10 +7,10 @@
 		echo $this->Form->input('title');
 		echo $this->Form->input('short_description');
 		echo $this->Backend->htmlEditor('description');
-        echo $this->Backend->imageInput('image', empty($this->data['News']['image']) ? array() : array(
-        	'preview' => array("url" => "/img/news/thumb." . $this->data['News']['image']),
-            'delete' => true
-        ));
+                echo $this->Backend->imageInput('image', empty($this->data['News']['image']) ? array() : array(
+                    'preview' => array("url" => "/img/news/thumb." . $this->data['News']['image']),
+                    'delete' => true
+                ));
 		echo $this->Form->input('published');
 		echo $this->Form->input('date');
 		echo $this->Form->input('date_from');

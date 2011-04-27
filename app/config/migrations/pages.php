@@ -20,6 +20,7 @@ class M4d1qweasddsa5334sd210c5bdf9508da extends CakeMigration {
                 'pages' => array(
                     'id' => array('type' => 'integer', 'null' => false, 'default' => 0, 'key' => 'primary'),
                     'slug' => array('type' => 'string', 'null' => false, 'default' => NULL),
+                    'images' => array('type' => 'string', 'null' => false, 'default' => NULL),
                     'title' => array('type' => 'string', 'null' => false, 'default' => NULL),
                     'description' => array('type' => 'text', 'null' => false, 'default' => NULL),
                     'published' => array('type' => 'boolean', 'null' => true, 'default' => '0'),

@@ -229,7 +229,9 @@ a.image-link span{
     background-repeat: no-repeat;
 }
 a.image-link:hover {
-    border-color: #91BF04;
+    -webkit-box-shadow: #bcbcee 0px 0px 2px;
+    -moz-box-shadow: #bcbcee 0px 0px 2px;
+    box-shadow: #bcbcee 0px 0px 2px;
 }
 .wrapper a.image-link {
     float: right;
@@ -400,7 +402,16 @@ p.abstract {
     background: #f6f6f6;
     padding: 10px 20px;
 }
-
+.pages a.image-link {
+    margin-right: 5px;
+}
+.content_description {
+    margin: 0 15px;
+}
+#content .content_description p {
+    margin-left: 0px;
+    margin-right: 0px;
+}
 
 
 

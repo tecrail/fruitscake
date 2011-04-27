@@ -11,7 +11,7 @@ $(document).ready(function() {
         }, 400);
     }, function() {
         $(this).stop(false, true).animate({
-            color: "#747474"
+            color: "#AAAABB"
         }, 300);
     });
 

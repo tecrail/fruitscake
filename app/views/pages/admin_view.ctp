@@ -21,6 +21,11 @@
 			<?php echo $page['Page']['description']; ?>
 			&nbsp;
 		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Image'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo empty($page['Page']['image']) ? "" : $this->Html->image("/img/pages/normal." . $page['Page']['image'], array('class' => 'image-frame')); ?>
+			&nbsp;
+		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Published'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $page['Page']['published']; ?>

@@ -30,8 +30,21 @@ class Page extends AppModel {
             'method' => 'multibyteSlug',
             'separator' => '-',
             'update' => true
+        ),
+        'CakeAttachment.Upload' => array(
+            'image' => array(
+                'field' => 'image',
+                'dir' => "{IMAGES}pages",
+                'uniqidAsFilenames' => true,
+                'thumbsizes' => array(
+                    'thumb' => array('width' => 200, 'height' => 'auto', 'name' => 'thumb.{$file}.{$ext}', 'autoResize' => true),
+                    'normal' => array('width' => 400, 'height' => 'auto', 'name' => 'normal.{$file}.{$ext}', 'autoResize' => true)
+                )
+            )
         )
     );
+
+
     public $displayField = 'title';
 
     /**
@@ -44,5 +57,8 @@ class Page extends AppModel {
     public function __construct($id = false, $table = null, $ds = null) {
         parent::__construct($id, $table, $ds);
     }
+
+
+
 
 }
