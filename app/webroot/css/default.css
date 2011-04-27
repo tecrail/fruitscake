@@ -430,6 +430,7 @@ form div.input label {
     cursor: pointer;
     float: left;
     width: 100px;
+    line-height: 22px;
 }
 form div.input input {
     float: left;
@@ -439,6 +440,13 @@ form div.submit {
     display: block;
     height: 30px;
     float: left;
+}
+form .error-message {
+    padding: 0px;
+    color: #f00;
+    float: right;
+    text-align: left;
+    width: 120px;
 }
 
 
