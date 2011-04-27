@@ -20,6 +20,7 @@ class NewslettersController extends AppController {
 
     public function index() {
         $this->Newsletter->recursive = 0;
+        $this->paginate['Newsletter'] = array('limit' => 10);
         $this->set('newsletters', $this->paginate());
     }
 
