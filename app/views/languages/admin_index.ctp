@@ -24,7 +24,7 @@
 		<td><?php echo $language['Language']['title']; ?>&nbsp;</td>
 		<td><?php echo $language['Language']['locale']; ?>&nbsp;</td>
 		<td><?php echo $language['Language']['slug']; ?>&nbsp;</td>
-		<td><?php echo $language['Language']['published']; ?>&nbsp;</td>
+                <td style="text-align: center;"><?php echo $this->Backend->isActive($language['Language']['published']); ?>&nbsp;</td>
 		<td><?php echo $language['Language']['created']; ?>&nbsp;</td>
 		<td><?php echo $language['Language']['modified']; ?>&nbsp;</td>
 		<td class="actions">

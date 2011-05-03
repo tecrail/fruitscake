@@ -23,13 +23,16 @@ class M4d1qweasddsa5334sd210c5bdf9508da extends CakeMigration {
                     'images' => array('type' => 'string', 'null' => false, 'default' => NULL),
                     'title' => array('type' => 'string', 'null' => false, 'default' => NULL),
                     'description' => array('type' => 'text', 'null' => false, 'default' => NULL),
+                    'homepage' => array('type' => 'boolean', 'null' => true, 'default' => '0'),
                     'published' => array('type' => 'boolean', 'null' => true, 'default' => '0'),
                     'created' => array('type' => 'datetime', 'null' => true, 'default' => NULL),
                     'modified' => array('type' => 'datetime', 'null' => true, 'default' => NULL),
                     'indexes' => array(
                         'PRIMARY' => array('column' => 'id', 'unique' => 1),
                         'BY_SLUG' => array('column' => array('slug'), 'unique' => 1),
-                        'BY_TITLE' => array('column' => array('title'), 'unique' => 0)
+                        'BY_TITLE' => array('column' => array('title'), 'unique' => 0),
+                        'BY_PUB' => array('column' => array('published'), 'unique' => 0),
+                        'BY_HOME' => array('column' => array('homepage'), 'unique' => 0)
                     ),
                 ),
             ),

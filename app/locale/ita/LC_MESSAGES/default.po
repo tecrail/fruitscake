@@ -138,7 +138,7 @@ msgstr ""
 
 #: /controllers/pages_controller.php:51;66
 msgid "The page has been saved"
-msgstr "L'elemento non è stato trovato"
+msgstr "L'elemento è stato salvato correttamente"
 
 #: /controllers/pages_controller.php:54;69
 msgid "The page could not be saved. Please, try again."

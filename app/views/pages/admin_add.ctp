@@ -6,6 +6,7 @@
 		echo $this->Form->input('title');
 		echo $this->Backend->htmlEditor('description');
                 echo $this->Backend->imageInput('image');
+                echo $this->Form->input('homepage');
 		echo $this->Form->input('published');
 	?>
 	</fieldset>

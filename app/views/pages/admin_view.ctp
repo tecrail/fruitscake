@@ -26,9 +26,14 @@
 			<?php echo empty($page['Page']['image']) ? "" : $this->Html->image("/img/pages/normal." . $page['Page']['image'], array('class' => 'image-frame')); ?>
 			&nbsp;
 		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Homepage'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $this->Backend->isActive($page['Page']['homepage']); ?>
+			&nbsp;
+		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Published'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $page['Page']['published']; ?>
+			<?php echo $this->Backend->isActive($page['Page']['published']); ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Created'); ?></dt>

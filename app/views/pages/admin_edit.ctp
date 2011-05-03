@@ -10,6 +10,7 @@
                     'preview' => array("url" => "/img/pages/thumb." . $this->data['Page']['image']),
                     'delete' => true
                 ));
+		echo $this->Form->input('homepage');
 		echo $this->Form->input('published');
 	?>
 	</fieldset>

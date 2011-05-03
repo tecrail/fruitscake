@@ -452,6 +452,18 @@ form .error-message {
     padding: 10px 0;
     font-weight: bold;
 }
+a.normal-image-link {
+    display: block;
+    margin: 15px;
+    border: 1px solid #eee;
+    background: #fff;
+    padding: 6px;
+}
+a.normal-image-link img {
+    display: block;
+    max-width: 567px;
+    margin: 0 auto;
+}
 
 
 

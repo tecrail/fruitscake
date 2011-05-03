@@ -711,3 +711,19 @@ a.fancyHtmlEditorLink {
     right: 12px;
     top: 8px;
 }
+
+.paginator_container {
+    background:  #F5F5F5;
+    padding: 5px 10px;
+    border: 1px solid #DDDDDD;
+    margin-top: 10px;
+}
+.paginator_container .disabled {
+    color: #999;
+}
+.paginator_container .paginator {
+    float: right;
+}
+.paginator_container .counter {
+    float: left;
+}
