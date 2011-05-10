@@ -15,8 +15,15 @@ class NewslettersController extends AppController {
           'host' => 'out.alice.it'
           );
           $this->Email->delivery = 'smtp'; */
-        $this->Auth->allow(array('view'));
+        $this->Auth->allow(array('index', 'view'));
     }
+
+    public function index() {
+        $this->Newsletter->recursive = 0;
+        $this->paginate['Newsletter'] = array('limit' => 10);
+        $this->set('newsletters', $this->paginate());
+    }
+
 
     public function admin_index() {
         $this->Newsletter->recursive = 0;
@@ -120,9 +127,9 @@ class NewslettersController extends AppController {
 
             $this->Email->to = $user['email'];
 
-            $this->Email->subject = Configure::read('App.baseTitle') . " :: " . $newsletter['Newsletter']["title"];
-            $this->Email->replyTo = Configure::read('App.baseTitle') . ' <' . Configure::read('App.defaultEmail') . '>';
-            $this->Email->from = Configure::read('App.baseTitle') . ' <' . Configure::read('App.infoEmail') . '>';
+            $this->Email->subject = $this->_variable('baseTitle') . " :: " . $newsletter['Newsletter']["title"];
+            $this->Email->replyTo = $this->_variable('baseTitle') . ' <' . $this->_variable('newsletterEmail') . '>';
+            $this->Email->from = $this->_variable('baseTitle') . ' <' . $this->_variable('newsletterEmail') . '>';
 
             if ((bool) $newsletter['Newsletter']["attachment"]) {
                 $this->Email->attachments = array(APP . "webroot" . DS . "files" . DS . "attachments" . DS . $newsletter['Newsletter']["attachment"]);

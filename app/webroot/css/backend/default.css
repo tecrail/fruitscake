@@ -413,7 +413,7 @@ ul#menu_tree li  .root-item {
 }
 ul#menu_tree div.actions {
     float: right;
-    width: 280px;
+    width: 300px;
     text-align: center;
 }
 ul#menu_tree div.actions a {
@@ -543,7 +543,7 @@ ul.gallery-list li.unpublished div.image {
     border: 1px solid #ccc;
 }
 ul.gallery-list a.image-link {
-    background-position: 50% 50%;
+    background-position: 50% 5%;
     background-repeat: no-repeat;
 
 }
@@ -635,7 +635,7 @@ fieldset.urlBuilder {
 div.urlBuilderBox {
     margin: 0px;
     padding: 2px;
-    width: 205px;
+    width: 32%;
     height: 100px;
     overflow-y: scroll;
     float: left;
@@ -710,4 +710,20 @@ a.fancyHtmlEditorLink {
     position: absolute;
     right: 12px;
     top: 8px;
+}
+
+.paginator_container {
+    background:  #F5F5F5;
+    padding: 5px 10px;
+    border: 1px solid #DDDDDD;
+    margin-top: 10px;
+}
+.paginator_container .disabled {
+    color: #999;
+}
+.paginator_container .paginator {
+    float: right;
+}
+.paginator_container .counter {
+    float: left;
 }

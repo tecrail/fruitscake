@@ -105,6 +105,25 @@ class News extends AppModel {
     );
     public $displayField = 'title';
     public $order = array('News.modified' => 'DESC');
+    public $publishedConditions = "News.published = 1 AND News.date_from <= {Date('Y-m-d')} AND News.date_to >= {Date('Y-m-d')}";
+    
+    public static function publishedConditions() {
+        return "News.published = 1 AND News.date_from <= '" . Date('Y-m-d') . "' AND News.date_to >= '" . Date('Y-m-d') . "'";
+    }
+    
+    public function published($options = array()) {
+        $publishedConditions = News::publishedConditions();
+        
+        if (isset($options['conditions']) && is_array($options['conditions'])) {
+            $options['conditions'] = array_push($options['conditions'], $publishedConditions);
+        } elseif (isset($options['conditions']) && !is_array($options['conditions'])) {
+            $options['conditions'] = "{$options['conditions']} AND {$publishedConditions}";
+        } else {
+            $options['conditions'] = $publishedConditions;
+        }
+        
+        return $this->find('all', $options);
+    }
 
 
 }

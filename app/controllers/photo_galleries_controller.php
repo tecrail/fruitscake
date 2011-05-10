@@ -4,6 +4,43 @@ class PhotoGalleriesController extends AppController {
 
     public $name = 'PhotoGalleries';
 
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow(array('index', 'view'));
+    }
+
+    public function index() {
+        $this->paginate['PhotoGallery'] = array(
+            'contain' => array('Photo' => array(
+                'limit' => 1,
+                'conditions' => array('Photo.published' => true)
+            )),
+            'order' => array('PhotoGallery.created' => 'DESC'),
+            'limit' => 5
+        );
+
+        $this->PhotoGallery->recursive = 0;
+        $this->set('photoGalleries', $this->paginate());
+    }
+
+    public function view($id = null) {
+        if (!$id) {
+            $this->Session->setFlash(__('Invalid photo gallery', true));
+            $this->redirect(array('action' => 'index'));
+        }
+        $this->PhotoGallery->recursive = -1;
+        $photoGallery = $this->PhotoGallery->read(null, $id);
+        $this->set('photoGallery', $photoGallery);
+
+        $this->paginate['Photo'] = array(
+            'conditions' => array("Photo.photo_gallery_id" => $photoGallery['PhotoGallery']['id']),
+            'order' => array('Photo.created' => 'DESC'),
+            'limit' => 16
+        );
+        $this->PhotoGallery->Photo->recursive = -1;
+        $this->set('photos', $this->paginate('Photo'));
+    }
+
     public function admin_index() {
         $this->paginate['PhotoGallery'] = array(
             'contain' => array('Photo' => array(

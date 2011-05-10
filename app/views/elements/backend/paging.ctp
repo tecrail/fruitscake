@@ -1,12 +1,20 @@
-<?php
-if (empty($this->Paginator) || !is_a($this->Paginator, 'PaginatorHelper')) {
-	$this->Paginator = $this->Paginator;
-}
-?>
-<?php if ($this->Paginator->hasNext() || $this->Paginator->hasPrev()): ?>
-	<div class="paging">
-		<?php echo $this->Paginator->prev('< prev', array(), null, array('class' => 'disabled'));?>
-		<?php echo $this->Paginator->numbers(array('separator' => ' '));?>
-		<?php echo $this->Paginator->next('next >', array(), null, array('class' => 'disabled'));?>
-	</div>
-<?php endif; ?>
+<?php $paginatorNumbers = $this->Paginator->numbers(); ?>
+
+<div class="clear">&nbsp;</div>
+
+<div class="paginator_container">
+    <div class="counter">
+        <?php echo $this->Paginator->counter(array('format' => 'Pagina %page% di %pages%')); ?>
+    </div>
+
+    <div class="paginator">
+        <?php echo $this->Paginator->prev('« Precedente', null, null, array('class' => 'disabled')); ?>
+        <?php if (!empty($paginatorNumbers))
+            echo "| {$paginatorNumbers}"; ?> |
+        <?php echo $this->Paginator->next('successiva »', null, null, array('class' => 'disabled')); ?>
+    </div>
+
+    <div class="clear">&nbsp;</div>
+</div>
+
+<div class="clear">&nbsp;</div>

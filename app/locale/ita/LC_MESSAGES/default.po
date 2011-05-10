@@ -1,217 +1,1395 @@
-#menu pubblico
 
-msgid "lbl_news"
+#: /app_controller.php:49
+msgid "backend"
+msgstr "backend"
+
+#: /app_model.php:57
+msgid "Invalid "
+msgstr "Record non valido"
+
+#: /controllers/languages_controller.php:13;33
+msgid "Invalid language"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/languages_controller.php:23;38
+msgid "The language has been saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/languages_controller.php:26;41
+msgid "The language could not be saved. Please, try again."
+msgstr "L'elemento non può essere salvato. Verifica che tutti i dati inseriti nei campi obbligatori siano corretti"
+
+#: /controllers/languages_controller.php:51
+msgid "Invalid id for language"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/languages_controller.php:55
+msgid "Language deleted"
+msgstr "L'elemento è stato eliminato correttamente"
+
+#: /controllers/languages_controller.php:58
+msgid "Language was not deleted"
+msgstr "L'elemento non è stato eliminato"
+
+#: /controllers/menus_controller.php:75;115
+msgid "The menu has been saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/menus_controller.php:97;136
+msgid "Menu saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/menus_controller.php:154
+msgid "Menu deleted"
+msgstr "L'elemento è stato eliminato correttamente"
+
+#: /controllers/news_controller.php:13;35
+msgid "Invalid news"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/news_controller.php:23;40
+msgid "The news has been saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/news_controller.php:26;43
+msgid "The news could not be saved. Please, try again."
+msgstr "L'elemento non può essere salvato. Verifica che tutti i dati inseriti nei campi obbligatori siano corretti"
+
+#: /controllers/news_controller.php:55
+msgid "Invalid id for news"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/news_controller.php:59
+msgid "News deleted"
+msgstr "L'elemento è stato eliminato correttamente"
+
+#: /controllers/news_controller.php:62
+msgid "News was not deleted"
+msgstr "L'elemento non è stato eliminato"
+
+#: /controllers/newsletter_users_controller.php:25
+msgid "lbl_thanks_for_your_subscription"
+msgstr "Grazie per esserti iscritto alla newsletter"
+
+#: /controllers/newsletter_users_controller.php:28;112;130
+#: /controllers/newsletters_controller.php:45;79
+msgid "lbl_invalid_fields"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/newsletter_users_controller.php:52
+msgid "lbl_unsubscription_email_not_sent"
+msgstr "Si è verificato un errore durante l'invio della email. Se l'errore persiste contattare l'amministratore del sito"
+
+#: /controllers/newsletter_users_controller.php:55
+msgid "lbl_unsubscription_email_to_remove"
+msgstr "Ti è stata inviata una email con la procedura per la rimonizione dalla newsletter"
+
+#: /controllers/newsletter_users_controller.php:58;62
+msgid "lbl_unsubscription_email_not_found"
+msgstr "Email non trovata"
+
+#: /controllers/newsletter_users_controller.php:79
+msgid "lbl_unsubscription_ok"
+msgstr "Eliminazione avvenuta con successo"
+
+#: /controllers/newsletter_users_controller.php:99;122;141
+msgid "lbl_newsletter_user_not_found"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/newsletter_users_controller.php:109;127
+msgid "lbl_newsletter_user_saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/newsletter_users_controller.php:145
+msgid "lbl_newsletter_user_deleted"
+msgstr "L'elemento è stato eliminato correttamente"
+
+#: /controllers/newsletter_users_controller.php:155
+msgid "lbl_newsletter_unsubscription_mail_subject"
+msgstr "Rimozione dalla newsletter"
+
+#: /controllers/newsletters_controller.php:34;67
+msgid "To properly view the newsletter please use the following link"
+msgstr "Se non visualizzate correttamente la newsletter, utilizzate il seguente link"
+
+#: /controllers/newsletters_controller.php:37;71
+msgid "lbl_newsletter_saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/newsletters_controller.php:61;97;147;157
+msgid "lbl_newsletter_not_found"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/newsletters_controller.php:112
+msgid "lbl_newsletter_sent"
+msgstr "Newsletter spedita correttamente"
+
+#: /controllers/newsletters_controller.php:162
+msgid "lbl_newsletter_deleted"
+msgstr "L'elemento è stato eliminato correttamente"
+
+#: /controllers/newsletters_controller.php:166
+msgid "lbl_newsletter_could_not_be_deleted"
+msgstr "L'elemento non è stato eliminato"
+
+#: /controllers/pages_controller.php:41;61
+msgid "Invalid page"
+msgstr ""
+
+#: /controllers/pages_controller.php:51;66
+msgid "The page has been saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/pages_controller.php:54;69
+msgid "The page could not be saved. Please, try again."
+msgstr "L'elemento non può essere salvato. Verifica che tutti i dati inseriti nei campi obbligatori siano corretti"
+
+#: /controllers/pages_controller.php:79
+msgid "Invalid id for page"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/pages_controller.php:83
+msgid "Page deleted"
+msgstr "L'elemento è stato eliminato correttamente"
+
+#: /controllers/pages_controller.php:86
+msgid "Page was not deleted"
+msgstr "L'elemento non è stato eliminato"
+
+#: /controllers/photo_galleries_controller.php:22;42
+msgid "Invalid photo gallery"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/photo_galleries_controller.php:32;47
+msgid "The photo gallery has been saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/photo_galleries_controller.php:35;50
+msgid "The photo gallery could not be saved. Please, try again."
+msgstr "L'elemento non può essere salvato. Verifica che tutti i dati inseriti nei campi obbligatori siano corretti"
+
+#: /controllers/photo_galleries_controller.php:60
+msgid "Invalid id for photo gallery"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/photo_galleries_controller.php:64
+msgid "Photo gallery deleted"
+msgstr "L'elemento è stato eliminato correttamente"
+
+#: /controllers/photo_galleries_controller.php:67
+msgid "Photo gallery was not deleted"
+msgstr "L'elemento non è stato eliminato"
+
+#: /controllers/photos_controller.php:13;39
+msgid "Invalid photo"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/photos_controller.php:23;44
+msgid "The photo has been saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/photos_controller.php:26;47
+msgid "The photo could not be saved. Please, try again."
+msgstr "L'elemento non può essere salvato. Verifica che tutti i dati inseriti nei campi obbligatori siano corretti"
+
+#: /controllers/photos_controller.php:31
+msgid "You have to create a photo gallery first"
+msgstr "Devi prima creare una foto gallery"
+
+#: /controllers/photos_controller.php:59
+msgid "Invalid id for photo"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/photos_controller.php:63
+msgid "Photo deleted"
+msgstr "L'elemento è stato eliminato correttamente"
+
+#: /controllers/photos_controller.php:66
+msgid "Photo was not deleted"
+msgstr "L'elemento non è stato eliminato"
+
+#: /controllers/url_builder_controller.php:15
+#: /views/pages/admin_view.ctp:2
+msgid "Page"
+msgstr "Pagina"
+
+#: /controllers/url_builder_controller.php:18
+#: /views/elements/backend/main_navigator.ctp:32
+msgid "Photo gallery"
+msgstr "Foto gallery"
+
+#: /controllers/url_builder_controller.php:21
+#: /views/elements/backend/main_navigator.ctp:21
+#: /views/news/admin_index.ctp:2
+#: /views/news/admin_view.ctp:2
+msgid "News"
 msgstr "News"
 
-msgid "lbl_contacts"
-msgstr "Contacts"
+#: /controllers/url_builder_controller.php:24
+#: /views/elements/backend/main_navigator.ctp:49
+#: /views/newsletters/admin_index.ctp:3
+msgid "Newsletters"
+msgstr "Newsletter"
 
-msgid "lbl_who_we_are"
-msgstr "Who we are"
+msgid "Change password"
+msgstr "Modifica password"
 
-msgid "lbl_where_we_are"
-msgstr "Where we are"
+msgid "change_password"
+msgstr "Modifica password"
 
-msgid "lbl_download_pdf"
-msgstr "Download PDF"
+#: /controllers/url_builder_controller.php:27
+msgid "Newsletters users"
+msgstr "Iscrizione newsletter"
 
-msgid "lbl_contact_form"
-msgstr "Contact Model"
+#: /controllers/url_builder_controller.php:30
+msgid "Subscription"
+msgstr "Iscrizione newsletter"
 
+#: /controllers/url_builder_controller.php:35
+msgid "Unsubscription"
+msgstr "Deiscrizione newsletter"
+
+#: /controllers/url_builder_controller.php:46
+msgid "Model index"
+msgstr "Indice"
+
+#: /controllers/url_builder_controller.php:51
+msgid "Model view"
+msgstr "Visualizza"
+
+#: /controllers/variables_controller.php:13;33
+msgid "Invalid variable"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/variables_controller.php:23;38
+msgid "The variable has been saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/variables_controller.php:26;41
+msgid "The variable could not be saved. Please, try again."
+msgstr "L'elemento non può essere salvato. Verifica che tutti i dati inseriti nei campi obbligatori siano corretti"
+
+#: /controllers/variables_controller.php:51
+msgid "Invalid id for variable"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/variables_controller.php:55
+msgid "Variable deleted"
+msgstr "L'elemento è stato eliminato correttamente"
+
+#: /controllers/variables_controller.php:58
+msgid "Variable was not deleted"
+msgstr "L'elemento non è stato eliminato"
+
+#: /models/menu.php:60;94;116
+msgid "Invalid Menu"
+msgstr "L'elemento non è stato trovato"
+
+#: /models/menu.php:135
+msgid "You need to confirm to delete this Menu"
+msgstr "Sei sicuro?"
+
+#: /models/newsletter.php:45
+#: /models/newsletter_user.php:53;60;71;76
+msgid "notEmpty validation message"
+msgstr "Obbligatorio"
+
+#: /models/newsletter.php:49
+msgid "between 0-255 validation message"
+msgstr "Dev'essere compreso tra 0 e 255 caratteri"
+
+#: /models/newsletter_user.php:67
+msgid "email validation message"
+msgstr "Email non valida"
+
+#: /views/elements/backend/left_navigator.ctp:5
+#: /views/languages/admin_add.ctp:15
+#: /views/languages/admin_edit.ctp:16
+#: /views/languages/admin_index.ctp:12;45
+#: /views/languages/admin_view.ctp:42
+#: /views/menus/admin_index.ctp:8
+#: /views/news/admin_index.ctp:9
+#: /views/pages/admin_index.ctp:13
+#: /views/photo_galleries/admin_add.ctp:14
+#: /views/photo_galleries/admin_edit.ctp:15
+#: /views/photo_galleries/admin_index.ctp:8;49
+#: /views/photo_galleries/admin_view.ctp:37
+#: /views/photos/admin_add.ctp:16
+#: /views/photos/admin_edit.ctp:17
+#: /views/photos/admin_index.ctp:20
+#: /views/photos/admin_view.ctp:47
+#: /views/users/admin_index.ctp:12
+#: /views/variables/admin_add.ctp:13
+#: /views/variables/admin_edit.ctp:14
+#: /views/variables/admin_index.ctp:7;31
+#: /views/variables/admin_view.ctp:32
+msgid "Actions"
+msgstr "Azioni"
+
+#: /views/elements/backend/left_navigator.ctp:9
+msgid "List "
+msgstr "Elenco"
+
+#: /views/elements/backend/left_navigator.ctp:13
+msgid "Edit "
+msgstr "Modifica"
+
+#: /views/elements/backend/left_navigator.ctp:17
+msgid "New "
+msgstr "Nuovo"
+
+#: /views/elements/backend/left_navigator.ctp:21
+#: /views/elements/backend/menus/tree_item.ctp:27
+#: /views/elements/backend/photos/list_item.ctp:5
+#: /views/helpers/backend.php:46;79
+#: /views/languages/admin_edit.ctp:19
+#: /views/languages/admin_index.ctp:33
+#: /views/news/admin_index.ctp:27
+#: /views/newsletters/admin_deliver_old.ctp:38
+#: /views/newsletters/admin_edit.ctp:28
+#: /views/newsletters/admin_view.ctp:47
+#: /views/pages/admin_index.ctp:32
+#: /views/photo_galleries/admin_edit.ctp:18
+#: /views/photo_galleries/admin_index.ctp:40
+#: /views/photos/admin_edit.ctp:20
+#: /views/users/admin_index.ctp:35
+msgid "Delete"
+msgstr "Elimina"
+
+#: /views/elements/backend/left_navigator.ctp:21
+#: /views/elements/backend/menus/tree_item.ctp:27
+#: /views/elements/backend/photos/list_item.ctp:5
+#: /views/languages/admin_edit.ctp:19
+#: /views/languages/admin_index.ctp:33
+#: /views/languages/admin_view.ctp:45
+#: /views/news/admin_index.ctp:27
+#: /views/newsletters/admin_deliver_old.ctp:38
+#: /views/newsletters/admin_edit.ctp:28
+#: /views/newsletters/admin_index.ctp:35
+#: /views/newsletters/admin_view.ctp:47
+#: /views/pages/admin_index.ctp:32
+#: /views/photo_galleries/admin_edit.ctp:18
+#: /views/photo_galleries/admin_index.ctp:40
+#: /views/photo_galleries/admin_view.ctp:40
+#: /views/photos/admin_edit.ctp:20
+#: /views/photos/admin_view.ctp:50
+#: /views/users/admin_index.ctp:35
+msgid "Are you sure you want to delete # %s?"
+msgstr "Sei sicuro di voler eliminare # %s ?"
+
+#: /views/elements/backend/main_navigator.ctp:4
+msgid "Navigation"
+msgstr "Navigazione"
+
+#: /views/elements/backend/main_navigator.ctp:7
+msgid "Menus index"
+msgstr "Elenco menu"
+
+#: /views/elements/backend/main_navigator.ctp:10
+msgid "Menus add"
+msgstr "Nuovo menu"
+
+#: /views/elements/backend/main_navigator.ctp:13
+msgid "Pages index"
+msgstr "Elenco pagine"
+
+#: /views/elements/backend/main_navigator.ctp:16
+msgid "Pages add"
+msgstr "Nuova pagina"
+
+#: /views/elements/backend/main_navigator.ctp:24
+msgid "News index"
+msgstr "Elenco news"
+
+#: /views/elements/backend/main_navigator.ctp:27
+msgid "News add"
+msgstr "Nuova news"
+
+#: /views/elements/backend/main_navigator.ctp:35
+msgid "Photo galleries index"
+msgstr "Elenco foto gallery"
+
+#: /views/elements/backend/main_navigator.ctp:38
+msgid "Photo galleries add"
+msgstr "Nuova foto gallery"
+
+#: /views/elements/backend/main_navigator.ctp:41
+msgid "Photos index"
+msgstr "Elenco foto"
+
+#: /views/elements/backend/main_navigator.ctp:44
+msgid "Photos add"
+msgstr "Carica foto"
+
+#: /views/elements/backend/main_navigator.ctp:52
+msgid "Newsletters index"
+msgstr "Elenco newsletter"
+
+#: /views/elements/backend/main_navigator.ctp:55
+msgid "Newsletters add"
+msgstr "Scrivi newsletter"
+
+#: /views/elements/backend/main_navigator.ctp:58
+msgid "Newsletter Users index"
+msgstr "Elenco iscritti"
+
+#: /views/elements/backend/main_navigator.ctp:61
+msgid "Newsletter Users add"
+msgstr "Nuovo iscritto"
+
+#: /views/elements/backend/main_navigator.ctp:66
+#: /views/users/admin_index.ctp:2
+msgid "Users"
+msgstr "Utenti"
+
+#: /views/elements/backend/main_navigator.ctp:69
+msgid "Users index"
+msgstr "Elenco utenti"
+
+#: /views/elements/backend/main_navigator.ctp:72
+msgid "Users add"
+msgstr "Nuovo utente"
+
+#: /views/elements/backend/main_navigator.ctp:77
+msgid "Configurations"
+msgstr "Configurazione"
+
+#: /views/elements/backend/main_navigator.ctp:80
+msgid "Variables index"
+msgstr "Impostazioni "
+
+#: /views/elements/backend/main_navigator.ctp:83
+msgid "Languages index"
+msgstr "Internazionalizzazione"
+
+#: /views/elements/backend/search.ctp:3
+#: /views/elements/backend/search.ctp:15
+msgid "Search"
+msgstr "Cerca"
+
+#: /views/elements/backend/search.ctp:6
+msgid "Filter"
+msgstr "Filtra"
+
+#: /views/elements/backend/menus/edit_menu.ctp:8
+#: /views/menus/admin_add.ctp:11
+#: /views/menus/admin_add_parent.ctp:11
+#: /views/menus/admin_edit_parent.ctp:12
+msgid "Current window"
+msgstr "Finestra corrente"
+
+#: /views/elements/backend/menus/edit_menu.ctp:8
+#: /views/menus/admin_add.ctp:11
+#: /views/menus/admin_add_parent.ctp:11
+#: /views/menus/admin_edit_parent.ctp:12
+msgid "New window"
+msgstr "Nuova finestra"
+
+#: /views/elements/backend/menus/tree_item.ctp:8;23
+msgid "Up"
+msgstr "Su"
+
+#: /views/elements/backend/menus/tree_item.ctp:9;24
+msgid "Down"
+msgstr "Giù"
+
+#: /views/elements/backend/menus/tree_item.ctp:10;25
+#: /views/languages/admin_index.ctp:31
+#: /views/news/admin_index.ctp:25
+#: /views/pages/admin_index.ctp:30
+#: /views/photo_galleries/admin_index.ctp:38
+#: /views/users/admin_index.ctp:33
+msgid "View"
+msgstr "Visualizza"
+
+#: /views/elements/backend/menus/tree_item.ctp:11;26
+#: /views/elements/backend/photos/list_item.ctp:4
+#: /views/languages/admin_index.ctp:32
+#: /views/news/admin_index.ctp:26
+#: /views/newsletters/admin_deliver_old.ctp:37
+#: /views/newsletters/admin_view.ctp:46
+#: /views/pages/admin_index.ctp:31
+#: /views/photo_galleries/admin_index.ctp:39
+#: /views/users/admin_index.ctp:34
+#: /views/variables/admin_index.ctp:21
+msgid "Edit"
+msgstr "Modifica"
+
+#: /views/elements/backend/menus/url_field.ctp:7
+msgid "Url builder"
+msgstr "Genera URL"
+
+#: /views/elements/backend/menus/url_field.ctp:10
+msgid "close"
+msgstr "chiudi"
+
+#: /views/elements/backend/menus/url_field.ctp:16
+msgid "Content type selection"
+msgstr "Seleziona una tipologia"
+
+#: /views/elements/backend/menus/url_field.ctp:23
+msgid "Actions list"
+msgstr "Azioni disponibili"
+
+#: /views/elements/backend/menus/url_field.ctp:30
+msgid "Items list"
+msgstr "Elenco elementi"
+
+#: /views/elements/email/html/unsubscription.ctp:1
+msgid "To stop receiving newsletters from %s click the following link"
+msgstr "Per non ricevere più le newsletter di %s clicca il seguente link"
+
+#: /views/elements/email/html/unsubscription.ctp:6
+msgid "Click here to proceed to the elimination from the newsletter"
+msgstr "Clicca qui per procedere alla deiscrizione della newsletter"
+
+#: /views/helpers/backend.php:42
+msgid "Current image"
+msgstr "Immagine corrente"
+
+#: /views/helpers/backend.php:75
+msgid "Current attachment"
+msgstr "File corrente"
+
+#: /views/languages/admin_add.ctp:4
+msgid "Add Language"
+msgstr "Nuova lingua"
+
+#: /views/languages/admin_add.ctp:12
+#: /views/languages/admin_edit.ctp:13
+#: /views/news/admin_add.ctp:17
+#: /views/news/admin_edit.ctp:21
+#: /views/pages/admin_add.ctp:11
+#: /views/pages/admin_edit.ctp:12
+#: /views/photo_galleries/admin_add.ctp:11
+#: /views/photo_galleries/admin_edit.ctp:12
+#: /views/photos/admin_add.ctp:13
+#: /views/photos/admin_edit.ctp:14
+#: /views/variables/admin_add.ctp:10
+#: /views/variables/admin_edit.ctp:11
+#: /views/users/admin_change_password.ctp:27
+#: /views/users/admin_login.ctp:18
+#: /views/users/admin_request_password_change.ctp:15
+#: /views/users/admin_reset_password.ctp:15
+#: /views/menus/admin_add.ctp:14
+#: /views/menus/admin_add_parent.ctp:14
+#: /views/menus/admin_edit.ctp:8
+#: /views/menus/admin_edit_parent.ctp:15
+msgid "Submit"
+msgstr "Salva"
+
+#: /views/languages/admin_add.ctp:18
+#: /views/languages/admin_edit.ctp:20
+#: /views/languages/admin_view.ctp:46
+msgid "List Languages"
+msgstr "Elenco lingue"
+
+#: /views/languages/admin_edit.ctp:4
+#: /views/languages/admin_view.ctp:44
+msgid "Edit Language"
+msgstr "Modifica lingua"
+
+#: /views/languages/admin_index.ctp:2
+msgid "Languages"
+msgstr "Internazionalizzazione"
+
+#: /views/languages/admin_index.ctp:47
+#: /views/languages/admin_view.ctp:47
+msgid "New Language"
+msgstr "Nuova lingua"
+
+#: /views/languages/admin_view.ctp:2
+msgid "Language"
+msgstr "Internazionalizzazione"
+
+#: /views/languages/admin_view.ctp:4
+#: /views/news/admin_view.ctp:4
+#: /views/newsletter_users/admin_view.ctp:4
+#: /views/newsletters/admin_view.ctp:4
+#: /views/pages/admin_view.ctp:4
+#: /views/photo_galleries/admin_view.ctp:4
+#: /views/photos/admin_view.ctp:4
+#: /views/variables/admin_view.ctp:4
+msgid "Id"
+msgstr "Id"
+
+#: /views/languages/admin_view.ctp:9
+#: /views/news/admin_view.ctp:14
+#: /views/pages/admin_view.ctp:14
+#: /views/photo_galleries/admin_view.ctp:9
+#: /views/photos/admin_view.ctp:14
+msgid "Title"
+msgstr "Titolo"
+
+#: /views/languages/admin_view.ctp:14
+msgid "Locale"
+msgstr "Locale"
+
+#: /views/languages/admin_view.ctp:19
+#: /views/news/admin_view.ctp:9
+#: /views/pages/admin_view.ctp:9
+msgid "Slug"
+msgstr "Slug"
+
+#: /views/languages/admin_view.ctp:24
+#: /views/news/admin_view.ctp:34
+#: /views/pages/admin_view.ctp:24
+#: /views/photo_galleries/admin_view.ctp:19
+#: /views/photos/admin_view.ctp:29
+msgid "Published"
+msgstr "Pubblicato"
+
+#: /views/languages/admin_view.ctp:29
+#: /views/menus/admin_view.ctp:42
+#: /views/news/admin_view.ctp:54
+#: /views/pages/admin_view.ctp:29
+#: /views/photo_galleries/admin_view.ctp:24
+#: /views/photos/admin_view.ctp:34
+#: /views/variables/admin_view.ctp:19
+msgid "Created"
+msgstr "Data creazione"
+
+#: /views/languages/admin_view.ctp:34
+#: /views/news/admin_view.ctp:59
+#: /views/pages/admin_view.ctp:34
+#: /views/photo_galleries/admin_view.ctp:29
+#: /views/photos/admin_view.ctp:39
+#: /views/variables/admin_view.ctp:24
+#: /views/users/admin_view.ctp:20
+msgid "Modified"
+msgstr "Data modifica"
+
+#: /views/languages/admin_view.ctp:45
+msgid "Delete Language"
+msgstr "Elimina lingua"
+
+#: /views/layouts/email/html/newsletter.ctp:34
+msgid "Attention! Do not respond to this email as sent by an automated system."
+msgstr "Attenzione: Non rispondere a questa e-mail; il messaggio è stato inviato da un sistema automatico."
+
+#: /views/layouts/email/html/newsletter.ctp:35
+msgid "For information and requests write to"
+msgstr "Per maggiori informazioni scrivere a"
+
+#: /views/layouts/email/html/newsletter.ctp:36
+msgid "This communication is addressed to users on the site "
+msgstr "Questa comunicazione è indirizzata agli utente del sito"
+
+#: /views/layouts/email/html/newsletter.ctp:36
+msgid "You received this message because you registered on the site"
+msgstr "Hai ricevuto questo messaggio perchè sei iscritto alla newsletter del sito"
+
+#: /views/layouts/email/html/newsletter.ctp:36
+msgid "Under Law 196/2003 on privacy. If you've never written it is possible that someone has made a recording using your information. You can report it to "
+msgstr "Secondo l'informativa 196/2003 per il trattamente dei dati personali. Se non hai mai scritto che è possibile che qualcuno abbia fatto una registrazione con i tuoi dati personali. In tal caso puoi riportare l'abuso a "
+
+#: /views/layouts/email/html/newsletter.ctp:38
+msgid "If you do not wish to receive further messages, you can unsubscribe at"
+msgstr "Se non desideri ricevere ulteriori messaggi, è possibile annullare l'iscrizione al seguente indirizzo "
+
+#: /views/menus/admin_index.ctp:3
+msgid "Menus"
+msgstr "Gestione menu"
+
+#: /views/menus/admin_index.ctp:6
+msgid "Menu"
+msgstr ""
+
+#: /views/menus/admin_view.ctp:2
+msgid "Menu"
+msgstr ""
+
+#: /views/menus/admin_view.ctp:7
+msgid "Padre"
+msgstr ""
+
+#: /views/menus/admin_view.ctp:14
+msgid "Name"
+msgstr "Nome"
+
+#: /views/menus/admin_view.ctp:21
+#: /views/news/admin_view.ctp:29
+#: /views/pages/admin_view.ctp:19
+#: /views/photo_galleries/admin_view.ctp:14
+#: /views/photos/admin_view.ctp:24
+msgid "Description"
+msgstr "Descrizione"
+
+#: /views/menus/admin_view.ctp:28
+msgid "Url"
+msgstr "URL"
+
+#: /views/menus/admin_view.ctp:35
+msgid "Target"
+msgstr "Target"
+
+#: /views/news/admin_add.ctp:4
+msgid "Add News"
+msgstr "Nuova news"
+
+#: /views/news/admin_edit.ctp:4
+msgid "Edit News"
+msgstr "Modifica news"
+
+#: /views/news/admin_view.ctp:19
+#: /views/photos/admin_view.ctp:19
+msgid "Image"
+msgstr "Immagine"
+
+#: /views/news/admin_view.ctp:24
+msgid "Short Description"
+msgstr "Introduzione"
+
+#: /views/news/admin_view.ctp:39
+msgid "Date"
+msgstr "Data"
+
+#: /views/news/admin_view.ctp:44
+msgid "Date From"
+msgstr "Dalla data"
+
+#: /views/news/admin_view.ctp:49
+msgid "Date To"
+msgstr "Alla data"
+
+#: /views/newsletter_users/admin_add.ctp:4
+msgid "Nuovo Iscritto alla Newsletter"
+msgstr "Nuovo Iscritto alla Newsletter"
+
+#: /views/newsletter_users/admin_add.ctp:17
+#: /views/newsletter_users/admin_edit.ctp:19
+msgid "Lista Iscritti alla Newsletter"
+msgstr "Lista Iscritti alla Newsletter"
+
+#: /views/newsletter_users/admin_edit.ctp:4
+msgid "Modifica Iscritto alla Newsletter"
+msgstr "Modifica Iscritto alla Newsletter"
+
+#: /views/newsletter_users/admin_edit.ctp:18
+#: /views/newsletter_users/admin_index.ctp:39
+#: /views/newsletters/admin_index.ctp:35
+msgid "Elimina"
+msgstr "Elimina"
+
+#: /views/newsletter_users/admin_edit.ctp:18
+msgid "Sei sicuro di voler eliminare il contatto\\n\\t * %s?"
+msgstr "Sei sicuro di voler eliminare il contatto # %s?"
+
+#: /views/newsletter_users/admin_index.ctp:2
+msgid "Utenti Newsletter"
+msgstr "Iscritti newsletter"
+
+#: /views/newsletter_users/admin_index.ctp:10
+#: /views/newsletters/admin_index.ctp:9
+msgid "Azioni"
+msgstr "Azioni"
+
+#: /views/newsletter_users/admin_index.ctp:37
+#: /views/newsletters/admin_index.ctp:33
+msgid "Visualizza"
+msgstr "Visualizza"
+
+#: /views/newsletter_users/admin_index.ctp:38
+#: /views/newsletters/admin_index.ctp:34
+msgid "Modifica"
+msgstr "Modifica"
+
+#: /views/newsletter_users/admin_index.ctp:39
+msgid "Sei sicuro di voler eliminare il contatto\\n\\t # %s?"
+msgstr "Sei sicuro di voler eliminare il contatto # %s?"
+
+#: /views/newsletter_users/admin_index.ctp:46
+msgid "precedente"
+msgstr "Precedente"
+
+#: /views/newsletter_users/admin_index.ctp:48
+msgid "successivo"
+msgstr "Successivo"
+
+#: /views/newsletter_users/admin_index.ctp:52
+msgid "Nuovo Utente"
+msgstr "Nuovo utente"
+
+#: /views/newsletter_users/admin_view.ctp:2
+msgid "Iscritto Newsletter"
+msgstr "Iscritto newsletter"
+
+#: /views/newsletter_users/admin_view.ctp:9
+msgid "Nome"
+msgstr "Nome"
+
+#: /views/newsletter_users/admin_view.ctp:14
+msgid "Cognome"
+msgstr "Cognome"
+
+#: /views/newsletter_users/admin_view.ctp:19
+#: /views/elements/login.ctp:12
+#: /views/users/admin_login.ctp:14
+#: /views/users/admin_view.ctp:14
+msgid "Email"
+msgstr "Email"
+
+#: /views/newsletter_users/admin_view.ctp:24
+#: /views/newsletters/admin_view.ctp:24
+msgid "Lingua"
+msgstr "Lingua"
+
+#: /views/newsletter_users/admin_view.ctp:29
+msgid "Attivo"
+msgstr "Attivo"
+
+#: /views/newsletter_users/admin_view.ctp:38
+msgid "Modifica Utente Newsletter"
+msgstr "Modifica dati iscritto"
+
+#: /views/newsletter_users/admin_view.ctp:39
+msgid "Elimina Utente Newsletter"
+msgstr "Elimina iscritto"
+
+#: /views/newsletter_users/admin_view.ctp:39
+msgid "Sei sicuro di voler eliminare il contatto \\n\\t # %s?"
+msgstr "Sei sicuro di voler eliminare il contatto # %s?"
+
+#: /views/newsletter_users/delete.ctp:4
+#: /views/newsletter_users/index.ctp:26
+#: /views/newsletter_users/unsubscription.ctp:3
+msgid "lbl_delete_from_newsletter"
+msgstr "Cancella iscrizione alla newsletter"
+
+#: /views/newsletter_users/delete.ctp:6
+#: /views/newsletter_users/index.ctp:16
 msgid "lbl_first_name"
-msgstr "Name"
+msgstr "Nome"
 
+#: /views/newsletter_users/delete.ctp:7
+#: /views/newsletter_users/index.ctp:17
 msgid "lbl_last_name"
-msgstr "Surname"
+msgstr "Cognome"
 
+#: /views/newsletter_users/delete.ctp:8
+#: /views/newsletter_users/index.ctp:18
 msgid "lbl_email"
 msgstr "Email"
 
-msgid "lbl_message"
-msgstr "Message"
-
-msgid "lbl_send"
-msgstr "Send"
-
-msgid "lbl_text_privacy"
-msgstr "I agree to privacy policy"
-
-msgid "lbl_required_fields"
-msgstr "* = required fields!"
-
-msgid "lbl_loading"
-msgstr "Loading"
-
-msgid "lbl_invalid_fields"
-msgstr "Attention: There are some or one invalid fields"
-
-msgid "lbl_message_sent"
-msgstr "Message sent successfully"
-
-msgid "lbl_message_not_sent"
-msgstr "Unable to send message"
-
-msgid "lbl_previous"
-msgstr "Previous"
-
+#: /views/newsletter_users/delete.ctp:9
 msgid "lbl_next"
-msgstr "Next"
+msgstr "Avanti"
 
-msgid "lbl_previous_product"
-msgstr "Previous"
-
-msgid "lbl_next_product"
-msgstr "Next"
-
-msgid "lbl_city"
-msgstr "City"
-
-msgid "lbl_address"
-msgstr "Address"
-
-msgid "lbl_telephone"
-msgstr "Phone"
-
-msgid "lbl_fax"
-msgstr "Fax"
-
-msgid "lbl_company"
-msgstr "Company"
-
-msgid "lbl_send_form"
-msgstr "Send"
-
-msgid "lbl_where_we_are"
-msgstr "Where we are"
-
-msgid "lbl_no_news"
-msgstr "No news or events found"
-
-msgid "lbl_News_and_Events"
-msgstr "News & Events"
-
-msgid "lbl_read_news"
-msgstr "Read all"
-
-msgid "lbl_read_all_news"
-msgstr "View all News"
-
+#: /views/newsletter_users/index.ctp:1
+#: /views/newsletter_users/unsubscription.ctp:1
 msgid "lbl_newsletter"
 msgstr "Newsletter"
 
+#: /views/newsletter_users/index.ctp:3
 msgid "lbl_subscribe_newsletter"
-msgstr "Sign up for our newsletter"
+msgstr "Iscrizione newsletter"
 
-msgid "lbl_text_subscribe_newsletter"
-msgstr "You will be informed about our news and offers of <br/><strong>Ristorante al Castello Superiore</strong>"
+#: /views/newsletter_users/index.ctp:7
+msgid "lbl_text_subscribe_newsletter_of_site"
+msgstr "Per essere sempre informato dei nuovi eventi e delle promozioni del "
 
-msgid "lbl_delete_from_newsletter"
-msgstr "Unsubscribe from our newsletter"
-
+#: /views/newsletter_users/index.ctp:19
 msgid "lbl_language"
-msgstr "Language"
+msgstr "Lingua"
 
+#: /views/newsletter_users/index.ctp:22
 msgid "lbl_subscription"
-msgstr "Subscription"
+msgstr "Invia"
 
+#: /views/newsletter_users/unsubscription.ctp:5
 msgid "lbl_remove_me_from_the_newsletter_text"
-msgstr "If you no longer wish to be informed about events and news from the <strong>Ristorante al Castello Superiore</strong>, enter the email address you have registered, you will receive an email to the procedure for removal from the newsletter."
+msgstr "Cancellami dalla newsletter"
 
-msgid "lbl_email_not_found"
-msgstr "Email not found"
+#: /views/newsletter_users/unsubscription.ctp:15
+msgid "lbl_send"
+msgstr "Invia"
 
-msgid "lbl_newsletter_subscription"
-msgstr "Newsletter Subscription"
+#: /views/newsletters/admin_add.ctp:4
+msgid "Scrivi Newsletter"
+msgstr "Scrivi newsletter"
 
-msgid "lbl_newletter_subscription"
-msgstr "Subscription"
+#: /views/newsletters/admin_edit.ctp:4
+msgid "Modifica Newsletter"
+msgstr "Modifica newsletter"
 
-msgid "lbl_privacy"
-msgstr "Privacy"
+#: /views/newsletters/admin_index.ctp:36
+#: /views/newsletters/admin_view.ctp:48
+msgid "Spedisci"
+msgstr "Spedisci"
 
-msgid "lbl_information"
-msgstr "Information"
+#: /views/newsletters/admin_view.ctp:2
+msgid "Newsletter"
+msgstr "Newsletter"
 
-msgid "lbl_where_we_are"
-msgstr "Where we are"
+#: /views/newsletters/admin_view.ctp:9
+msgid "Titolo"
+msgstr "Titolo"
 
-msgid "lbl_calculate_route"
-msgstr "Calcolate route"
+#: /views/newsletters/admin_view.ctp:14
+msgid "Descrizione [HTML]"
+msgstr "Descrizione [HTML]"
 
-msgid "lbl_Menus_and_recipes"
-msgstr "Menus and Recipes"
+#: /views/newsletters/admin_view.ctp:19
+msgid "Descrizione [TEXT]"
+msgstr "Descrizione [TEXT]"
 
-msgid "lbl_menus_and_recipes"
-msgstr "Menus&Recipes"
+#: /views/newsletters/admin_view.ctp:29
+msgid "Allegato"
+msgstr "Allegato"
 
-msgid "lbl_Menu"
-msgstr "Menu"
+#: /views/newsletters/admin_view.ctp:37
+msgid "Utente"
+msgstr "Utente"
 
-msgid "lbl_photo_gallery"
-msgstr "Photo Gallery"
+#: /views/pages/admin_add.ctp:4
+msgid "Add Page"
+msgstr "Nuova pagina"
 
-msgid "lbl_informations"
-msgstr "Informations"
+#: /views/pages/admin_edit.ctp:4
+msgid "Edit Page"
+msgstr "Modifica pagina"
 
-msgid "lbl_photos"
-msgstr "Photos"
+#: /views/pages/admin_index.ctp:2
+msgid "Pages"
+msgstr "Elenco pagine"
 
-msgid "lbl_restaurant_tour"
-msgstr "Restaurant tour"
+#: /views/photo_galleries/admin_add.ctp:4
+msgid "Add Photo Gallery"
+msgstr "Nuova gallery"
 
-msgid "lbl_kitchen"
-msgstr "The Kitchen"
+#: /views/photo_galleries/admin_add.ctp:17
+#: /views/photo_galleries/admin_edit.ctp:19
+#: /views/photo_galleries/admin_view.ctp:41
+#: /views/photos/admin_add.ctp:20
+#: /views/photos/admin_edit.ctp:22
+#: /views/photos/admin_index.ctp:23
+#: /views/photos/admin_view.ctp:53
+msgid "List Photo Galleries"
+msgstr "Elenco gallery"
 
-msgid "lbl_history"
-msgstr "The History"
+#: /views/photo_galleries/admin_add.ctp:18
+#: /views/photo_galleries/admin_edit.ctp:20
+#: /views/photo_galleries/admin_index.ctp:52
+#: /views/photo_galleries/admin_view.ctp:43
+#: /views/photos/admin_add.ctp:19
+#: /views/photos/admin_edit.ctp:21
+#: /views/photos/admin_view.ctp:51
+msgid "List Photos"
+msgstr "Elenco foto"
 
-msgid "lbl_castle"
-msgstr "The castle"
+#: /views/photo_galleries/admin_add.ctp:19
+#: /views/photo_galleries/admin_edit.ctp:21
+#: /views/photo_galleries/admin_index.ctp:53
+#: /views/photo_galleries/admin_view.ctp:44;66
+#: /views/photos/admin_index.ctp:22
+#: /views/photos/admin_view.ctp:52
+msgid "New Photo"
+msgstr "Carica foto"
 
-msgid "lbl_events"
-msgstr "Events"
+#: /views/photo_galleries/admin_edit.ctp:4
+#: /views/photo_galleries/admin_view.ctp:39
+msgid "Edit Photo Gallery"
+msgstr "Modifica gallery"
 
-msgid "lbl_our_menus"
-msgstr "Our Menus"
+#: /views/photo_galleries/admin_index.ctp:2
+msgid "Photo Galleries"
+msgstr "Foto gallery"
 
-msgid "lbl_our_recipes"
-msgstr "Our Recipes"
+#: /views/photo_galleries/admin_index.ctp:51
+#: /views/photo_galleries/admin_view.ctp:42
+#: /views/photos/admin_add.ctp:21
+#: /views/photos/admin_edit.ctp:23
+#: /views/photos/admin_index.ctp:24
+#: /views/photos/admin_view.ctp:54
+msgid "New Photo Gallery"
+msgstr "Nuova gallery"
 
-msgid "lbl_photo_gallery_index"
-msgstr "Back to Photo Gallery"
+#: /views/photo_galleries/admin_view.ctp:2
+#: /views/photos/admin_view.ctp:9
+msgid "Photo Gallery"
+msgstr "Foto gallery"
 
-msgid "lbl_recipes_index"
-msgstr "Back to Recipes"
+#: /views/photo_galleries/admin_view.ctp:40
+msgid "Delete Photo Gallery"
+msgstr "Elimina gallery"
 
-msgid "lbl_menu_index"
-msgstr "Back to menus"
+#: /views/photo_galleries/admin_view.ctp:48
+msgid "Related Photos"
+msgstr "Foto della gallery"
 
-msgid "lbl_news_index"
-msgstr "Back to News"
+#: /views/photos/admin_add.ctp:4
+msgid "Add Photo"
+msgstr "Carica foto"
 
-msgid "lbl_thanks_for_your_subscription"
-msgstr "Thank you for your subscription"
+#: /views/photos/admin_edit.ctp:4
+#: /views/photos/admin_view.ctp:49
+msgid "Edit Photo"
+msgstr "Modifica foto"
 
-msgid "lbl_email_to_remove"
-msgstr "We've sent an email to you containing an url that will allow you to remove you from the newsletter service. Please check your spam folder if the email doesn't appear within a few minutes."
+#: /views/photos/admin_index.ctp:2
+msgid "Photos"
+msgstr "Elenco Foto"
 
-msgid "lbl_unsubscription_ok"
-msgstr "You have been successfully removed from our newsletter service"
+#: /views/photos/admin_view.ctp:2
+msgid "Photo"
+msgstr "Foto"
 
-msgid "lbl_email_not_sent"
-msgstr "Error sending the email, please try again"
+#: /views/photos/admin_view.ctp:50
+msgid "Delete Photo"
+msgstr "Elimina foto"
 
-msgid "lbl_request_to_remove"
-msgstr "Request newsletter subscription removal"
+#: /views/users/admin_dashboard.ctp:16
+#: /views/users/admin_edit.ctp:31
+msgid "Change password"
+msgstr "Modifica password"
 
-msgid "lbl_address_information"
-msgstr "Street Cansignorio della Scala, 4/A - 36063 Marostica (VI) - Italy - Phone +39 0424 73315 - Fax +39 0424 475947"
+#: /views/users/admin_login.ctp:5
+msgid "reset password"
+msgstr "Hai dimenticato la password?"
 
-msgid "lbl_address_where_we_are"
-msgstr "<p>Street Cansignorio della Scala, 4/A - 36063 Marostica (VI) - Italy<br/>Phone +39 0424 73315 - Fax +39 0424 475947</p>"
+#: /views/variables/admin_add.ctp:4
+msgid "Add Variable"
+msgstr "Nuova variabile"
 
-msgid "lbl_all_rights_reserved"
-msgstr "All rights reserved"
+#: /views/variables/admin_add.ctp:16
+#: /views/variables/admin_edit.ctp:16
+#: /views/variables/admin_view.ctp:35
+msgid "List Variables"
+msgstr "Impostazioni"
 
-msgid "lbl_watchword"
-msgstr "Welcome and hospitality in a medieval surroundings"
+#: /views/variables/admin_edit.ctp:4
+#: /views/variables/admin_view.ctp:34
+msgid "Edit Variable"
+msgstr "Modifica valore"
+
+#: /views/variables/admin_index.ctp:2
+msgid "Variables"
+msgstr "Impostazioni"
+
+#: /views/variables/admin_index.ctp:33
+msgid "No actions available"
+msgstr "Nessuna azione disponibile"
+
+#: /views/variables/admin_view.ctp:2
+msgid "Variable"
+msgstr "Valore"
+
+#: /views/variables/admin_view.ctp:9
+msgid "Key"
+msgstr "Variabile"
+
+#: /views/variables/admin_view.ctp:14
+msgid "Value"
+msgstr "Valore"
+
+#: /controllers/users_controller.php:62
+msgid "Invalid User."
+msgstr "Utente non valido"
+
+#: /controllers/users_controller.php:75
+msgid "The User has been saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/users_controller.php:92
+msgid "User saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/users_controller.php:118
+msgid "User deleted"
+msgstr "L'elemento è stato eliminato correttamente"
+
+#: /controllers/users_controller.php:120
+msgid "Invalid User"
+msgstr "L'elemento non è stato trovato"
+
+#: /controllers/users_controller.php:141
+msgid "%s you have successfully logged in"
+msgstr "È stato effettuato l'accesso"
+
+#: /controllers/users_controller.php:203
+msgid "%s you have successfully logged out"
+msgstr "Logout avvenuto con successo"
+
+#: /controllers/users_controller.php:229
+msgid "There url you accessed is not longer valid"
+msgstr "L'indirizzo non è più valido"
+
+#: /controllers/users_controller.php:252;366
+msgid "Password Reset"
+msgstr "Reimposta password"
+
+#: /controllers/users_controller.php:254
+msgid "Your password has been reset"
+msgstr "La passwors è stata resettata"
+
+#: /controllers/users_controller.php:255
+msgid "Please login using this password and change your password"
+msgstr "Effettua il login utilizzando la seguente password e reimpostane una nuova"
+
+#: /controllers/users_controller.php:258
+msgid "Your password was sent to your registered email account"
+msgstr "La password è stata inviata alla tua email"
+
+#: /controllers/users_controller.php:264
+#: /tests/cases/controllers/users_controller.test.php:231
+msgid "Your e-mail has been validated!"
+msgstr "Email validata"
+
+#: /controllers/users_controller.php:268
+msgid "There was an error trying to validate your e-mail address. Please check your e-mail for the URL you should use to verify your e-mail address."
+msgstr "Si è verificato un errore nel tentativo di convalidare il tuo indirizzo email. Ti è stata spedita un'email per la convalidazione dell'account."
+
+#: /controllers/users_controller.php:272
+#: /tests/cases/controllers/users_controller.test.php:236
+msgid "The url you accessed is not longer valid"
+msgstr "Indirizzo non è più valido"
+
+#: /controllers/users_controller.php:286
+msgid "Password changed."
+msgstr "Password modificata"
+
+#: /controllers/users_controller.php:342
+msgid "Account verification"
+msgstr "Verifica account"
+
+#: /controllers/users_controller.php:384
+msgid "%s has been sent an email with instruction to reset their password."
+msgstr "%s ha inviato un'email con le istruzioni per reimpostare una nuova password"
+
+#: /controllers/users_controller.php:388
+msgid "You should receive an email with further instructions shortly"
+msgstr "A breve dovresti ricevere un'email con ulteriori istruzioni"
+
+#: /controllers/users_controller.php:392
+msgid "No user was found with that email."
+msgstr "Email non trovata"
+
+#: /controllers/users_controller.php:439
+msgid "Invalid password reset token, try again."
+msgstr "Token non valido"
+
+#: /controllers/users_controller.php:445
+msgid "Password changed, you can now login with your new password."
+msgstr "La password è stata modifica."
+
+#: /models/user.php:39
+msgid "Please enter a username"
+msgstr "Inserire il proprio username"
+
+#: /models/user.php:42
+msgid "The username must be alphanumeric"
+msgstr "Inserire solamente caratteri alfanumerici"
+
+#: /models/user.php:45
+msgid "This username is already in use."
+msgstr "Username già in uso"
+
+#: /models/user.php:48
+msgid "The username must have at least 3 characters."
+msgstr "Lo username dev'essere domposto da almeno 3 caratteri"
+
+#: /models/user.php:53
+msgid "Please enter a valid email address."
+msgstr "Inserire un'indirizzo email valido"
+
+#: /models/user.php:56
+msgid "This email is already in use."
+msgstr "Email già in uso"
+
+#: /models/user.php:60
+msgid "The password must have at least 8 characters."
+msgstr "La password dec'essere composta da almeno 8 caratteri"
+
+#: /models/user.php:63
+msgid "Please enter a password."
+msgstr "Inserire una password"
+
+#: /models/user.php:66
+msgid "The passwords are not equal, please try again."
+msgstr "Le password non corrispondono"
+
+#: /models/user.php:75;249
+msgid "The passwords are not equal."
+msgstr "Le password non corrispondono"
+
+#: /models/user.php:77
+msgid "Invalid password."
+msgstr "Password non valida"
+
+#: /models/user.php:344
+msgid "The user does not exist."
+msgstr "Utente non trovato"
+
+#: /models/user.php:387
+msgid "Please enter your email address."
+msgstr "Inserire il proprio indirizzo email"
+
+#: /models/user.php:397
+msgid "The email address does not exist in the system"
+msgstr "Email non travata"
+
+#: /models/user.php:402
+msgid "Your account is already authenticaed."
+msgstr "L'account è già stato autenticato"
+
+#: /models/user.php:407
+msgid "Your account is disabled."
+msgstr "Account disabilitato"
+
+#: /views/elements/login.ctp:14
+#: /views/users/admin_login.ctp:15
+msgid "Password"
+msgstr "Password"
+
+#: /views/elements/login.ctp:16
+#: /views/users/admin_login.ctp:11
+#: /views/users/admin_reset_password.ctp:8
+msgid "Login"
+msgstr "Login"
+
+#: /views/elements/email/text/account_verification.ctp:12
+msgid "Hello %s,"
+msgstr "Ciao %s, "
+
+#: /views/elements/email/text/account_verification.ctp:14
+msgid "to validate your account, you must visit the URL below within 24 hours"
+msgstr "per autenticare il tuo account clicca il seguente link:"
+
+#: /views/elements/email/text/password_reset_request.ctp:12
+msgid "A request to reset your password was sent. To change your password click the link below."
+msgstr "Questa email ti è stata inviata in seguito ad una richiesta di reset della password. Per procedere alla modifica della password clicca il seguente link:"
+
+#: /views/users/admin_add.ctp:4
+msgid "Add User"
+msgstr "Nuovo utente"
+
+#: /views/users/admin_change_password.ctp:12
+msgid "Change your password"
+msgstr "Modifica password"
+
+#: /views/users/admin_change_password.ctp:14
+msgid "Please enter your old password because of security reasons and then your new password twice."
+msgstr "Inserisci la tua password e reimpostane una nuova"
+
+#: /views/users/admin_change_password.ctp:19
+msgid "Old Password"
+msgstr "Password"
+
+#: /views/users/admin_change_password.ctp:22
+#: /views/users/admin_reset_password.ctp:13
+msgid "New Password"
+msgstr "Nuova password"
+
+#: /views/users/admin_change_password.ctp:25
+#: /views/users/admin_reset_password.ctp:14
+msgid "Confirm"
+msgstr "Conferma password"
+
+#: /views/users/admin_dashboard.ctp:13
+msgid "Welcome"
+msgstr "Benvenuto"
+
+#: /views/users/admin_dashboard.ctp:14
+msgid "Recent broadcasts"
+msgstr "Attivita recenti"
+
+#: /views/users/admin_edit.ctp:19
+msgid "Edit User"
+msgstr "Modifica utente"
+
+#: /views/users/admin_login.ctp:16
+msgid "Remember Me"
+msgstr "Ricormami su questo computer"
+
+#: /views/users/admin_request_password_change.ctp:8
+msgid "Forgot your password?"
+msgstr "Password dimenticata?"
+
+#: /views/users/admin_request_password_change.ctp:10
+msgid "Please enter the email you used for registration and you'll get an email with further instructions."
+msgstr "Inserisci l'email che hai usato per la registrazione, ricevera un'email con le istruzioni per il reset della password"
+
+#: /views/users/admin_request_password_change.ctp:14
+msgid "Your Email"
+msgstr "Inserisci la tua Email"
+
+#: /views/users/admin_reset_password.ctp:9
+msgid "Reset your password"
+msgstr "Reimposta password"
+
+#: /views/users/admin_view.ctp:2
+msgid "User"
+msgstr "Utente"
+
+#: /views/users/admin_view.ctp:5
+msgid "Username"
+msgstr "Username"
+
+#: /views/users/admin_view.ctp:8
+msgid "First Name"
+msgstr "Nome"
+
+#: /views/users/admin_view.ctp:11
+msgid "Last Name"
+msgstr "Cognome"
+
+#: /views/users/admin_view.ctp:17
+msgid "Active"
+msgstr "Attivo"
+
+#: /models/menu.php:34
+msgid "Please enter a menu name"
+msgstr "Inserire il nome del menu"
+
+#: /models/menu.php:46
+msgid "Could not save the menu, please check your inputs."
+msgstr "L'elemento non può essere salvato. Verifica che tutti i dati inseriti nei campi obbligatori siano corretti"
+
+#: /views/menus/admin_add.ctp:5
+#: /views/menus/admin_add_parent.ctp:5
+msgid "Add Menu"
+msgstr "Nuovo menu"
+
+#: /views/menus/admin_edit.ctp:5
+#: /views/menus/admin_edit_parent.ctp:5
+msgid "Edit Menu"
+msgstr "Modifica menu"
+
+msgid "List Menu"
+msgstr "Elenco Menu"
+
+msgid "New Menu"
+msgstr "Inserisci Menu"
+
+msgid "List News"
+msgstr "Elenco News"
+
+msgid "New News"
+msgstr "Inserisci News"
+
+msgid "New image"
+msgstr "Inserisci foto"
+
+msgid "List Newsletter"
+msgstr "Elenco Newsletter"
+
+msgid "New Newsletter"
+msgstr "Inserisci Newsletter"
+
+msgid "New User"
+msgstr "Inserisci Utente"
+
+msgid "List User"
+msgstr "Elenco Utenti"
+
+msgid "Passwd"
+msgstr "Password"
+
+msgid "Temppassword"
+msgstr "Ripeti password"
+
+msgid "List Page"
+msgstr "Elenco Pagine"
+
+msgid "New Page"
+msgstr "Nuova Pagina"

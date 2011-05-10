@@ -106,34 +106,34 @@ class Menu extends AppModel {
      * @return boolean True on success
      * @throws OutOfBoundsException If the element does not exists
      */
-    public function delete($id = null, $data = array()) {
-        $menu = $this->find('first', array(
-                    'conditions' => array(
-                        "{$this->alias}.{$this->primaryKey}" => $id
-                        )));
-
-        if (empty($menu)) {
-            throw new OutOfBoundsException(__('Invalid Menu', true));
-        }
-
-        $this->data['menu'] = $menu;
-        if (!empty($data)) {
-            $data['Menu']['id'] = $id;
-            $tmp = $this->validate;
-            $this->validate = array(
-                'id' => array('rule' => 'notEmpty'),
-                'confirm' => array('rule' => '[1]')
-            );
-
-            $this->set($data);
-            if ($this->validates()) {
-                if ($this->delete($data['Menu']['id'])) {
-                    return true;
-                }
-            }
-            $this->validate = $tmp;
-            throw new Exception(__('You need to confirm to delete this Menu', true));
-        }
-    }
+//    public function delete($id = null, $data = array()) {
+//        $menu = $this->find('first', array(
+//                    'conditions' => array(
+//                        "{$this->alias}.{$this->primaryKey}" => $id
+//                        )));
+//
+//        if (empty($menu)) {
+//            throw new OutOfBoundsException(__('Invalid Menu', true));
+//        }
+//
+//        $this->data['menu'] = $menu;
+//        if (!empty($data)) {
+//            $data['Menu']['id'] = $id;
+//            $tmp = $this->validate;
+//            $this->validate = array(
+//                'id' => array('rule' => 'notEmpty'),
+//                'confirm' => array('rule' => '[1]')
+//            );
+//
+//            $this->set($data);
+//            if ($this->validates()) {
+//                if ($this->delete($data['Menu']['id'])) {
+//                    return true;
+//                }
+//            }
+//            $this->validate = $tmp;
+//            throw new Exception(__('You need to confirm to delete this Menu', true));
+//        }
+//    }
 
 }

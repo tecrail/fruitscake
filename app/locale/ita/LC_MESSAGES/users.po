@@ -1,0 +1,270 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2011-03-06 16:17+0100\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: /controllers/users_controller.php:62
+msgid "Invalid User."
+msgstr "Utente non valido"
+
+#: /controllers/users_controller.php:75
+msgid "The User has been saved"
+msgstr "L'elemento è stato salvato correttamente"
+
+#: /controllers/users_controller.php:92
+msgid "User saved"
+msgstr "L'utente è stato salvato correttamente"
+
+#: /controllers/users_controller.php:118
+msgid "User deleted"
+msgstr "Utente eliminato"
+
+#: /controllers/users_controller.php:120
+msgid "Invalid User"
+msgstr "Utente non valido"
+
+#: /controllers/users_controller.php:141
+msgid "%s you have successfully logged in"
+msgstr "%s ti sei collegato correttamente"
+
+#: /controllers/users_controller.php:203
+msgid "%s you have successfully logged out"
+msgstr "%s ti sei scollegato correttamente"
+
+#: /controllers/users_controller.php:229
+msgid "There url you accessed is not longer valid"
+msgstr "L'indirizzo non è più valido"
+
+#: /controllers/users_controller.php:252;366
+msgid "Password Reset"
+msgstr "Reimposta password"
+
+#: /controllers/users_controller.php:254
+msgid "Your password has been reset"
+msgstr "La passwors è stata resettata"
+
+#: /controllers/users_controller.php:255
+msgid "Please login using this password and change your password"
+msgstr "Effettua il login utilizzando la seguente password e reimpostane una nuova"
+
+#: /controllers/users_controller.php:258
+msgid "Your password was sent to your registered email account"
+msgstr "La password è stata inviata alla tua email"
+
+#: /controllers/users_controller.php:264
+#: /tests/cases/controllers/users_controller.test.php:231
+msgid "Your e-mail has been validated!"
+msgstr "Email validata"
+
+#: /controllers/users_controller.php:268
+msgid "There was an error trying to validate your e-mail address. Please check your e-mail for the URL you should use to verify your e-mail address."
+msgstr "Si è verificato un errore nel tentativo di convalidare il tuo indirizzo email. Ti è stata spedita un'email per la convalidazione dell'account."
+
+#: /controllers/users_controller.php:272
+#: /tests/cases/controllers/users_controller.test.php:236
+msgid "The url you accessed is not longer valid"
+msgstr "Indirizzo non è più valido"
+
+#: /controllers/users_controller.php:286
+msgid "Password changed."
+msgstr "Password modificata"
+
+#: /controllers/users_controller.php:342
+msgid "Account verification"
+msgstr "Verifica account"
+
+#: /controllers/users_controller.php:384
+msgid "%s has been sent an email with instruction to reset their password."
+msgstr "%s ha inviato un'email con le istruzioni per reimpostare una nuova password"
+
+#: /controllers/users_controller.php:388
+msgid "You should receive an email with further instructions shortly"
+msgstr "A breve dovresti ricevere un'email con ulteriori istruzioni"
+
+#: /controllers/users_controller.php:392
+msgid "No user was found with that email."
+msgstr "Email non trovata"
+
+#: /controllers/users_controller.php:439
+msgid "Invalid password reset token, try again."
+msgstr "Token non valido"
+
+#: /controllers/users_controller.php:445
+msgid "Password changed, you can now login with your new password."
+msgstr "La password è stata modifica."
+
+#: /models/user.php:39
+msgid "Please enter a username"
+msgstr "Inserire il proprio username"
+
+#: /models/user.php:42
+msgid "The username must be alphanumeric"
+msgstr "Inserire solamente caratteri alfanumerici"
+
+#: /models/user.php:45
+msgid "This username is already in use."
+msgstr "Username già in uso"
+
+#: /models/user.php:48
+msgid "The username must have at least 3 characters."
+msgstr "Lo username dev'essere domposto da almeno 3 caratteri"
+
+#: /models/user.php:53
+msgid "Please enter a valid email address."
+msgstr "Inserire un'indirizzo email valido"
+
+#: /models/user.php:56
+msgid "This email is already in use."
+msgstr "Email già in uso"
+
+#: /models/user.php:60
+msgid "The password must have at least 8 characters."
+msgstr "La password dec'essere composta da almeno 8 caratteri"
+
+#: /models/user.php:63
+msgid "Please enter a password."
+msgstr "Inserire una password"
+
+#: /models/user.php:66
+msgid "The passwords are not equal, please try again."
+msgstr "Le password non corrispondono"
+
+#: /models/user.php:75;249
+msgid "The passwords are not equal."
+msgstr "Le password non corrispondono"
+
+#: /models/user.php:77
+msgid "Invalid password."
+msgstr "Password non valida"
+
+#: /models/user.php:344
+msgid "The user does not exist."
+msgstr "Utente non trovato"
+
+#: /models/user.php:387
+msgid "Please enter your email address."
+msgstr "Inserire il proprio indirizzo email"
+
+#: /models/user.php:397
+msgid "The email address does not exist in the system"
+msgstr "Email non travata"
+
+#: /models/user.php:402
+msgid "Your account is already authenticaed."
+msgstr "L'account è già stato autenticato"
+
+#: /models/user.php:407
+msgid "Your account is disabled."
+msgstr "Account disabilitato"
+
+#: /views/elements/login.ctp:14
+#: /views/users/admin_login.ctp:15
+msgid "Password"
+msgstr "Password"
+
+#: /views/elements/login.ctp:16
+#: /views/users/admin_login.ctp:11
+#: /views/users/admin_reset_password.ctp:8
+msgid "Login"
+msgstr "Login"
+
+#: /views/elements/email/text/account_verification.ctp:12
+msgid "Hello %s,"
+msgstr "Ciao %s, "
+
+#: /views/elements/email/text/account_verification.ctp:14
+msgid "to validate your account, you must visit the URL below within 24 hours"
+msgstr "per autenticare il tuo account clicca il seguente link:"
+
+#: /views/elements/email/text/password_reset_request.ctp:12
+msgid "A request to reset your password was sent. To change your password click the link below."
+msgstr "Questa email ti è stata inviata in seguito ad una richiesta di reset della password. Per procedere alla modifica della password clicca il seguente link:"
+
+#: /views/users/admin_add.ctp:4
+msgid "Add User"
+msgstr "Nuovo utente"
+
+#: /views/users/admin_change_password.ctp:12
+msgid "Change your password"
+msgstr "Modifica password"
+
+#: /views/users/admin_change_password.ctp:14
+msgid "Please enter your old password because of security reasons and then your new password twice."
+msgstr "Inserisci la tua password e reimpostane una nuova"
+
+#: /views/users/admin_change_password.ctp:19
+msgid "Old Password"
+msgstr "Password"
+
+#: /views/users/admin_change_password.ctp:22
+#: /views/users/admin_reset_password.ctp:13
+msgid "New Password"
+msgstr "Nuova password"
+
+#: /views/users/admin_change_password.ctp:25
+#: /views/users/admin_reset_password.ctp:14
+msgid "Confirm"
+msgstr "Conferma password"
+
+#: /views/users/admin_dashboard.ctp:13
+msgid "Welcome"
+msgstr "Benvenuto"
+
+#: /views/users/admin_dashboard.ctp:14
+msgid "Recent broadcasts"
+msgstr "Attivita recenti"
+
+#: /views/users/admin_edit.ctp:19
+msgid "Edit User"
+msgstr "Modifica utente"
+
+#: /views/users/admin_login.ctp:16
+msgid "Remember Me"
+msgstr "Ricormami su questo computer"
+
+#: /views/users/admin_request_password_change.ctp:8
+msgid "Forgot your password?"
+msgstr "Password dimenticata?"
+
+#: /views/users/admin_request_password_change.ctp:10
+msgid "Please enter the email you used for registration and you'll get an email with further instructions."
+msgstr "Inserisci l'email che hai usato per la registrazione, ricevera un'email con le istruzioni per il reset della password"
+
+#: /views/users/admin_request_password_change.ctp:14
+msgid "Your Email"
+msgstr "Inserisci la tua Email"
+
+#: /views/users/admin_reset_password.ctp:9
+msgid "Reset your password"
+msgstr "Reimposta password"
+
+#: /views/users/admin_view.ctp:2
+msgid "User"
+msgstr "Utente"
+
+#: /views/users/admin_view.ctp:5
+msgid "Username"
+msgstr "Username"
+
+#: /views/users/admin_view.ctp:8
+msgid "First Name"
+msgstr "Nome"
+
+#: /views/users/admin_view.ctp:11
+msgid "Last Name"
+msgstr "Cognome"
+
+#: /views/users/admin_view.ctp:17
+msgid "Active"
+msgstr "Attivo"

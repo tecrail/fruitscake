@@ -7,6 +7,7 @@
         <tr>
             <th><?php echo $this->Paginator->sort('id'); ?></th>
             <th><?php echo $this->Paginator->sort('title'); ?></th>
+            <th><?php echo $this->Paginator->sort('homepage'); ?></th>
             <th><?php echo $this->Paginator->sort('published'); ?></th>
             <th><?php echo $this->Paginator->sort('created'); ?></th>
             <th><?php echo $this->Paginator->sort('modified'); ?></th>
@@ -23,7 +24,8 @@
             <tr<?php echo $class; ?>>
                 <td><?php echo $page['Page']['id']; ?>&nbsp;</td>
                 <td><?php echo $page['Page']['title']; ?>&nbsp;</td>
-                <td><?php echo $page['Page']['published']; ?>&nbsp;</td>
+                <td style="text-align: center;"><?php echo $this->Backend->isActive($page['Page']['homepage']); ?>&nbsp;</td>
+                <td style="text-align: center;"><?php echo $this->Backend->isActive($page['Page']['published']); ?>&nbsp;</td>
                 <td><?php echo $page['Page']['created']; ?>&nbsp;</td>
                 <td><?php echo $page['Page']['modified']; ?>&nbsp;</td>
                 <td class="actions">

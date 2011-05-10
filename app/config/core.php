@@ -20,6 +20,10 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
+
+//force italian translations
+Configure::write('Config.language', 'ita');
+
 /**
  * CakePHP Debug Level:
  *
@@ -34,7 +38,6 @@
  * In development mode, you need to click the flash message to continue.
  */
 Configure::write('debug', 2);
-
 /**
  * CakePHP Log Level:
  *

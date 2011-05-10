@@ -11,10 +11,9 @@ body {
     padding: 0;
     height: 100%;
     background: #ffffff;
-    color: #1A1A1A;
+    color: #666666;
     font-family: Arial,Helvetica,sans-serif;
-    font-size: 12px;
-    line-height: 19px;
+    font: 13px/20px "Trebuchet MS", Arial, Sans-Serif;
     text-transform: none;
 }
 
@@ -25,7 +24,12 @@ ul, ol {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    padding: 10px 0;
+    margin: 5px 0 15px 0;
+    padding: 2px 15px;
+    color: #888;
+    border-bottom: 3px solid #eef;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 a {
@@ -52,7 +56,7 @@ div.center {
 div#header ul {
     list-style: none;
     margin: 0;
-    padding: 10px 0;
+    padding: 10px 20px;
     display: block;
 }
 div#header ul > li {
@@ -64,23 +68,24 @@ div#header ul a {
     display: block;
     padding: 0px;
     text-decoration: none;
-    font-size: 17px;
-    line-height: 50px;
-    color: #747474;
+    font-size: 12px;
+    line-height: 18px;
+    color: #aab;
+    text-transform: uppercase;
 }
 div#header ul a:hover {
     /*    color: #ffffff;*/
 }
 div#header .menu {
-/*    margin-bottom: 5px;
-    border-bottom: 4px solid #ffffff;*/
+    /*    margin-bottom: 5px;
+        border-bottom: 4px solid #ffffff;*/
 }
 div#header {
     padding-bottom: 12px;
 }
 div#banners {
-    border-top: 4px solid #FFFFFF;
-    border-bottom: 4px solid #FFFFFF;
+    border-top: 4px solid #eef;
+    border-bottom: 4px solid #eef;
     padding: 5px 0;
     height: 300px;
     overflow: hidden;
@@ -90,8 +95,8 @@ div#container {
 }
 div#navigator {
     float: left;
-    padding: 35px 23px 30px 29px;
-    width: 198px;
+    padding: 35px 20px;
+    width: 210px;
 }
 div#content {
     width: 671px;
@@ -99,11 +104,12 @@ div#content {
     background: #ffffff;
     float: right;
     position: relative;
-    margin: -52px 39px -56px 0;
+    margin: -38px 25px -56px 0;
 }
 div#content div.top {
     min-height: 200px;
-    padding: 58px 58px 40px 58px;
+    padding: 42px 30px;
+    min-height: 300px;
 }
 div#content div.bottom {
     background: #F2F2F2;
@@ -112,7 +118,9 @@ div#content div.bottom {
 
 div#footer {
     background: #191919;
-    color: #ffffff;
+    color: #ccc;
+    padding-left: 55px;
+    font-size: 12px;
 }
 div#footer a {
     color: #666;
@@ -120,26 +128,22 @@ div#footer a {
 }
 div#footer a:hover {
     color: #aaa;
+    text-decoration: underline;
 }
 div#footer div.center {
     padding: 25px 30px;
-}
-div#footer div.center a {
-
 }
 div#navigator ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-div#navigator ul > li {
+div#navigator ul li {
     display: block;
-    margin-bottom: 3px;
-/*    padding-left: 8px;*/
-    background-color: #e6e6e6;
+    margin-bottom: 10px;
 }
 div#navigator ul a {
-    color: #1A1A1A;
+    color: #666;
     display: block;
     height: 34px;
     line-height: 34px;
@@ -147,16 +151,23 @@ div#navigator ul a {
     text-transform: none;
     font-size: 15px;
     padding-left: 15px;
+    position: relative;
+    -webkit-box-shadow: #ccc 0px 1px 2px;
+    -moz-box-shadow: #ccc 0px 1px 2px;
+    box-shadow: #ccc 0px 1px 2px;
+    background: #eeeefe;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#eeeefe));
+    background: -moz-linear-gradient(#fff, #eeeefe);
+    background: linear-gradient(#fff, #eeeefe);
+    -pie-background: linear-gradient(#fff, #eeeefe);
 }
-div#navigator ul > li:hover {
-/*    background: url(/img/lm_bg_h.png)   ;*/
-    background-position: 0% 50%;
-    background-repeat: no-repeat;
-    color: #e6e6e6;
-}
-div#navigator ul > li:hover a {
-    background: url(/img/lm_bg_h1.png) left center #4776a2 no-repeat;
-    color: #fff;
+div#navigator a:hover {
+    color: #444;
+    background: #fff;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eeeefe), to(#fff));
+    background: -moz-linear-gradient(#eeeefe, #fff);
+    background: linear-gradient(#eeeefe, #fff);
+    -pie-background: linear-gradient(#eeeefe, #fff);
 }
 #logo {
     display: block;
@@ -165,16 +176,310 @@ div#navigator ul > li:hover a {
     width: 250px;
 }
 
+body #content {
+    -webkit-box-shadow: #aaa 0px 2px 3px;
+    -moz-box-shadow: #aaa 0px 2px 3px;
+    box-shadow: #aaa 0px 2px 3px;
+    
+    ﻿border: 1px solid #696;
+    padding: 0px 0px 0px 0px;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+
+    background: #EEFF99;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#eeeefe));
+    background: -moz-linear-gradient(#fff, #eeeefe);
+    background: linear-gradient(#fff, #eeeefe);
+    -pie-background: linear-gradient(#fff, #eeeefe);
+}
+ul.indexList {
+    list-style: none;
+    display: block;
+}
+ul.indexList li {
+/*    -webkit-box-shadow: #ccc 0px 0px 2px;
+    -moz-box-shadow: #ccc 0px 0px 2px;
+    box-shadow: #ccc 0px 0px 2px;*/
+    border-bottom: 1px solid #eef;
+    padding: 10px 15px;
+    color: #666666;
+}
+ul.indexList li .abstract {
+    min-height: 60px;
+}
+a.image-link {
+    border: 1px solid #eef;
+    padding: 5px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    background: #fff;
+
+    -webkit-box-shadow: #ececee 0px 0px 2px;
+    -moz-box-shadow: #ececee 0px 0px 2px;
+    box-shadow: #ececee 0px 0px 2px;
+}
+a.image-link span{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+}
+a.image-link:hover {
+    -webkit-box-shadow: #bcbcee 0px 0px 2px;
+    -moz-box-shadow: #bcbcee 0px 0px 2px;
+    box-shadow: #bcbcee 0px 0px 2px;
+}
+.wrapper a.image-link {
+    float: right;
+    margin: 0;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.wrapper ul a.image-link {
+    float: left;
+    margin: 0;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+.wrapper p.abstract {
+}
+a.show_link {
+    float: right;
+    font-style: italic;
+    text-decoration: none;
+}
+.paginator_container {
+    background: #eef;
+    padding: 5px 15px;
+    margin: 20px 0 5px 0;
+}
+.paginator_container .disabled,
+.paginator_container .paginator {
+    color: #ccc;
+}
+.paginator_container .paginator {
+    float: right;
+}
+.paginator_container .counter {
+    float: left;
+}
+.paginator_container a {
+    text-decoration: none;
+}
+.paginator_container a:hover {
+    text-decoration: underline;
+}
+h2 a {
+    color: #888888;
+    text-decoration: none;
+}
+h2 a:hover {
+    color: #bbc;
+    text-decoration: none;
+}
+h2 strong {
+    font-size: 0.85em;
+}
+#content p {
+    margin: 0 15px 10px 15px;
+    color: #888;
+}
+#content .bottom p {
+    margin: 10px 0px 10px;
+}
+ul.gallery-list {
+    list-style: none;
+    min-height: 165px;
+    display: block;
+    padding: 15px;
+}
+ul.gallery-list li {
+    display: block;
+    float: left;
+    margin: 0 10px 15px 0;
+}
+ul.gallery-list li a.image-link {
+    border: 1px solid #eef;
+    margin: 0;
+}
+ul.gallery-list li a.image-link:hover {
+    border: 1px solid #91BF04;
+}
+ul.gallery-list li a.image-link span{
+    display: block;
+    width: 123px;
+    height: 123px;
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+#content ul {
+    margin: 15px 30px;
+}
+#content ul li {
+    margin: 5px 0;
+    padding: 3px 0;
+
+}
+#content ul.pages_index {
+    margin: 15px;
+    list-style: none;
+    border-top: 1px dotted #eee;
+    border-left: 1px dotted #eee;
+    border-right: 1px dotted #eee;
+}
+#content ul.pages_index li {
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+}
+#content ul.pages_index li a {
+    display: block;
+    text-decoration: none;
+    padding: 3px 10px 2px 10px;
+    text-transform: uppercase;
+    border-bottom: 1px dotted #eee;
+}
+#content ul.pages_index li a span {
+    float: right;
+    text-transform: lowercase;
+}
+#content ul.pages_index li.altrow a {
+    background: #fff;
+}
+#content ul.pages_index li a:hover {
+/*    border-bottom: 1px dotted #bbc;*/
+    text-decoration: underline;
+}
+.wrapper {
+    min-height: 200px;
+}
+#content ul.gallery-list {
+    list-style: none;
+    min-height: 165px;
+    display: block;
+    padding: 15px;
+    margin: 15px 0px;
+}
+#content ul.gallery-list li {
+    display: block;
+    float: left;
+    margin: 0 10px 15px 0;
+}
+#content ul.gallery-list li a.image-link {
+    border: 1px solid #eef;
+    margin: 0;
+}
+#content ul.gallery-list li a.image-link:hover {
+    border: 1px solid #91BF04;
+}
+#content ul.gallery-list li a.image-link span{
+    display: block;
+    width: 123px;
+    height: 123px;
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+#content h2 .date,
+#content a.title .date {
+    float: right;
+    font-size: 0.7em;
+    line-height: 20px;
+    display: block;
+    margin-left: 20px;
+}
+#content a.title .date {
+    font-size: 0.9em;
+}
+#content a.title {
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+}
+p.abstract {
+    font-style: italic;
+    background: #f6f6f6;
+    padding: 10px 20px;
+}
+.pages a.image-link {
+    margin-right: 5px;
+}
+.content_description {
+    margin: 0 15px;
+}
+#content .content_description p {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+form {
+    margin: 30px 0;
+    padding: 0;
+}
+form div.input {
+    padding: 5px 100px;
+    display: block;
+    height: 30px;
+}
+form div.input label {
+    display: block;
+    cursor: pointer;
+    float: left;
+    width: 100px;
+    line-height: 22px;
+}
+form div.input input {
+    float: left;
+}
+form div.submit {
+    margin-left: 100px;
+    display: block;
+    height: 30px;
+    float: left;
+}
+form .error-message {
+    padding: 0px;
+    color: #f00;
+    float: right;
+    text-align: left;
+    width: 120px;
+}
+#flashMessage {
+    padding: 10px 0;
+    font-weight: bold;
+}
+a.normal-image-link {
+    display: block;
+    margin: 15px;
+    border: 1px solid #eee;
+    background: #fff;
+    padding: 6px;
+}
+a.normal-image-link img {
+    display: block;
+    max-width: 567px;
+    margin: 0 auto;
+}
+
+
 
 .clear,
 div#header ul > li.clear,
-div#navigator ul > li.clear {
+div#navigator ul > li.clear,
+#content ul.gallery-list li.clear {
     clear: both;
     display: block;
     float: none;
     height: 0;
     line-height: 0;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 .overlay {
     height: 0px;

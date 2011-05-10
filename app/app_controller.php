@@ -4,9 +4,11 @@ class AppController extends Controller {
 
     public $helpers = array('Html', 'Form', 'Session', 'Time', 'Number', 'Text', 'Utils.Gravatar', 'Backend', 'Frontend');
     public $components = array('Auth', 'Session', 'Email', 'Cookie', 'Search.Prg', 'DebugKit.Toolbar');
-    public $uses = array('Menu');
+    public $uses = array('Menu', 'Variable');
     protected $_pageTitle = null;
+    protected $_variable = null;
     public $presetVars = null;
+    
 
     public function beforeFilter() {
         $this->_setupCookies();
@@ -14,10 +16,15 @@ class AppController extends Controller {
         $this->_setupLayout();
         $this->set('presetVars', $this->presetVars);
         $this->set('model', $this->modelClass);
+        $this->set('variable',
+            ($this->_variable = $this->Variable->find('list', array('fields' => array('key', 'value'))))
+        );
+        
+        $this->helpers['Layout'] = array('variables' => $this->_variable);
     }
 
     public function beforeRender() {
-        $this->set('title_for_layout', Configure::read('App.baseTitle') . " " . $this->_pageTitle);
+        $this->set('title_for_layout', $this->_variable('baseTitle') . " " . $this->_pageTitle);
     }
 
     public function admin_find() {
@@ -44,7 +51,7 @@ class AppController extends Controller {
     }
 
     protected function _setupLayout() {
-        if (isset($this->params['prefix']) && $this->params['prefix'] == 'admin') {
+        if ( isset($this->params['prefix']) && $this->params['prefix'] == 'admin' && $this->params['admin'] ) {
             $this->layout = 'backend/default';
             $this->_pageTitle = __('backend', true);
         } else {
@@ -55,18 +62,36 @@ class AppController extends Controller {
 
     protected function _getMenus() {
         $this->Menu->recursive = -1;
-        $menus = $this->Menu->find('all', array('conditions' => "Menu.menu_id = '' OR Menu.menu_id IS NULL"));
+        $menus = $this->Menu->find('all', array(
+            'conditions' => "Menu.menu_id = '' OR Menu.menu_id IS NULL",
+            'order'      => "Menu.lft"
+        ));
+        
         foreach ($menus as $menu) {
             $this->set(
                     Inflector::variable($menu['Menu']['name']) . "FCMenu",
                     array(
                         'Menu' => $menu['Menu'],
-                        'Children' => $this->Menu->find('all', array('conditions' => array('Menu.menu_id' => $menu['Menu']['id'])))
+                        'Children' => $this->Menu->find('all', array(
+                            'conditions' => array('Menu.menu_id' => $menu['Menu']['id']),
+                            'order' => "Menu.lft"
+                        ))
                     )
             );
         }
     }
-
+    
+    protected function _variable($key = false) {
+        if($key) {
+            
+            return (isset($this->_variable[$key]) && !empty($this->_variable[$key])) ? $this->_variable[$key] : Configure::read("App.{$key}");
+            
+        } else {
+            
+            return false;
+            
+        }
+    }
     /** old * */
 //    public function setLocale($lang = null) {
 //        $this->P28n->change($lang);

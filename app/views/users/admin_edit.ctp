@@ -28,7 +28,7 @@
         <div id="change_password_box" style="display: <?php echo (isset($this->data['User']['change_password']) && $this->data['User']['change_password']) ? 'block' : 'none' ?>">
 
             <fieldset>
-                <legend><?php __d('users', 'Change password'); ?></legend>
+                <legend><?php __('Change password'); ?></legend>
                 <?php
                 echo $this->Form->input('passwd', array('type' => 'password', 'disabled' => (isset($this->data['User']['change_password']) && $this->data['User']['change_password']) ? false : 'disabled'));
                 echo $this->Form->input('temppassword', array('type' => 'password', 'disabled' => (isset($this->data['User']['change_password']) && $this->data['User']['change_password']) ? false : 'disabled'));

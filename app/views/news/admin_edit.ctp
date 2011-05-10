@@ -18,7 +18,7 @@
 		echo $this->Form->hidden('language_id');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit', true));?>
+	<?php echo $this->Form->end(__('Submit', true));?>
 </div>
 
 <?php echo $this->element("backend/left_navigator") ?>
