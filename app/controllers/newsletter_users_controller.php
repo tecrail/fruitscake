@@ -152,9 +152,9 @@ class NewsletterUsersController extends AppController {
             
             $this->Email->to = $newsletterUser['NewsletterUser']['email'];
 
-            $this->Email->subject = Configure::read('App.baseTitle') . " :: " . __('lbl_newsletter_unsubscription_mail_subject', true);
-            $this->Email->replyTo = Configure::read('App.baseTitle') . ' <' . Configure::read('App.defaultEmail') . '>';
-            $this->Email->from = Configure::read('App.baseTitle') . ' <' . Configure::read('App.defaultEmail') . '>';
+            $this->Email->subject   = $this->_variable('baseTitle') . " :: " . __('lbl_newsletter_unsubscription_mail_subject', true);
+            $this->Email->replyTo   = $this->_variable('baseTitle') . ' <' . $this->_variable('newsletterEmail') . '>';
+            $this->Email->from      = $this->_variable('baseTitle') . ' <' . $this->_variable('newsletterEmail') . '>';
 
             $this->Email->layout = 'unsubscription';
             $this->Email->template = 'unsubscription';

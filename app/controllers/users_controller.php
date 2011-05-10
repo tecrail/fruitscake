@@ -18,10 +18,6 @@ class UsersController extends AppController {
         if ($this->action == 'login') {
             $this->Auth->autoRedirect = false;
         }
-
-        if (!Configure::read('App.defaultEmail')) {
-            Configure::write('App.defaultEmail', 'noreply@' . env('HTTP_HOST'));
-        }
     }
 
     /**
@@ -246,9 +242,9 @@ class UsersController extends AppController {
             if ($this->User->save($data, false)) {
                 if ($type === 'reset') {
                     $this->Email->to = $email;
-                    $this->Email->from = Configure::read('App.defaultEmail');
-                    $this->Email->replyTo = Configure::read('App.defaultEmail');
-                    $this->Email->return = Configure::read('App.defaultEmail');
+                    $this->Email->from = $this->_variable('defaultEmail');
+                    $this->Email->replyTo = $this->_variable('defaultEmail');
+                    $this->Email->return = $this->_variable('defaultEmail');
                     $this->Email->subject = env('HTTP_HOST') . ' ' . __d('users', 'Password Reset', true);
                     $this->Email->template = null;
                     $content[] = __d('users', 'Your password has been reset', true);

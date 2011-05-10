@@ -127,9 +127,9 @@ class NewslettersController extends AppController {
 
             $this->Email->to = $user['email'];
 
-            $this->Email->subject = Configure::read('App.baseTitle') . " :: " . $newsletter['Newsletter']["title"];
-            $this->Email->replyTo = Configure::read('App.baseTitle') . ' <' . Configure::read('App.defaultEmail') . '>';
-            $this->Email->from = Configure::read('App.baseTitle') . ' <' . Configure::read('App.infoEmail') . '>';
+            $this->Email->subject = $this->_variable('baseTitle') . " :: " . $newsletter['Newsletter']["title"];
+            $this->Email->replyTo = $this->_variable('baseTitle') . ' <' . $this->_variable('newsletterEmail') . '>';
+            $this->Email->from = $this->_variable('baseTitle') . ' <' . $this->_variable('newsletterEmail') . '>';
 
             if ((bool) $newsletter['Newsletter']["attachment"]) {
                 $this->Email->attachments = array(APP . "webroot" . DS . "files" . DS . "attachments" . DS . $newsletter['Newsletter']["attachment"]);

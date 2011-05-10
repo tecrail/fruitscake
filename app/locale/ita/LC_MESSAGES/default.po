@@ -231,6 +231,12 @@ msgstr "News"
 msgid "Newsletters"
 msgstr "Newsletter"
 
+msgid "Change password"
+msgstr "Modifica password"
+
+msgid "change_password"
+msgstr "Modifica password"
+
 #: /controllers/url_builder_controller.php:27
 msgid "Newsletters users"
 msgstr "Iscrizione newsletter"

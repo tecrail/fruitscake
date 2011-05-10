@@ -11,7 +11,7 @@
 
     <?php
         echo $this->Html->link(
-                "<span style='background-image: url(/img/news/normal.{$news['News']['image']})'></span>",
+                "<span style='background-image: url(/img/news/thumb.{$news['News']['image']})'></span>",
                 "/img/news/{$news['News']['image']}",
                 array(
                     'rel'       => 'shadowbox',
