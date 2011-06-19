@@ -10,6 +10,9 @@ div#menu-container {
     border-radius: 3px;
     padding: 0 10px;
 }
+.no-borderradius div#menu-container {
+    behavior: url(/pie/PIE.php); position: relative;
+}
 ul.sf-menu {
     margin-bottom: 0;
     border-right: 1px solid #ddd;

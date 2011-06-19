@@ -1,4 +1,3 @@
-
 html, body {
 }
 
@@ -143,7 +142,7 @@ div#navigator ul li {
     margin-bottom: 10px;
 }
 div#navigator ul a {
-    color: #666;
+    color: #777;
     display: block;
     height: 34px;
     line-height: 34px;
@@ -152,22 +151,32 @@ div#navigator ul a {
     font-size: 15px;
     padding-left: 15px;
     position: relative;
-    -webkit-box-shadow: #ccc 0px 1px 2px;
-    -moz-box-shadow: #ccc 0px 1px 2px;
-    box-shadow: #ccc 0px 1px 2px;
+    -webkit-box-shadow: #ccc 0px 0px 3px;
+    -moz-box-shadow: #ccc 0px 0px 3px;
+    box-shadow: #ccc 0px 0px 3px;
     background: #eeeefe;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#eeeefe));
-    background: -moz-linear-gradient(#fff, #eeeefe);
-    background: linear-gradient(#fff, #eeeefe);
-    -pie-background: linear-gradient(#fff, #eeeefe);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(#eeeefe));
+    background: -moz-linear-gradient(#ffffff, #eeeefe);
+    background: linear-gradient(#ffffff, #eeeefe);
+    /*    -pie-background: linear-gradient(#ffffff, #eeeefe);    */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeefe');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeefe')"; /* IE8+ */
+}
+html.no-boxshadow body div#navigator ul a {
+    behavior: url(/pie/PIE.php);
 }
 div#navigator a:hover {
-    color: #444;
-    background: #fff;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eeeefe), to(#fff));
-    background: -moz-linear-gradient(#eeeefe, #fff);
-    background: linear-gradient(#eeeefe, #fff);
-    -pie-background: linear-gradient(#eeeefe, #fff);
+    color: #334;
+    -webkit-box-shadow: #ccc 0px 0px 1px;
+    -moz-box-shadow: #ccc 0px 0px 1px;
+    box-shadow: #ccc 0px 0px 1px;
+    /*    background: #fff;
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eeeefe), to(#fff));
+        background: -moz-linear-gradient(#eeeefe, #fff);
+        background: linear-gradient(#eeeefe, #fff);
+        -pie-background: linear-gradient(#eeeefe, #fff);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeefe', endColorstr='#ffffff');
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeefe', endColorstr='#ffffff')";  IE8+ */
 }
 #logo {
     display: block;
@@ -175,33 +184,36 @@ div#navigator a:hover {
     background: transparent url(/img/logo02.png) center center no-repeat;
     width: 250px;
 }
-
 body #content {
-    -webkit-box-shadow: #aaa 0px 2px 3px;
-    -moz-box-shadow: #aaa 0px 2px 3px;
-    box-shadow: #aaa 0px 2px 3px;
-    
-    ﻿border: 1px solid #696;
+    -webkit-box-shadow: #aaa 0px 2px 5px;
+    -moz-box-shadow: #aaa 0px 2px 5px;
+    box-shadow: #aaa 0px 2px 5px;
+    ﻿border: 0px solid #696;
     padding: 0px 0px 0px 0px;
-
+    background: #f9f9f9;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#f9f9f9));
+    background: -moz-linear-gradient(#fff, #f9f9f9);
+    background: linear-gradient(#fff, #f9f9f9);
+    /*    -pie-background: linear-gradient(#fff, #f9f9f9);*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeefe');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f9f9f9')"; /* IE8+ */
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-
-    background: #EEFF99;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#eeeefe));
-    background: -moz-linear-gradient(#fff, #eeeefe);
-    background: linear-gradient(#fff, #eeeefe);
-    -pie-background: linear-gradient(#fff, #eeeefe);
 }
+html.no-borderradius body #content,
+html.no-boxshadow body #content{
+    behavior: url(/pie/PIE.php);
+}
+
 ul.indexList {
     list-style: none;
     display: block;
 }
 ul.indexList li {
-/*    -webkit-box-shadow: #ccc 0px 0px 2px;
-    -moz-box-shadow: #ccc 0px 0px 2px;
-    box-shadow: #ccc 0px 0px 2px;*/
+    /*    -webkit-box-shadow: #ccc 0px 0px 2px;
+        -moz-box-shadow: #ccc 0px 0px 2px;
+        box-shadow: #ccc 0px 0px 2px;*/
     border-bottom: 1px solid #eef;
     padding: 10px 15px;
     color: #666666;
@@ -221,6 +233,9 @@ a.image-link {
     -moz-box-shadow: #ececee 0px 0px 2px;
     box-shadow: #ececee 0px 0px 2px;
 }
+html.no-boxshadow body a.image-link {
+    behavior: url(/pie/PIE.php);
+}
 a.image-link span{
     display: block;
     width: 100px;
@@ -232,6 +247,9 @@ a.image-link:hover {
     -webkit-box-shadow: #bcbcee 0px 0px 2px;
     -moz-box-shadow: #bcbcee 0px 0px 2px;
     box-shadow: #bcbcee 0px 0px 2px;
+}
+html.no-boxshadow body a.image-link:hover {
+    behavior: url(/pie/PIE.php);
 }
 .wrapper a.image-link {
     float: right;
@@ -352,7 +370,7 @@ ul.gallery-list li a.image-link span{
     background: #fff;
 }
 #content ul.pages_index li a:hover {
-/*    border-bottom: 1px dotted #bbc;*/
+    /*    border-bottom: 1px dotted #bbc;*/
     text-decoration: underline;
 }
 .wrapper {

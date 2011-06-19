@@ -4,5 +4,5 @@ div#navigator ul a,
 a.image-link,
 a.image-link:hover {
     position: relative;
-    behavior: url(/pie/PIE.php);
+/*    behavior: url(/pie/PIE.php);*/
 }

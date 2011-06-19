@@ -7,7 +7,8 @@
         <meta name="keywords" content=""/>
         <?php
         echo $this->Html->css(array('/shadowbox/shadowbox', 'default'));
-        echo $this->Html->script(array('jquery-1.5.2.min', 'jquery.animate-colors-min', '/shadowbox/shadowbox', 'http://maps.google.com/maps/api/js?sensor=false', 'application'));
+        //echo $this->Html->script(array('jquery-1.5.2.min', 'jquery.animate-colors-min', '/shadowbox/shadowbox', 'http://maps.google.com/maps/api/js?sensor=false', 'modernizr-1.7.min', 'application'));
+        echo $this->Html->script(array('jquery-1.5.2.min', 'jquery.animate-colors-min', '/shadowbox/shadowbox', 'modernizr-1.7.min', 'application'));
         echo $scripts_for_layout
         ?>
         <?php echo $this->Html->css(array('ie')); ?>

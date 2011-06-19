@@ -1,4 +1,5 @@
 .DS_Store
+app/webroot/.DS_Store
 app/config/database.php
 app/tmp/logs
 app/tmp/cache/models/cake_*

@@ -141,7 +141,9 @@ fieldset legend {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
-
+.no-borderradius .inner-container {
+    behavior: url(/pie/PIE.php); position: relative;
+}
 .outer-container {
     /*background: url('../img/administration/container.jpg') no-repeat 50% 100%;*/
     padding-bottom: 64px;
@@ -157,7 +159,9 @@ fieldset legend {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
-
+.no-borderradius .header {
+    behavior: url(/pie/PIE.php); position: relative;
+}
 .header .title {
     color: #FFF;
     padding-top: 50px;
@@ -280,7 +284,10 @@ fieldset legend {
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
-
+.no-borderradius .footer,
+.no-borderradius .graybox {
+    behavior: url(/pie/PIE.php); position: relative;
+}
 .graybox a {
     color: #fff;
     text-decoration: none;
@@ -384,6 +391,6 @@ dd {
 fieldset {
     width: 270px;
     margin: 10px 0 20px 10px;
-    border: 1;
+    border-width: 1px;
     float: right;
 }

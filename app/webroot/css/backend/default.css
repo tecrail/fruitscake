@@ -114,10 +114,13 @@ div.selector span,  div.selector select, div.uploader {
     font-size: 1.2em;
     margin: 0 50px;
     padding: 10px;
-/*    width: 950px;*/
+    /*    width: 950px;*/
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+}
+.no-borderradius .inner-container {
+    behavior: url(/pie/PIE.php);
 }
 .outer-container {
     /*background: url('../img/administration/container.jpg') no-repeat 50% 100%;*/
@@ -132,6 +135,9 @@ div.selector span,  div.selector select, div.uploader {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+}
+.no-borderradius .header {
+    behavior: url(/pie/PIE.php);
 }
 .header .title {
     color: #FFF;
@@ -235,6 +241,10 @@ div.selector span,  div.selector select, div.uploader {
     border-radius: 3px;
     padding: 9px 25px;
 }
+.no-borderradius .footer,
+.no-borderradius .graybox {
+    behavior: url(/pie/PIE.php);
+}
 .graybox a {
     color: #fff;
     text-decoration: none;
@@ -310,6 +320,10 @@ div#map_canvas *{
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+}
+.no-borderradius #authMessage,
+.no-borderradius #flashMessage{
+    behavior: url(/pie/PIE.php);
 }
 form.OrderedListForm {
     padding: 0px;
@@ -417,8 +431,23 @@ ul#menu_tree div.actions {
     text-align: center;
 }
 ul#menu_tree div.actions a {
-    -moz-border-radius: 8px 8px 8px 8px;
+/*    -moz-border-radius: 8px;    
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: #E6E49F;
     background: -moz-linear-gradient(center top , #F1F1D4, #E6E49F) repeat scroll 0 0 #E6E49F;
+
+    
+    background: -ms-linear-gradient(#F1F1D4, #E6E49F);  IE10   
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F1F1D4), color-stop(100%, #E6E49F));  Safari 4+, Chrome 2+   
+    background: -webkit-linear-gradient(#F1F1D4, #E6E49F);  Safari 5.1+, Chrome 10+   
+    background: -o-linear-gradient(#F1F1D4, #E6E49F);  Opera 11.10   
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F1F1D4', endColorstr='#E6E49F');  IE6 & IE7   
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#F1F1D4', endColorstr='#E6E49F')";  IE8+   
+    background: linear-gradient(#F1F1D4, #E6E49F);  the standard   
+*/
+
+    display: inline-block;
     border: 1px solid #AAAC62;
     color: #333333;
     font-weight: normal;
@@ -427,6 +456,9 @@ ul#menu_tree div.actions a {
     text-shadow: 0 1px 0 #FFFFFF;
     margin: 0 2px;
     padding: 2px 5px;
+}
+.no-borderradius ul#menu_tree div.actions a {
+    behavior: url(/pie/PIE.php);
 }
 ul#menu_tree div.actions a:hover {
     background: #f0f09a;
@@ -445,7 +477,7 @@ ul#menu_tree a.parent_menu {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
-/*    background: url(/img/backend/li2.png) 10% 50% no-repeat;*/
+    /*    background: url(/img/backend/li2.png) 10% 50% no-repeat;*/
 }
 ul#menu_tree ul a.menu-tree-link {
     margin-left: 30px;
@@ -615,9 +647,9 @@ a.avatar-username {
     background: url(/img/backend/avatar.png) 0px 50% no-repeat;
 }
 a.listing {
-/*    display: block;*/
-    background: url(/img/backend/li2.png) 5px 50% no-repeat;
-    padding-left: 22px;
+    /*    display: block;*/
+/*    background: url(/img/backend/li2.png) 5px 50% no-repeat;
+    padding-left: 22px;*/
 }
 fieldset.imageInput, fieldset.urlBuilder {
     margin: 0 11px 20px 5px
