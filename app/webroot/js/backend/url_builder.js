@@ -132,6 +132,13 @@ $(document).ready(function() {
 
 
             $(config.model_ancors_selector).live('click', function() {
+                
+                $("#thirdUrlBuilderBox").fadeOut(400, function() {
+                    $(this).css({
+                        display: 'none'
+                    });
+                });
+                
                 $("#urlBuilderModelActionsBox ul.urlBuilderList").fadeOut(400, function() {
                     $(this).css({
                         display: 'none'

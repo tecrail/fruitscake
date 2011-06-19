@@ -561,6 +561,17 @@ ul.gallery-list div.actions a {
     display: block;
     float: left;
     text-decoration: none;
+    border: none;
+    background: none;
+    padding: 0;
+    font-weight: bold;
+    color: #048;
+}
+ul.gallery-list div.actions a:hover {
+    color: #06c;
+}
+ul.gallery-list div.actions div.right a:hover {
+    color: #f25;
 }
 ul.gallery-list div.actions a:hover {
     text-decoration: underline;
