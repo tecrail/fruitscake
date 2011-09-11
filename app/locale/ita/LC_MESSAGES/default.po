@@ -1,25 +1,36 @@
 msgid "January"
 msgstr "Gennaio"
+
 msgid "February"
 msgstr "Febbraio"
+
 msgid "March"
 msgstr "Marzo"
+
 msgid "April"
 msgstr "Aprile"
+
 msgid "May"
 msgstr "Maggio"
+
 msgid "June"
 msgstr "Giugno"
+
 msgid "July"
 msgstr "Luglio"
+
 msgid "August"
 msgstr "Agosto"
+
 msgid "September"
 msgstr "Settembre"
+
 msgid "October"
 msgstr "Ottobre"
+
 msgid "November"
 msgstr "Novembre"
+
 msgid "December"
 msgstr "Dicembre"
 
@@ -259,6 +270,9 @@ msgid "Newsletters"
 msgstr "Newsletter"
 
 msgid "Change password"
+msgstr "Modifica password"
+
+msgid "Change Password"
 msgstr "Modifica password"
 
 msgid "change_password"
