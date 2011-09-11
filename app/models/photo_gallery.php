@@ -40,7 +40,7 @@ class PhotoGallery extends AppModel {
         'Photo' => array(
             'className' => 'Photo',
             'foreignKey' => 'photo_gallery_id',
-            'dependent' => false,
+            'dependent' => true,
             'conditions' => '',
             'fields' => '',
             'order' => '',

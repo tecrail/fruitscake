@@ -23,7 +23,7 @@
                 ?>
                 <?php 
                 echo $this->Html->link(
-                        "<div class='date'>{$news_item['News']['date']}</div>{$news_item['News']['title']}",
+                        "<div class='date'>" . $this->Frontend->l10n_date($news_item['News']['date']) . "</div>{$news_item['News']['title']}",
                         array('controller' => 'news', 'action' => 'view', $news_item['News']['id']),
                         array('escape' => false, 'class' => 'title')
                 );

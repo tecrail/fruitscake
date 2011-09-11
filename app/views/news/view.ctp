@@ -1,7 +1,7 @@
 <h2>
     <?php echo $this->Html->link(__('News', true), array('controller' => 'news', 'action' => 'index')) ?> <strong>&gt; <?php echo $news['News']['title']; ?></strong>
     <div class="date">
-        <?php echo $news['News']['date']; ?>
+        <?php echo $this->Frontend->l10n_date($news['News']['date']); ?>
     </div>
 </h2>
 

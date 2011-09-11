@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
         <meta name="author" content="tecrail - http://www.tecrail.com"/>
-        <meta name="description" content=""/>
+        <meta name="description" content="<?php echo $title_for_layout; ?>"/>
         <meta name="keywords" content=""/>
         <?php
         echo $this->Html->css(array('/shadowbox/shadowbox', 'default'));

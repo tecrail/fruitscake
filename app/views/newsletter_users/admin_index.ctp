@@ -31,12 +31,12 @@ foreach ($newsletterUsers as $newsletterUser):
 			<?php echo $newsletterUser['NewsletterUser']['email']; ?>
 		</td>
 		<td>
-            <?php echo $this->Html->image('/img/administration/'.($newsletterUser['NewsletterUser']['is_active'] ? 'on.gif' : 'off.gif')); ?>
+			<?php echo $this->Backend->isActive($newsletterUser['NewsletterUser']['is_active']); ?>
 		</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('Visualizza', true), array('action'=>'view', $newsletterUser['NewsletterUser']['id'])); ?>
-			<?php echo $this->Html->link(__('Modifica', true), array('action'=>'edit', $newsletterUser['NewsletterUser']['id'])); ?>
-			<?php echo $this->Html->link(__('Elimina', true), array('action'=>'delete', $newsletterUser['NewsletterUser']['id']), null, sprintf(__('Sei sicuro di voler eliminare il contatto\n\t # %s?', true), $newsletterUser['NewsletterUser']['email'])); ?>
+			<?php echo $this->Backend->actionLink(__('View', true), array('action'=>'view', $newsletterUser['NewsletterUser']['id'])); ?>
+			<?php echo $this->Backend->actionLink(__('Edit', true), array('action'=>'edit', $newsletterUser['NewsletterUser']['id'])); ?>
+			<?php echo $this->Backend->actionLink(__('Delete', true), array('action'=>'delete', $newsletterUser['NewsletterUser']['id']), null, sprintf(__('Sei sicuro di voler eliminare il contatto\n\t # %s?', true), $newsletterUser['NewsletterUser']['email'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

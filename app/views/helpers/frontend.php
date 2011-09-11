@@ -18,4 +18,8 @@ class FrontendHelper extends AppHelper {
         return $this->output($result);
     }
 
+		public function l10n_date($date) {
+			return strftime('%d/%m/%Y', mktime(0,0,0, substr($date, 5, 2), substr($date, 8, 2), substr($date, 0, 4)));
+		}
+
 }
