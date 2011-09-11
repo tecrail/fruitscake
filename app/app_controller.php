@@ -24,7 +24,11 @@ class AppController extends Controller {
     }
 
     public function beforeRender() {
-        $this->set('title_for_layout', $this->_variable('baseTitle') . " " . $this->_pageTitle);
+			if(!empty($this->_pageTitle)) {
+				$this->set('title_for_layout', $this->_variable('baseTitle') . " - " . $this->_pageTitle);
+			} else {
+				$this->set('title_for_layout', $this->_variable('baseTitle'));
+			}
     }
 
     public function admin_find() {
@@ -92,7 +96,8 @@ class AppController extends Controller {
             
         }
     }
-    /** old * */
+
+    /** old **/
 //    public function setLocale($lang = null) {
 //        $this->P28n->change($lang);
 //        $this->currentLanguage = $lang;
