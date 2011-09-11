@@ -141,7 +141,7 @@ class NewsletterUsersController extends AppController {
             $this->Session->setFlash(__('lbl_newsletter_user_not_found', true));
             $this->redirect(array('action' => 'index'));
         }
-        if ($this->NewsletterUser->del($id)) {
+        if ($this->NewsletterUser->delete($id)) {
             $this->Session->setFlash(__('lbl_newsletter_user_deleted', true));
             $this->redirect(array('action' => 'index'));
         }
