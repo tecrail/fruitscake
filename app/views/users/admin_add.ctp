@@ -12,7 +12,7 @@
                 echo $this->Form->input('active');
 	?>
 	</fieldset>
-<?php echo $this->Form->end('Submit');?>
+<?php echo $this->Form->end(__('Submit', true));?>
 </div>
 
 <?php echo $this->element("backend/left_navigator") ?>
