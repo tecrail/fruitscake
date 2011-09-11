@@ -18,6 +18,7 @@ class PhotoGalleriesController extends AppController {
             'order' => array('PhotoGallery.created' => 'DESC'),
             'limit' => 5
         );
+				$this->_pageTitle = "Foto gallery";
 
         $this->PhotoGallery->recursive = 0;
         $this->set('photoGalleries', $this->paginate());
@@ -30,6 +31,8 @@ class PhotoGalleriesController extends AppController {
         }
         $this->PhotoGallery->recursive = -1;
         $photoGallery = $this->PhotoGallery->read(null, $id);
+
+				$this->_pageTitle = "Foto gallery - " . $photoGallery['PhotoGallery']['title'];
         $this->set('photoGallery', $photoGallery);
 
         $this->paginate['Photo'] = array(

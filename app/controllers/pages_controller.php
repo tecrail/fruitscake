@@ -21,7 +21,11 @@ class PagesController extends AppController {
             $this->Session->setFlash(__('Invalid page', true));
             $this->redirect(array('action' => 'index'));
         }
-        $this->set('page', $this->Page->read(null, $slug));
+				$page = $this->Page->read(null, $slug);
+				$this->_pageTitle = $page['Page']['title'];
+				
+				
+        $this->set('page', $page);
     }
 	
 

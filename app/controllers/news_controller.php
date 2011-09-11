@@ -14,6 +14,7 @@ class NewsController extends AppController {
                     'limit' => 10,
                     'conditions' => News::publishedConditions()
                 );
+		$this->_pageTitle = "News";
 		$this->set('news', $this->paginate());
 	}
 
@@ -22,7 +23,9 @@ class NewsController extends AppController {
 			$this->Session->setFlash(__('Invalid news', true));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->set('news', $this->News->read(null, $id));
+		$news = $this->News->read(null, $id);
+		$this->_pageTitle = "News - " . $news['News']['title'];
+		$this->set('news', $news);
 	}
 
 	public function admin_index() {

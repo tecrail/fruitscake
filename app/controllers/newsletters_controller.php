@@ -19,6 +19,7 @@ class NewslettersController extends AppController {
     }
 
     public function index() {
+				$this->_pageTitle = "Newsletter";
         $this->Newsletter->recursive = 0;
         $this->paginate['Newsletter'] = array('limit' => 10);
         $this->set('newsletters', $this->paginate());
@@ -156,7 +157,10 @@ class NewslettersController extends AppController {
         }
         
         $this->layout = 'email/html/newsletter';
-        $this->set('newsletter', $this->Newsletter->read(null, $id));
+				$newsletter = $this->Newsletter->read(null, $id);
+
+				$this->_pageTitle = "Newsletter";
+        $this->set('newsletter', $newsletter);
     }
 
     public function admin_delete($id = null) {

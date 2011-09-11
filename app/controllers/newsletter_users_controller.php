@@ -29,10 +29,13 @@ class NewsletterUsersController extends AppController {
             }
         }
         
+				$this->_pageTitle = "Newsletter";
+
         $this->set('options_languages', $this->NewsletterUser->Language->find('list'));
     }
 
     public function unsubscription() {
+				$this->_pageTitle = "Newsletter";
         if (!empty($this->data)) {
             $this->NewsletterUser->set($this->data);
 
@@ -66,6 +69,7 @@ class NewsletterUsersController extends AppController {
     }
 
     public function confirm_unsubscription($id = null) {
+				$this->_pageTitle = "Newsletter";
         if ($id) {
             $newsletterUser = $this->NewsletterUser->read(null, $id);
             if ($newsletterUser) {
