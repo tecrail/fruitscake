@@ -52,16 +52,16 @@
 
 										        // Skin options
 										        skin : "o2k7",
-										        skin_variant : "silver",
+										        skin_variant : "black",
 
 										        // Example content CSS (should be your site CSS)
-										        content_css : "css/example.css",
+										        // content_css : "css/example.css",
 
 										        // Drop lists for link/image/media/template dialogs
 										        template_external_list_url : "js/template_list.js",
 										        external_link_list_url : "js/link_list.js",
 										        external_image_list_url : "js/image_list.js",
-										        media_external_list_url : "js/media_list.js",
+										        media_external_list_url : "js/media_list.js"
 										        
 
                         });
