@@ -66,7 +66,8 @@ class Photo extends AppModel {
                 'uniqidAsFilenames' => true,
                 'thumbsizes' => array(
                     'thumb' => array('width' => 200, 'height' => 'auto', 'name' => 'thumb.{$file}.{$ext}', 'autoResize' => true),
-                    'normal' => array('width' => 400, 'height' => 'auto', 'name' => 'normal.{$file}.{$ext}', 'autoResize' => true)
+                    'normal' => array('width' => 400, 'height' => 'auto', 'name' => 'normal.{$file}.{$ext}', 'autoResize' => true),
+										'zoom' => array('width' => 1024, 'height' => 'auto', 'name' => 'zoom.{$file}.{$ext}', 'autoResize' => true)
                 )
             )
         )
