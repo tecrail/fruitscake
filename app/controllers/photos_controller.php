@@ -25,12 +25,14 @@ class PhotosController extends AppController {
 			} else {
 				$this->Session->setFlash(__('The photo could not be saved. Please, try again.', true));
 			}
+		} else {
+			$this->data['Photo']['published'] = true;
 		}
 		$photoGalleries = $this->Photo->PhotoGallery->find('list');
-                if(empty($photoGalleries)) {
-                    $this->Session->setFlash(__('You have to create a photo gallery first', true));
-                    $this->redirect(array('controller' => 'photo_galleries', 'action'=>'add'));
-                }
+		if(empty($photoGalleries)) {
+			$this->Session->setFlash(__('You have to create a photo gallery first', true));
+			$this->redirect(array('controller' => 'photo_galleries', 'action'=>'add'));
+		}
 		$this->set(compact('photoGalleries'));
 	}
 

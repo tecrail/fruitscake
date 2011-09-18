@@ -15,12 +15,13 @@ class PhotoGalleriesController extends AppController {
                 'limit' => 1,
                 'conditions' => array('Photo.published' => true)
             )),
+						'conditions' => array('PhotoGallery.published' => true),
             'order' => array('PhotoGallery.created' => 'DESC'),
             'limit' => 5
         );
 				$this->_pageTitle = "Foto gallery";
 
-        $this->PhotoGallery->recursive = 0;
+        // $this->PhotoGallery->recursive = 0;
         $this->set('photoGalleries', $this->paginate());
     }
 
@@ -36,7 +37,9 @@ class PhotoGalleriesController extends AppController {
         $this->set('photoGallery', $photoGallery);
 
         $this->paginate['Photo'] = array(
-            'conditions' => array("Photo.photo_gallery_id" => $photoGallery['PhotoGallery']['id']),
+            'conditions' => array(
+							"Photo.photo_gallery_id" => $photoGallery['PhotoGallery']['id'],
+							"Photo.published" => true),
             'order' => array('Photo.created' => 'DESC'),
             'limit' => 16
         );
@@ -74,7 +77,9 @@ class PhotoGalleriesController extends AppController {
             } else {
                 $this->Session->setFlash(__('The photo gallery could not be saved. Please, try again.', true));
             }
-        }
+        } else {
+					$this->data['PhotoGallery']['published'] = true;
+				}
     }
 
     public function admin_edit($id = null) {
