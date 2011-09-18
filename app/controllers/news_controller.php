@@ -50,6 +50,8 @@ class NewsController extends AppController {
 			} else {
 				$this->Session->setFlash(__('The news could not be saved. Please, try again.', true));
 			}
+		} else {
+			$this->data['News']['published'] = true;
 		}
 		$languages = $this->News->Language->find('list');
 		$this->set(compact('languages'));

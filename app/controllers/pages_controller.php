@@ -43,15 +43,17 @@ class PagesController extends AppController {
     }
 
     public function admin_add() {
-        if (!empty($this->data)) {
-            $this->Page->create();
-            if ($this->Page->save($this->data)) {
-                $this->Session->setFlash(__('The page has been saved', true));
-                $this->redirect(array('action' => 'index'));
-            } else {
-                $this->Session->setFlash(__('The page could not be saved. Please, try again.', true));
-            }
-        }
+       if (!empty($this->data)) {
+           $this->Page->create();
+           if ($this->Page->save($this->data)) {
+               $this->Session->setFlash(__('The page has been saved', true));
+               $this->redirect(array('action' => 'index'));
+           } else {
+               $this->Session->setFlash(__('The page could not be saved. Please, try again.', true));
+           }
+       } else {
+				$this->data['Page']['published'] = true;
+			}
     }
 
     public function admin_edit($id = null) {
